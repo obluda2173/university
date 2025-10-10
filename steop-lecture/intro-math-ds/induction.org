@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-09>
-#+lastmod: <2025-10-10 16:08>
+#+lastmod: <2025-10-10 18:13>
 #+options: num:t
 #+startup: overview
 
@@ -123,3 +123,17 @@ It follows by induction that 2^k <= 2^(k+1) - 2^(k-1) - 1 for each n ∈ N
 #+end_quote
 
 * 10.2 Proof by Strong Induction
+Sometimes in an induction proof it is hard to show Sk implies Sk+1. It thus may be easier to show some "lower" Sm (with m < k) implies Sk+1.
+
+For such situations, there is a slight variant of induction called =strong induction=.
+
+Strong induction works just like the regular induction, except that in step 2 instead of assuming Sk is true and showing this forces Sk+1 to be true, we assume that all the statements S1, S2, S3, ... are true and show this forces Sk+1 to be true. The idea is that if the first k dominoes falling always forces the (k + 1)th domino to fall, then all the dominoes must fall.
+
+Outline for Proof by Strong Induction
+#+begin_quote
+*Proposition* The statements S1, S2, S3, ... are all true.
+
+Proof. (Strong induction)
+1. Prove the first statement S1. (Or the first several Sn, if needed.)
+2. Given any integer k > 1, prove (S1 ∧ S2 ∧ S3 ∧ ... ∧ Sk) => Sk+1.
+#+end_quote

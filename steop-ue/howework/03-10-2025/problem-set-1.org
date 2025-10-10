@@ -1,0 +1,364 @@
+#+title: Problem Set 1
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-03>
+#+lastmod: <2025-10-06 19:50>
+#+options: num:t
+#+startup: overview
+
+* Answers
+** Problem 1
+1. {x ∈ Z : |2x| < 5} = {0, 1, 2}
+2. {x ∈ R : x^3 + 5x^2 = -6x} = {-3, -2, 0}
+3. {x ∈ R : sin(Pi * x) = 0} = {..., -1, 0, 1, ...} or Z
+4. {5x : x ∈ Z, |2x| <= 8} = {0, 10, 20, 30, 40}
+
+** Problem 2
+1. {2, 4, 8, 16, 32, 64, ...} = {2^x : x ∈ Z, x >= 1}
+2. {-5, -4, -3, -2, -1, , 0, 1} = {x : x ∈ Z, -5 <= x <= 1}
+3. {..., 1/27, 1/9, 1/3, 1, 3, 9, 27} = {x : x ∈ Z, x <= 3}
+4. {3, 6, 11, 18, 27, 38, ...} = {2 + x^2 : x ∈ Z, x >= 0}
+
+** Problem 3
+1. {x ∈ R : x^2 = 2} * {a, b, c} = {-(2^(1/2)), 2^(1/2)} * {a, b, c}
+   = {{-(2^(1/2), a}, {-(2^(1/2), b}, {-(2^(1/2), c},
+      {2^(1/2, a},    {2^(1/2), b},   {2^(1/2), c}}
+2. {0, 1}^4 =
+   {0, 1} * {0, 1} * {0, 1} * {0, 1}
+   {{0, 0}, {0, 1}, {1, 0}, {1, 1}} * {{0, 0}, {0, 1}, {1, 0}, {1, 1}}
+   {{{0, 0}, {0, 0}},
+    {{0, 0}, {0, 1}},
+    {{0, 0}, {1, 0}},
+    {{0, 0}, {1, 1}},
+    {{0, 1}, {0, 0}},
+    {{0, 1}, {0, 1}},
+    {{0, 1}, {1, 0}},
+    {{0, 1}, {1, 1}},
+    {{1, 0}, {0, 0}},
+    {{1, 0}, {0, 1}},
+    {{1, 0}, {1, 0}},
+    {{1, 0}, {1, 1}},
+    {{1, 1}, {0, 0}},
+    {{1, 1}, {0, 1}},
+    {{1, 1}, {1, 0}},
+    {{1, 1}, {1, 1}}}
+3. {П, 1, 0} * {-П, -1, -0} =
+   {{{П, -П}, {П, -1}, {П, -0}},
+    {{1, -П}, {1, -1}, {1, -0}},
+    {{0, -П}, {0, -1}, {0, -0}}}
+4. {{R}} = {{R}}
+
+** Problem 4
+1. {1, 2, 3, 4}
+   {}
+   {1}
+   {2}
+   {3}
+   {4}
+   {1, 2}
+   {1, 3}
+   {1, 4}
+   {2, 3}
+   {2, 4}
+   {3, 4}
+   {1, 2, 3}
+   {1, 2, 4}
+   {1, 3, 4}
+   {2, 3, 4}
+   {1, 2, 3, 4}
+
+2. {R, Q, N}
+   {}
+   {R}
+   {Q}
+   {N}
+   {R, Q}
+   {R, N}
+   {Q, N}
+   {R, Q, N}
+
+3. {{0, 1}, {0, 1, {2}}, {0}}
+   {}
+   {{0, 1}}
+   {{0, 1, {2}}}
+   {{0}}
+   {{0, 1}, {0, 1, {2}}}
+   {{0, 1}, {0}}
+   {{0, 1, {2}}, {0}}
+   {{0, 1}, {0, 1, {2}}, {0}}
+
+** Problem 5
+1. P({{∅}, 4}) = {∅, {{∅}}, {4}, {{∅}, 4}}
+2. P(P({3})) = {∅, {∅}, {{3}}, {∅, {3}}}
+   - P({3}) = {∅, {3}}
+     P({∅, {3}}) = {∅, {∅}, {{3}}, {∅, {3}}}
+
+** Problem 6
+*** Installing packages
+#+begin_src julia
+import Pkg
+try
+    using CSV, DataFrames
+    println("CSV & DataFrames available.")
+catch
+    println("Installing CSV & DataFrames (one-time)...")
+    Pkg.add("CSV")
+    Pkg.add("DataFrames")
+    Pkg.precompile()    # optional: precompile to speed later loads
+    using CSV, DataFrames
+    println("Installed and loaded.")
+end
+#+end_src
+
+*** {1} ∈ {1, {1}}
+**** Soluion 1
+#+begin_src julia :session none :results value
+[1] in [1, [1]]
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 2
+#+begin_src julia :session none :results value
+[1] ∈ [1, [1]]
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 3
+#+begin_src julia :session none :results value
+set = Set([1, (1,)])
+(1,) in set
+#+end_src
+
+#+RESULTS:
+: true
+
+*** {1} ⊂ {1, {1}}
+**** Solution 1
+#+begin_src julia :session none :results value
+all(in([1, [1]]), [1])
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 2
+#+begin_src julia :session none :results value
+set_1 = [1]
+set_2 = [1, [1]]
+
+issubset(set_1, set_2)
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 3
+#+begin_src julia :session none :results value
+set_1 = [1]
+set_2 = [1, [1]]
+
+set_1 ⊆ set_2
+#+end_src
+
+#+RESULTS:
+: true
+
+*** ∅ ∉ N
+**** Solution 1
+#+begin_src julia :session none :results value
+!([] ∈ -10:10)
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 2
+#+begin_src julia :session none :results value
+!(() in -10:10)
+#+end_src
+
+#+RESULTS:
+: true
+
+*** ∅ ⊂ N
+**** Solution 1
+#+begin_src julia :session none :results value
+N = -10:10
+empty = []
+
+issubset(empty, N)
+#+end_src
+
+#+RESULTS:
+: true
+
+**** Solution 2
+#+begin_src julia :session none :results value
+N = -10:10
+empty = []
+
+empty ⊆ N
+#+end_src
+
+#+RESULTS:
+: true
+
+*** Resources
+- [[https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols][Mathematical symbols]]
+- [[https://docs.julialang.org/en/v1/base/collections/][Julia Data Structures (Manual)]]
+
+** Problem 7
+*** Task
+Write a function in Julia that takes two sets A and B and returns the Cartesian product A×B as a set of tuples
+
+*** Solution
+#+begin_src julia :session none :results value
+set_a = Set([1, 2, 3])
+set_b = Set(['a', 'b', 'c'])
+
+function cartesian_product(set_a::Set, set_b::Set)
+    set_c = Set{Tuple}()
+
+    for a in set_a
+        for b in set_b
+            push!(set_c, (a, b))
+        end
+    end
+
+    return set_c
+end
+
+cartesian_product(set_a, set_b)
+#+end_src
+
+#+RESULTS:
+: Set(Tuple[(1, 'a'), (2, 'a'), (3, 'b'), (1, 'b'), (3, 'c'), (1, 'c'), (2, 'b'), (3, 'a'), (2, 'c')])
+
+** Problem 8
+*** Task
+Let A = {b, c, d} and B = {a, b}. Find:
+a) P(A) ∩ P(B)
+b) (A × B) \ (B × B)
+
+*** Solution
+a) P(A) = {∅, {b}, {c}, {d}, {b, c}, {c, d}, {b, d}, {b, c, d}}
+   P(B) = {∅, {a}, {b}, {a, b}}
+   P(A) ∩ P(B) = {∅, {b}}
+
+b) (A × B) = {(d, b), (c, b), (d, a), (b, a), (c, a), (b, b)}
+   (B × B) = {(a, b), (b, a), (b, b), (a, a)}
+   (A × B) \ (B × B) = {(d, b), (c, b), (d, a), (c, a)}
+** Problem 9
+*** Task
+Draw an Euler-Venn diagram for
+a) (A \ B) ∩ C
+b) A \ (B ∩ C)
+
+*** Solution
+**** a)
+- [[file:./problem-9/venn-a.py][Code]]
+- [[file:./problem-9/venn-a.png][Image]]
+
+**** b)
+- [[file:./problem-9/venn-b.py][Code]]
+- [[file:./problem-9/venn-b.png][Image]]
+
+** Problem 10
+*** Task
+Sketch the set A = [1, 3] × [1, 2] on the plane R^2. On separate drawing, shade in the sets A∁ and A∁ ∩ ([0, 2] × [0, 3]). The set A∁ denotes the complement of A (in this context, the universal set is R^2).
+
+*** Solution
+[[file:./problem-10/rectangle_A.png][Plot]]
+** Problem 11
+*** 1.
+- [1, ∞)
+- [0, ∞)
+
+*** 2.
+- ∅
+
+*** 3.
+- ∅
+
+** Problem 12
+*** Task
+Write in Julia the function that outputs the power set of a given set (without using external libraries).
+
+*** Code
+**** Solution 1 - binary
+#+begin_src julia :session none :results value
+set = Set([1, 2, 3, 4])
+
+function power_set(s::Set{T}) where T
+    elems = collect(s)
+    n = length(elems)
+    result = Vector{Set{T}}()
+
+    for mask in 0:(1 << n) - 1
+        subset = Set{T}()
+
+        for j in 1:n
+            if ((mask >> (j - 1)) & 1) == 1
+                push!(subset, elems[j])
+            end
+        end
+        push!(result, subset)
+    end
+    return result
+end
+
+power_set(set)
+#+end_src
+
+#+RESULTS:
+| Set{Int64}()      |
+| Set([4])          |
+| Set([2])          |
+| Set([4, 2])       |
+| Set([3])          |
+| Set([4, 3])       |
+| Set([2, 3])       |
+| Set([4, 2, 3])    |
+| Set([1])          |
+| Set([4, 1])       |
+| Set([2, 1])       |
+| Set([4, 2, 1])    |
+| Set([3, 1])       |
+| Set([4, 3, 1])    |
+| Set([2, 3, 1])    |
+| Set([4, 2, 3, 1]) |
+
+
+
+**** Solution 2 - recursion
+#+begin_src julia :session none :results value
+function power_set(input::Set)
+    result = Set[]
+    for item in input
+        for sub in copy(result)
+            push!(result, union(sub, Set([item])))
+        end
+        push!(result, Set([item]))
+    end
+    push!(result, Set())
+    return result
+end
+
+
+input = Set([1, 2, 3])
+power_set(input)
+#+end_src
+
+#+RESULTS:
+| Set([2])       |
+| Set([2, 3])    |
+| Set([3])       |
+| Set([2, 1])    |
+| Set([2, 3, 1]) |
+| Set([3, 1])    |
+| Set([1])       |
+| Set{Any}()     |

@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+
+# Thumbnails
+._*
+
+# Editor or IDE junk
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

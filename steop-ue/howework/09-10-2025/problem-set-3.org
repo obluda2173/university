@@ -1,0 +1,112 @@
+#+title: Problem Set 3
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-11>
+#+lastmod: <2025-10-11 18:26>
+#+options: num:t
+#+startup: overview
+
+* Problem 1
+** Task
+Prove that 3|(n^3 - n) for all n ∈ N
+
+** Solution
+*** Original
+Proposition: 3|(n^3 - n) for all n ∈ N
+
+Proof. I will prove this with mathematical induction.
+1. If n = 1, this statement is 3|(1^3 - 1) or 3|0 which is obviously true.
+2. let k > 0. I need to prove that if 3|(k^3 - k) implies 3|((k+1)^3 - (k+1))
+
+   Suppose 3|(k^3 - k). Thus, k^3 - k = 3a for some a ∈ Z.
+
+   Observe that:
+
+   (k + 1)^3 - (k + 1) = k^3 + 3k^2 + 3k + 1 - k - 1
+                       = (k^3 - k) + 3k^2 + 3k
+                       = 3a + 3k^2 + 3k
+                       = 3(a + k^2 + k)
+
+This shows that (k + 1)^3 - (k + 1) is a multiple of 3, so 3|((k+1)^3 - (k+1)) is true.
+
+I have just shown that 3|(k^3 - k) implies 3|((k+1)^3 - (k+1)).
+
+It follows by induction that 3|(k^3 - k) for all n ∈ N.
+
+*** Polished
+Proposition: 3|(n^3 - n) for all n ∈ N.
+
+Proof by induction on n.
+
+Base case: n = 1. 1^3 - 1 = 0, and 3|0. So P(1) holds.
+
+Inductive step: Assume for some k >= 1 that 3|(k^3 - k); i.e. k^3 - k = 3a for a ∈ Z. Then
+
+(k + 1)^3 - (k + 1) = k^3 + 3k^2 + 3k + 1 - (k + 1)
+                    = (k^3 - k) + 3k^2 + 3k
+
+By the induction hypothesis (k^3 - k) = 3a, so
+
+(k + 1)^3 - (k + 1) = 3a + 3k^2 + 3k
+                    = 3(a + k^2 + k)
+
+which is divisible by 3. Hence P(k) --> P(k+1). By induction the statement holds for all n >= 1.
+
+* Problem 2
+** Task
+Prove that 2^n < n! for all n >= 4.
+
+** Solution
+Proposition: 2^n < n! for all n >= 4.
+
+Proof by induction on n.
+
+Base case: n = 4. 2^4 = 8 and 4! = 24. Thus, 8 < 24. So P(4) holds.
+
+Inductive step: Assume for k >= 4 that 2^k < k!. Then
+
+2^(k+1) = 2 * 2^k < 2 * k!
+
+But for k >= 4, we have k + 1 >= 5 > 2, hence
+
+2 * k! < (k + 1) * k! = (k+1)!
+
+Thus, combining two inequalities, it gives:
+
+2^(k+1) < (k+1)!
+
+It follows by the induction that 2^n < n! for all n >= 4.
+
+* Problem 3
+** Task
+Prove that sin(nx) <= n * sin(x) for all x ∈ R and n ∈ N.
+
+** Solution
+Proposition: sin(nx) <= n * sin(x) for all x ∈ R and n ∈ N.
+
+Proof by induction.
+
+Base case: n = 1. sin(1 * x) <= 1 * sin(x), x ∈ R. So P(1) holds.
+
+Inductive step: Assume for k >= 1 that sin(kx) <= k * sin(x) for all n ∈ N. Then
+
+/Trig. identity: sin(A + B) = sin(A)cos(B) + cos(A)sin()B./
+
+sin((k+1)x) <= (k + 1) * sin(x)
+sin(x + kx) <= ksin(x) + sin(x)
+sin(x)cos(kx) + cos(x)sin(kx) <= ksin(x) + sin(x)
+
+Because cos(kx) <= 1 for x ∈ R and sin(x) >= 0, we have cos(kx)sin(x) <= 1 * sin(x) = sin(x).
+
+Also cos(x) <= 1, so
+
+sin(kx)cos(x) <= ksin(x) + sin(x) = (k + 1)sin(x)
+
+Thus, P(k) --> P(k+1). By the induction the inequality holds for all n ∈ R.
+
+* Problem 4
+* Problem 5
+* Problem 6
+* Problem 7
+* Problem 8
+* Problem 9

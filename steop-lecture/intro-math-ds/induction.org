@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-09>
-#+lastmod: <2025-10-10 18:13>
+#+lastmod: <2025-10-11 15:53>
 #+options: num:t
 #+startup: overview
 
@@ -136,4 +136,29 @@ Outline for Proof by Strong Induction
 Proof. (Strong induction)
 1. Prove the first statement S1. (Or the first several Sn, if needed.)
 2. Given any integer k > 1, prove (S1 ∧ S2 ∧ S3 ∧ ... ∧ Sk) => Sk+1.
+#+end_quote
+
+#+begin_quote
+*Proposition* Any postage of 8c or more is possible using the 3c and 5c stamps.
+
+Proof. We will use strong induction
+1. This holds for postages of 8, 9, and 10 cents: For 8c, use one 3c and one 5c stamps. For 9c, three 3c. For 10c, two 5c.
+2. Let k >= 10, and for each 8 <= m <= k, assume a postage of m cents can be obtained exactly with 3c and 5c stamps. (That assume statements S8, S9, ..., Sk are true.) We must show that Sk+1 is true, that is, (k+1) cents postage can be achieved with 3c and 5c stamps. By assumption, Sk-2 is true. Thus we can get (k-2)-cents postage with 3c and 5c stamps. Now just add one more 3c stamp and we have (k-2)+3 = k+1 cents postage with 3c and 5c.
+#+end_quote
+
+#+begin_quote
+*Proposition* If n ∈ N, then 12|(n^4 - n^2)
+
+Proof. We will prove this with strong induction.
+1. First we note that the statement is true for the first six positive integers:
+   For n = 1, 12 divides 1^4 - 1^2 = 0.         For n = 4, 12 divides 4^4 - 4^2 = 240.
+   For n = 2, 12 divides 2^4 - 2^2 = 4.         For n = 5, 12 divides 5^4 - 5^2 = 600.
+   For n = 3, 12 divides 3^4 - 3^2 = 72.        For n = 6, 12 divides 6^4 - 6^2 = 1260.
+2. For k >= 6, assume 12|(m^4 - m^2) for 1 <= m <= k (i.e. S1, S2, ..., Sk are true). We must show Sk+1 is true, that is, 12|((k-5)^4 - (k-5)^2). To simplify, put k - 5 = l so 12|(l^4 - l^2), meaning l^4 - l^2 = 12a for a ∈ Z, and k + 1 = l + 6.
+
+   (k + 1)^4 - (k + 1)^2 = (l + 6)^4 - (l + 6)^2
+                         = l^4 + 24l^3 + 216l^2 + 864l + 1296 - (l^2 + 12l + 36)
+                         = (l^4 - l^2) + 24l^3 + 216l^2 + 852l + 1260
+                         = 12a + 24l^3 + 216l^2 + 852l + 1260
+                         = 12(a + 2l^3 + 18l^2 + 71l + 105)
 #+end_quote

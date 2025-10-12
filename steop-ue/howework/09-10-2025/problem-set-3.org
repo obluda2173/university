@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-11>
-#+lastmod: <2025-10-11 18:26>
+#+lastmod: <2025-10-12 14:50>
 #+options: num:t
 #+startup: overview
 
@@ -105,8 +105,49 @@ sin(kx)cos(x) <= ksin(x) + sin(x) = (k + 1)sin(x)
 Thus, P(k) --> P(k+1). By the induction the inequality holds for all n ∈ R.
 
 * Problem 4
+** Task
+(Bernoulli inequality.) Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
+
+** Solution
+- Bernoulli inequality is basically what we are proving here.
+
+Proposition: Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
+
+Proof by induction.
+
+Basis case: n = 1. (1 + x)^n >= 1 + 1*x  <--> 1 + x = 1 + x. Thus P(1) holds.
+
+Inductive step: Assume that (1 + x)^k >= 1 + kx for some k >= 1. Since x >= -1, we have 1 + x >= 0, so multiplying inequality by (1 + x) gives:
+
+(1 + x)^k >= 1 + kx  (multiply by (1 + x))
+(1 + x)^(k + 1) >= (1 + kx)(x + 1)
+(1 + x)^(k + 1) >= x(k + 1) + 1 + x^2 * k
+
+Since k >= 1 and x >= -1 --> k * x^2 >= 0
+
+Therefore, we can drop non-negative term from the smaller side.
+
+(1 + x)^(k + 1) >= x(k + 1) + 1
+
+Hence, this shows that P(k) --> P(k+1). By induction the statement holds for all n ∈ N.
+
 * Problem 5
+** Solution
+1/k(k+1) = 1/k - 1/k+1
+
+Thus
+
+P(k) = (1/1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + ... + (1/k - 1/k+1)
+P(k) = 1/1 - 1/2 + 1/2 - 1/3 + 1/3 - 1/4 + ... + 1/k - 1/k+1
+P(k) = 1/1 - 1/k+1
+
 * Problem 6
+** Task
+Let S be a set containing n elements. Use induction to prove that |P(S)| = 2n.
+
+** Solution
+So we are basically asked for calculating the cardinality of power set of some set. Which is in simple words to show that a set that contains n elements has 2^n number of power sets.
+
 * Problem 7
 * Problem 8
 * Problem 9

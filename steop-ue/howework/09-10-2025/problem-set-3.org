@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-11>
-#+lastmod: <2025-10-13 11:50>
+#+lastmod: <2025-10-13 14:20>
 #+options: num:t
 #+startup: overview
 
@@ -15,6 +15,19 @@
 *Inductive hypothesis.* Assume that Sk is true.
 
 *Induction step.* "Proof that Sk implies Sk+1"
+
+*Conclusion.* Therefore, by induction, all the Sn are true.
+#+end_quote
+
+* Strong Induction Structure
+#+begin_quote
+*Proposition.* S1, S2, S3, ..., are all true
+
+*Base case.* "Demonstrate that S1 (or more S) is true"
+
+*Inductive hypothesis.* Assume that S1, S2, S3, ..., Sk are true.
+
+*Induction step.* "Proof that (S1, S2, S3, ..., Sk) implies Sk+1 is true"
 
 *Conclusion.* Therefore, by induction, all the Sn are true.
 #+end_quote
@@ -70,14 +83,24 @@ which is divisible by 3. Hence P(k) --> P(k+1). By induction the statement holds
 
 *Basis case.* n = 1. 1^3 - 1 = 0 or 3|0. Statement holds.
 
-*Inductive hypothesis.* Assume 3|(n^3 - n) for
+*Inductive hypothesis.* Assume 3|(k^3 - k) for k ∈ N.
 
+*Induction step.* (k^3 - k) = 3a, a ∈ N0.
+                  k^3 - k = 3a
+
+                  (k+1)^3 - (k + 1) = k^3 + 3k^2 + 3k + 1 - k - 1
+                                    = (k^3 - k) + 3k^2 + 3k + 1 - 1
+                                    = 3a + 3k^2 + 3k
+                                    = 3(a + k^2 + k)
+
+*Conclusion.* Therefore by induction, 3|(n^3 - n) for all n ∈ N.
 
 * Problem 2
 ** Task
 Prove that 2^n < n! for all n >= 4.
 
 ** Solution
+*** Original
 Proposition: 2^n < n! for all n >= 4.
 
 Proof by induction on n.
@@ -97,6 +120,24 @@ Thus, combining two inequalities, it gives:
 2^(k+1) < (k+1)!
 
 It follows by the induction that 2^n < n! for all n >= 4.
+
+*** Revision
+*Proposition.* 2^n < n! for all n >= 4.
+
+*Base case.* n = 4. 2^4 < 4! <--> 16 < 24. Statement holds.
+
+*Inductive hypothesis.* Assume 2^k < k! for k >= 4.
+
+*Induction step.* 2^k < k! (multiply by 2)
+                  2 * 2^k < 2 * k!
+                  2^(k+1) < 2 * k!
+
+                  since k + 1 >= 5, thus k + 1 > 2
+
+                  2^(k+1) < (k + 1) * k!
+                  2^(k+1) < (k + 1)!
+
+*Conclusion.* Therefore, by induction, 2^n < n! for all n >= 4.
 
 * Problem 3 [check again]
 ** Task
@@ -130,6 +171,7 @@ Thus, P(k) --> P(k+1). By the induction the inequality holds for all n ∈ R.
 (Bernoulli inequality.) Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
 
 ** Solution
+*** Original
 - Bernoulli inequality is basically what we are proving here.
 
 Proposition: Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
@@ -151,6 +193,21 @@ Therefore, we can drop non-negative term from the smaller side.
 (1 + x)^(k + 1) >= x(k + 1) + 1
 
 Hence, this shows that P(k) --> P(k+1). By induction the statement holds for all n ∈ N.
+*** Revision
+*Proposition.* (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
+
+*Basis case.* n = 1. (1 + x)^1 >= 1 + 1 * x <--> 1 + x >= 1 + x. Statement holds.
+
+*Inductive hypothesis.* Assume (1 + x)^k >= 1 + kx, for x ∈ R, x >= -1, k ∈ N.
+
+*Induction step.* (1 + x)^k >= 1 + kx  (multiply by (1 + x))
+                  (1 + x)^(k+1) >= (1 + kx)(1 + x)
+                  (1 + x)^(k+1) >= 1 + x + kx + kx^2
+                  (1 + x)^(k+1) >= x(1 + k) + 1 + kx^2
+                  (1 + x)^(k+1) >= 1 + x(k+1) + kx^2  (since x^2 and k ∈ N, kx^2 >= 0)
+                  (1 + x)^(k+1) >= 1 + x(k+1)
+
+*Conclusion.* Therefore, by induction, (1 + x)^k >= 1 + kx, for x ∈ R, x >= -1, k ∈ N.
 
 * Problem 5
 ** Solution
@@ -167,6 +224,7 @@ P(k) = 1/1 - 1/k+1
 Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
 
 ** Solution
+*** Original
 *Proposition.* Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
 
 *Base case.* n = 0, |P(S)| = 2^0 = 1. It is obviously true. Base holds.
@@ -182,15 +240,28 @@ But A is exactly P(T), so by the induction hypothesis |A| = 2^n. Define
 
 f: P(T) -> B,   f(X) = X ∪ {a}
 
+S = {∅, 1, 2, 3}
+P(S) = {∅}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}
 
+let a = 3
 
-*Conclusion.* Therefore, by the induction, all the Sn are true.
+T = {∅, 1, 2}
+
+A = {∅}, {1}, {2}, {1, 2}
+B = {3}, {1, 3}, {2, 3}, {1, 2, 3}
+
+Since B is a bijection of the A, |B| = 2^n.
+
+Thus, |P(S)| = |A| + |B| = 2^n + 2^n = 2^(n + 1)
+
+*Conclusion.* Therefore, by the induction, |P(S)| = 2^n.
 
 * Problem 7
 ** Task
 The bank has an unlimited supply of 3 and 5 euros bills. Prove that it can dispense any number of euros greater than 8 (without change).
 
 ** Solution
+*** Original
 8 = 3 * 1 + 5 * 1       10 = 3 * 0 + 5 * 2      12 = 3 * 4 + 5 * 0      14 = 3 * 3 + 5 * 1
 9 = 3 * 3 + 5 * 1       11 = 3 * 2 + 5 * 1      13 = 3 * 1 + 5 * 2      15 = 3 * 0 + 5 * 3
 
@@ -217,6 +288,24 @@ k + 1 = 3 + (k − 2) = 3 + (3a + 5b) = 3(a + 1) + 5b
 
 *Conclusion.* Because the base cases 8, 9, 10 hold, and an inductive step works for every k >= 10, by strong induction, every integer n >= 8 can be written in the form of 3a + 5b, whith a,b ∈ Z; a,b >= 0.
 
+*** Revision
+*Proposition.* If n ∈ R, n >= 8, then n = 3a + 5b, where a,b ∈ Z; a,b >= 0.
+
+*Base cases.* 8 = 3 * 1 + 5 * 1
+              9 = 3 * 3 + 5 * 0
+              10 = 3 * 0 + 5 * 2
+              Base holds.
+
+*Inductive hypothesis.* Assume k ∈ R, k >= 8, then k = 3a + 5b, where a,b ∈ Z; a,b >= 0.
+
+*Induction step.* k = 3a + 5b
+                  k + 3 = 3a + 5b + 3
+                  k + 3 = 3(a + 1) + 5b
+
+                  This shows that k + 3 can be expressed as the sum of 3s and 5s, where the number 3s has increased by one.
+
+*Conlcusion.* Since the statement is true for the base cases, and the induction step shows that P(k) --> P(k+3), the statement is true for k >= 8.
+
 * Problem 8
 ** Task
 There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them). We have already proved it in class, and now your goal is to express the proof in words.
@@ -228,16 +317,40 @@ Chess board follows the resolution of 2^n x 2^n.
 
 *Inductive hypothesis.* Let k ∈ N, and assume that if any one square is removed from a 2^k x 2^k chessboard, the result can be perfectly covered with L shaped tiles.
 
-*Induction step.* Consider 2^(k+1) x 2^(k+1) chessboard with any one square removed. Cut this chessboard in half vertically and horisontally to form 2^k x 2^k cehssboards. One of these four will have a square removed and hence by the induction hypothesis can be perfectly covered.
+*Induction step.* Consider 2^(k+1) x 2^(k+1) chessboard with any one square removed. Cut this chessboard in half vertically and horisontally to form 2^k x 2^k chessboards. One of these four will have a square removed and hence by the induction hypothesis can be perfectly covered.
 
 Next place a single L shaped tile so that it covers one from each of the other three 2ˆk x 2^k chessboards.
 
 Each of these other 2^k x 2ˆk chessboards can be perfectly covered by the inductive hypothesis, and hence 2^(k+1) x 2^(k+1) chessboard can be perfecly covered.
 
-*Conclusion.* Byb induction, for every n ∈ N, if any one square is removed from a 2^n x 2^n chessboard, the result can be perfectly covered with L shaped tiles.
+*Conclusion.* By induction, for every n ∈ N, if any one square is removed from a 2^n x 2^n chessboard, the result can be perfectly covered with L shaped tiles.
 
 * Problem 9
 ** Task
 Prove that there exists an n ∈ N for which 11|(2^n − 1).
 
 ** Solution
+** Solution
+#+begin_src julia :results output
+k = 1
+
+function S(n::Int)
+    return powermod(2, n, 11) == 1   # (2^n - 1) % 11 == 0  <=> 2^n % 11 == 1
+end
+
+while true
+    global k
+    if S(k)
+        println(k)
+        break
+    end
+    k += 1
+end
+#+end_src
+
+#+RESULTS:
+: 1
+: S (generic function with 1 method)
+: 10
+
+Therefore, 11|(2^n - 1) where n = 10.

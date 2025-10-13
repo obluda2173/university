@@ -1,0 +1,24 @@
+#+title: Direct Proof
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-13>
+#+lastmod: <2025-10-13 17:26>
+#+options: num:t
+#+startup: overview
+
+* book of proof
+** 4.0 Introduction
+- Theorem :: is a mathematical statement that is true and can be (and has been) verified as true.
+- Proof :: of a theorem is a written verification that shows that the theorem is definitely and unequivocally true.
+- Definition :: is an exact, unambigious explanation of the meaning of a mathematical word or phrase.
+
+** 4.1 Theorems
+Examples of theorem:
+
+- *Theorem* - Let f be differentiable on an open interval I and let c ∈ I. If f(c) is the maximum or minimum value of f on I, then f(c) = 0.
+- *Theorem* - Suppose f is continious on the interval [a, b]. Then f is integrable on [a, b].
+- *Theorem* - Every absolutely convergent series converges.
+
+Observe that in each of these theorems either has the conditional form "If P, then Q." or can be put into that form.
+
+* proofs james cumings

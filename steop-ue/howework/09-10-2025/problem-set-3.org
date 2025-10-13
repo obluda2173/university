@@ -2,9 +2,22 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-11>
-#+lastmod: <2025-10-13 10:11>
+#+lastmod: <2025-10-13 11:50>
 #+options: num:t
 #+startup: overview
+
+* Weak Induction Structure
+#+begin_quote
+*Proposition.* S1, S2, S3, ..., are all true
+
+*Base case.* "Demonstrate that S1 is true"
+
+*Inductive hypothesis.* Assume that Sk is true.
+
+*Induction step.* "Proof that Sk implies Sk+1"
+
+*Conclusion.* Therefore, by induction, all the Sn are true.
+#+end_quote
 
 * Problem 1
 ** Task
@@ -51,6 +64,14 @@ By the induction hypothesis (k^3 - k) = 3a, so
                     = 3(a + k^2 + k)
 
 which is divisible by 3. Hence P(k) --> P(k+1). By induction the statement holds for all n >= 1.
+
+*** Revision
+*Proposition.* 3|(n^3 - n) for all n ∈ N.
+
+*Basis case.* n = 1. 1^3 - 1 = 0 or 3|0. Statement holds.
+
+*Inductive hypothesis.* Assume 3|(n^3 - n) for
+
 
 * Problem 2
 ** Task
@@ -216,3 +237,7 @@ Each of these other 2^k x 2ˆk chessboards can be perfectly covered by the induc
 *Conclusion.* Byb induction, for every n ∈ N, if any one square is removed from a 2^n x 2^n chessboard, the result can be perfectly covered with L shaped tiles.
 
 * Problem 9
+** Task
+Prove that there exists an n ∈ N for which 11|(2^n − 1).
+
+** Solution

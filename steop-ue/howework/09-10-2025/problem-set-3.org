@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-11>
-#+lastmod: <2025-10-12 14:50>
+#+lastmod: <2025-10-13 10:11>
 #+options: num:t
 #+startup: overview
 
@@ -65,7 +65,7 @@ Base case: n = 4. 2^4 = 8 and 4! = 24. Thus, 8 < 24. So P(4) holds.
 
 Inductive step: Assume for k >= 4 that 2^k < k!. Then
 
-2^(k+1) = 2 * 2^k < 2 * k!
+2^(k+1) < 2 * k!
 
 But for k >= 4, we have k + 1 >= 5 > 2, hence
 
@@ -77,7 +77,7 @@ Thus, combining two inequalities, it gives:
 
 It follows by the induction that 2^n < n! for all n >= 4.
 
-* Problem 3
+* Problem 3 [check again]
 ** Task
 Prove that sin(nx) <= n * sin(x) for all x ∈ R and n ∈ N.
 
@@ -143,11 +143,76 @@ P(k) = 1/1 - 1/k+1
 
 * Problem 6
 ** Task
-Let S be a set containing n elements. Use induction to prove that |P(S)| = 2n.
+Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
 
 ** Solution
-So we are basically asked for calculating the cardinality of power set of some set. Which is in simple words to show that a set that contains n elements has 2^n number of power sets.
+*Proposition.* Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
+
+*Base case.* n = 0, |P(S)| = 2^0 = 1. It is obviously true. Base holds.
+
+*Inductive hypothesis.* Suppose for some n >= 0 the statement holds: for every set with n elements has 2^n subsets.
+
+*Induction step.* Let S be any set with n + 1 elements. Pick a particular element a ∈ S and write T := S \ {a}. Then |T| = n. Every subset of S either contains a or does not. So partition P(S) into:
+
+- A = {X ⊆ S: a ∉ X}
+- B = {X ⊆ S: a ∈ X}
+
+But A is exactly P(T), so by the induction hypothesis |A| = 2^n. Define
+
+f: P(T) -> B,   f(X) = X ∪ {a}
+
+
+
+*Conclusion.* Therefore, by the induction, all the Sn are true.
 
 * Problem 7
+** Task
+The bank has an unlimited supply of 3 and 5 euros bills. Prove that it can dispense any number of euros greater than 8 (without change).
+
+** Solution
+8 = 3 * 1 + 5 * 1       10 = 3 * 0 + 5 * 2      12 = 3 * 4 + 5 * 0      14 = 3 * 3 + 5 * 1
+9 = 3 * 3 + 5 * 1       11 = 3 * 2 + 5 * 1      13 = 3 * 1 + 5 * 2      15 = 3 * 0 + 5 * 3
+
+*Proposition.* If n ∈ R, n >= 8, then n = 3a + 5b, where a,b ∈ Z; a,b >= 0.
+
+*Base cases.* In the induction step I will need 3 cases prior. Therefore
+              Let a = 1, b = 1, then 3 * 1 + 5 * 1 = 8.
+              Let a = 1, b = 1, then 3 * 3 + 5 * 0 = 9.
+              Let a = 1, b = 1, then 3 * 0 + 5 * 2 = 10.
+              Base holds.
+
+*Inductive hypothesis.* Assume that for some integer k >= 10, the result holds for
+                        n = 10, 11, ..., k.
+
+*Induction step.* I aim to prove the result for k + 1. By the inductive hypothesis.
+
+I must show k + 1 has the same form.
+
+(k + 1) - 3 = k - 2
+
+Since k >= 10, we have k - 2 >= 8. By the inductive hypothesis k - 2 = 3a + 5b
+
+k + 1 = 3 + (k − 2) = 3 + (3a + 5b) = 3(a + 1) + 5b
+
+*Conclusion.* Because the base cases 8, 9, 10 hold, and an inductive step works for every k >= 10, by strong induction, every integer n >= 8 can be written in the form of 3a + 5b, whith a,b ∈ Z; a,b >= 0.
+
 * Problem 8
+** Task
+There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them). We have already proved it in class, and now your goal is to express the proof in words.
+
+** Solution
+Chess board follows the resolution of 2^n x 2^n.
+
+*Base case.* The base case is when n = 1, and among the four possible squares that one can remove from a 2x2 chessboard, each leaves a chessboard which can be perfectly covered by the single L shaped tile.
+
+*Inductive hypothesis.* Let k ∈ N, and assume that if any one square is removed from a 2^k x 2^k chessboard, the result can be perfectly covered with L shaped tiles.
+
+*Induction step.* Consider 2^(k+1) x 2^(k+1) chessboard with any one square removed. Cut this chessboard in half vertically and horisontally to form 2^k x 2^k cehssboards. One of these four will have a square removed and hence by the induction hypothesis can be perfectly covered.
+
+Next place a single L shaped tile so that it covers one from each of the other three 2ˆk x 2^k chessboards.
+
+Each of these other 2^k x 2ˆk chessboards can be perfectly covered by the inductive hypothesis, and hence 2^(k+1) x 2^(k+1) chessboard can be perfecly covered.
+
+*Conclusion.* Byb induction, for every n ∈ N, if any one square is removed from a 2^n x 2^n chessboard, the result can be perfectly covered with L shaped tiles.
+
 * Problem 9

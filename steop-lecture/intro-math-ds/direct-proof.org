@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-13 17:26>
+#+lastmod: <2025-10-14 09:23>
 #+options: num:t
 #+startup: overview
 
@@ -22,3 +22,57 @@ Examples of theorem:
 Observe that in each of these theorems either has the conditional form "If P, then Q." or can be put into that form.
 
 * proofs james cumings
+** Working from Definitions
+#+begin_quote Definition 1.1
+- An integer n is even if n = 2k for some integer k;
+- An integer n is odd if n = 2k + 1 for some integer k.
+#+end_quote
+
+#+begin_quote Fact 1.1
+The sum of integers is an integer, the difference of integers is an integer, and the product of integers is an integer. Also, every integer is either even or odd.
+#+end_quote
+
+#+begin_quote
+*Proposition.* The sum of two even integers is even.
+
+*Proof.* Assume that n and m are even integers. By Definition 1.1 this means that n = 2a and m = 2b, for some integers a and b. Then,
+
+n + m = 2a + 2b = 2(a + b).
+
+And since, by Fact 1.1, a + b is an integer too, we have shown that n + m = 2k, where k = a + b is an integer. Therefore, by Definition 1.1, this means that n + m is even.
+#+end_quote
+
+#+begin_quote
+*Proposition.* The sum of two odd integers is even.
+
+*Proof.* Assume that n and m are odd integers. By Definition 1.1, this means that n = 2a + 1 and m = 2b + 1, for some integers a and b. Then,
+
+n + m = (2a + 1) + (2b + 1) = 2a + 2b + 2 = 2(a + b + 1)
+
+And since, by fact 1.1, a + b + 1 is an integer too, we have shown that n + m = 2k, where k = a + b + 1 is an integer. Therefore,  by Definition 1.1, this means that n + m is even.
+#+end_quote
+
+#+begin_quote
+*Proposition.* If n is an odd integer, then n^2 is an odd integer.
+
+*Proof.* Assume that n is an odd integer. By Definition 1.1 this means that n = 2a + 1, for some integer a. Then,
+
+n^2 = (2a + 1)^2 = 4a^2 + 4a + 1 = 2(2a + 2a) + 1.
+
+And since, by Fact 1.1 2a^2 + 2a = 2 * a * a + 2 * a is an integer too, we have shown that n^2 = 2k + 1, where k = 2a^2 + 2a is an integer. Therefore, by Definition 1.1 this means that n^2 is odd.
+#+end_quote
+
+
+#+begin_quote
+*Proposition.* P --> Q
+
+*Proof.* Assume P.
+
+"An explanation of what P means" <--- Apply definitions and/or other results.
+- apply algebra, logic, techniques
+"Hey look, that's what Q means"
+
+Therefore Q.
+#+end_quote
+
+** Proofs by Cases

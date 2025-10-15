@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-14 09:23>
+#+lastmod: <2025-10-15 09:15>
 #+options: num:t
 #+startup: overview
 
@@ -22,7 +22,7 @@ Examples of theorem:
 Observe that in each of these theorems either has the conditional form "If P, then Q." or can be put into that form.
 
 * proofs james cumings
-** Working from Definitions
+** 2.1 Working from Definitions
 #+begin_quote Definition 1.1
 - An integer n is even if n = 2k for some integer k;
 - An integer n is odd if n = 2k + 1 for some integer k.
@@ -75,4 +75,46 @@ And since, by Fact 1.1 2a^2 + 2a = 2 * a * a + 2 * a is an integer too, we have 
 Therefore Q.
 #+end_quote
 
-** Proofs by Cases
+** 2.2 Proofs by Cases
+The proof by cases is a "divide and conquer" strategy where one breaks up their work into two or more cases.
+
+#+begin_quote
+*Proposition.* If n is an integerm then n^2 + n + 6 is even.
+
+*Proof idea.* The idea lies in the principle of dividing the possible values of n into odd and even numbers.
+
+*Proof.* Assume that n is an integer. Then n is either even or odd.
+
+Case 1: n is even. Then n = 2a for some integer a. Thus,
+
+n^2 + n + 6 = (2a)^2 + (2a) + 6
+            = 4a^2 + 2a + 6
+            = 2(2a^2 + a + 3).
+
+and since a is an integer, 2a^2 + a + 3 is also an integer. Therefore, n^2 + n + 6 = 2k, where k = 2a^2 + a + 3 is an integer, which is by the definition of an even integer means that n^2 + n + 6 is even.
+
+Case 2: n is odd. Then n = 2a + 1 for some integer a. Thus,
+
+n^2 + n + 6 = (2a + 1)^2 + (2a + 1) + 6
+            = 4a^2 + 4a + 1 + 2a + 1 + 6
+            = 4a^2 + 6a + 8
+            = 2(2a^2 + 3a + 4).
+
+and since a is an integer, 2a^2 + 3a + 4 is also an integer. Therefore, n^2 + n + 6 = 2k, where k = 2a^2 + 3a + 4 is an integer, which is by the definition of an even integer means that n^2 + n + 6 is even.
+
+I have shown that n^2 + n + 6 is even whether n is even or odd. Combined, this shows that n^2 + n + 6 is even for all integers n, completing the proof.
+#+end_quote
+
+Here are 3 examples that I might encounter in the future:
+
+1. Case 1: n is prime
+   Case 2: n is composite
+
+2. Case 1: f is continious
+   Case 2: f is not continious
+
+3. Case 1. n ≡ 0 (mod 3)
+   Case 2. n ≡ 1 (mod 3)
+   Case 3. n ≡ 2 (mod 3)
+
+** 2.4 Divisibiility

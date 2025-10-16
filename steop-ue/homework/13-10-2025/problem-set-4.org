@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-14>
-#+lastmod: <2025-10-15 08:30>
+#+lastmod: <2025-10-16 09:40>
 #+options: num:t
 #+startup: overview
 
@@ -124,8 +124,7 @@ a. 0.1212.. + 0.122122..
 b. 0.33.. + 0.44..
 
 ** Solution
-
-
+*** a.
 * Problem 6
 ** Task
 

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-14>
-#+lastmod: <2025-10-16 09:40>
+#+lastmod: <2025-10-17 06:35>
 #+options: num:t
 #+startup: overview
 
@@ -125,10 +125,28 @@ b. 0.33.. + 0.44..
 
 ** Solution
 *** a.
+0.1212.. + 0.122122.. = 12/99 + 122/999
+lcm(99, 999) = 10989
+
+Thus,
+111 * 12/99 + 11 * 122/999 = 1332/10989 + 1342/10989
+                           = 2674/10989
+                           = 0.243334...
+*** b.
+0.33.. * 0.44.. = 3/9 * 4/9
+                = 12/81
+                = 4/27
+                = 0.148...
+
 * Problem 6
 ** Task
+Find digits a and b such that (o.aa..)^(1/2) = 0.bb..
 
 ** Solution
+1. a = 0, b = 0
+2. a = 1, b = 3
+3. a = 4, b = 6
+4. a = 9, b = 9
 
 * Problem 7
 ** Task
@@ -137,10 +155,29 @@ b. 0.33.. + 0.44..
 
 * Problem 8
 ** Task
+a. gcd(10223; 33341)
+b. gcd(2n + 1; 3n + 2)
 
 ** Solution
+a. 33341 = 10223 * 3 + 2672
+   10223 = 2672 * 3 + 2207
+   2672 = 2207 * 1 + 465
+   2207 = 465 * 4 + 347
+   465 = 347 * 1 + 118
+   347 = 118 * 2 + 111
+   116 = 111 * 1 + 5
+   111 = 5 * 22 + 1
+   5 = 1 * 5 + 0
+
+   Thus, 1
+b. 1
 
 * Problem 9
 ** Task
+Convert (110 1001 0101 1011)2 to decimal representation. Without converting, can you know for sure whether this number is greater than 2^15?
 
 ** Solution
+1. 26971
+2. Smaller
+   - Last digit can represent sign, making number less or equal to 2^14
+   - Obviously smaller, since the number is 15 bits long and not the maximum number (since not all bit equal to 1)

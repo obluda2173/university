@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-16 11:49>
+#+lastmod: <2025-10-17 16:01>
 #+options: num:t
 #+startup: overview
 
@@ -268,4 +268,26 @@ Some examples:
 1. If p !| a, then gcd(p,a) = 1.
 2. if a | bc and gcd(a,b) = 1, then a | c.
 3. if p | bc, then p | b or p | c (or both).
+#+end_quote
+
+*Proof Idea for 1.* The divisors of p are p, -p, 1 and -1. Therefore, these four numbers are the only possible common divisors between p and a. The question is: Which of these also divides a? And among ones which do, which is targest?
+
+|---------+---------+---------+---------|
+| *-p*    | *-1*    | *1*     | *p*     |
+|---------+---------+---------+---------|
+| is not  | is a    | is a    | is not  |
+| common  | common  | common  | common  |
+| divisor | divisor | divisor | divisor |
+| with a  | with a  | with a  | with a  |
+|---------+---------+---------+---------|
+Along the two which are common divisors, we can see that 1 is the greatest.
+
+*Proof Idea for 2.* In this part we need a tool. A tool that connects integers to their gcd ... and Bezout's identity will do just that!
+
+*Proof Idea for 2.* Part 3 turns out to be just a mixture of parts 1 and 2. So once those are proven, we will ba able to unite their powers to give us.
+
+#+begin_quote
+*Proof.* Assume that a, b, c are integers, and p is a prime.
+
+*Proof of 1.* Assume that p does not divide a. To be a common divisor of a an dp means that you mist divide both of them, but since we are assuming taht n does not divide a, this also means taht p is not a common divisor of a and p. And since p is not a common divisor of a and o
 #+end_quote

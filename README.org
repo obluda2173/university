@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-14 10:36>
+#+lastmod: <2025-10-17 16:04>
 #+options: num:t
 #+startup: overview
 
@@ -39,3 +39,4 @@ Note: homework organized by date. Use the date folder to find submitted solution
 - [[file:./steop-ue/homework/06-10-2025][06-10-2025]]
 - [[file:./steop-ue/homework/09-10-2025][09-10-2025]]
 - [[file:./steop-ue/homework/13-10-2025][13-10-2025]]
+- [[file:./steop-ue/homework/16-10-2025][16-10-2025]]

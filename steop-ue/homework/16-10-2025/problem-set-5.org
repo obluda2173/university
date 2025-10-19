@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-19 14:55>
+#+lastmod: <2025-10-19 15:35>
 #+options: num:t
 #+startup: overview
 
@@ -71,14 +71,33 @@ Thus, gcd((n^2 - n + 1), (n^2 + 1)) = 1. Meaning, (n^2 - n + 1)/(n^2 + 1) is irr
 
 Thus d|1, so d = 1. Therefore, gcd((n^2 - n + 1), (n^2 + 1)) = 1, and the fraction is irreducible.
 
-* Problem 3
+* Problem 3 [DONE]
 ** Task
+Prove that if n is an odd integer, then n^2 ≡ 1 (mod 8).
+
 ** Solution
+*CLaim.* If n is odd, n ∈ N, then n^2 ≡ 1 (mod 8).
+
+*Proof.* Let n = 2k + 1, for k ∈ N, k >= 0.
+         Then, (2k + 1)^2 = 4k^2 + 4k + 1
+         4k^2 + 4k + 1 = 4(k^2 + k) + 1
+
+         But 2|(k^2 + k), as
+         (k^2 + k) = k(k + 1) (a product of 2 consequitive integers)
+         k(k + 1) = 2m, m ∈ Z.
+
+         Therefore,
+         n^2 = 4 * 2m + 1
+         n^2 = 8m + 1 ≡ 1 (mod 8).
+
+         Thus every odd n satisfies n^2 ≡ 1 (mod 8).
 
 * Problem 4
 ** Task
+Find the remainder from the division of 2^2025 by 11.
 
 ** Solution
+
 
 * Problem 5
 ** Task

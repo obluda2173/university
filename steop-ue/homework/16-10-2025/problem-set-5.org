@@ -1,0 +1,168 @@
+#+title: Problem Set 5
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-17>
+#+lastmod: <2025-10-19 14:01>
+#+options: num:t
+#+startup: overview
+
+* Problem 1
+** Task
+Find gcd(11...1, 11...1)
+            n       m
+
+** Solution
+*** With substitution
+Let n = 3, m = 4
+
+Therefore, gcd(111, 1111) =
+
+1111 = 111 * 10 + 1
+111 = 1 * 111 + 0
+
+11111 = 111 * 100 + 11
+111 = 11 * 10 + 1
+
+111111 = 111 * 1000 + 111
+111 = 111 * 1 + 0
+
+111111 = 11 * 10000 + 1111
+11 = 1111 * 1 - 1100
+1111 = -1100 *
+
+*** With n
+
+* Problem 2
+** Task
+Find all n ∈ N for which the fraction (n^2 - n + 1)/(n^2 + 1)
+
+** Notes
+- What exactly does this mean a fraction being irreducible?
+- How am I supposed to find answer of all n values
+
+** Solution
+
+* Problem 3
+** Task
+** Solution
+
+* Problem 4
+** Task
+
+** Solution
+
+* Problem 5
+** Task
+
+** Solution
+
+* Problem 6
+** Task
+
+** Solution
+
+* Problem 7
+** Task
+
+** Solution
+
+* Problem 8
+** Task
+
+** Solution
+
+* Problem 9
+** Task
+Prove that there exists an n ∈ N for which 11 | (2^n − 1).
+
+** Solution
+#+begin_src julia :results output
+function get_n()
+    n = 1
+
+    while true
+        if (2^n - 1) % 11 == 0
+            println(n)
+            break
+        end
+        n += 1
+    end
+end
+
+get_n()
+
+#+end_src
+
+#+RESULTS:
+: get_n (generic function with 1 method)
+: 10
+
+* Problem 10 [DONE]
+** Task
+Prove that there exists a power of 3 that ends with the digits 001. (In other words, 3n = ...001 for some n ∈ N.)
+
+** Solution
+#+begin_src julia :results output
+function is_wanted(num::BigInt)
+    if num > 1000 && num % 1000 == 1
+        return true
+    end
+    return false
+end
+
+function get_num()
+    i = 1
+    while true
+        n = BigInt(3)^i
+        if is_wanted(n)
+            println("Number is: 3^$i = ", n)
+            break
+        end
+        i += 1
+    end
+end
+
+get_num()
+#+end_src
+
+#+RESULTS:
+: is_wanted (generic function with 1 method)
+: get_num (generic function with 1 method)
+: Number is: 3^100 = 515377520732011331036461129765621272702107522001
+
+* Problem 11 [DONE]
+** Task
+A natural number is called perfect if it is equal to the sum of all its divisors. For example, 28 is perfect, because 28 = 1 + 2 + 4 + 7 + 14. Find all perfect numbers under 10000.
+
+** Solution
+#+begin_src julia :results output
+function is_perfect_natural(num::Int)
+    arr = Int[]
+
+    for i in 1:1:num / 2
+        if num % i == 0
+            push!(arr, i)
+        end
+    end
+    return num == sum(arr)
+end
+
+function get_perfect_naturals()
+    limit = 10000
+    arr = Int[]
+
+    for i in 1:1:limit
+        if (is_perfect_natural(i))
+            push!(arr, i)
+        end
+    end
+    return arr
+end
+
+println(get_perfect_naturals())
+#+end_src
+
+#+RESULTS:
+: is_perfect_natural (generic function with 1 method)
+: get_perfect_naturals (generic function with 1 method)
+: [6, 28, 496, 8128]

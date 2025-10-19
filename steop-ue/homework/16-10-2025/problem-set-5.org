@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-19 14:01>
+#+lastmod: <2025-10-19 14:55>
 #+options: num:t
 #+startup: overview
 
@@ -32,15 +32,44 @@ Therefore, gcd(111, 1111) =
 
 *** With n
 
-* Problem 2
+* Problem 2 [DONE]
 ** Task
-Find all n ∈ N for which the fraction (n^2 - n + 1)/(n^2 + 1)
+Find all n ∈ N for which the fraction (n^2 - n + 1)/(n^2 + 1) is irreduciable.
 
 ** Notes
 - What exactly does this mean a fraction being irreducible?
-- How am I supposed to find answer of all n values
+  When the fraction can not be simplified any further.
+- How am I supposed to find answer of all n values?
+  Answer is basically a number set.
+- Maybe I can check how it works for even and odd values of n?
+  Not working
+- No, I should try to use gcd((n^2 - n + 1), (n^2 + 1)) = 1
 
 ** Solution
+*** Original
+Let a = (n^2 - n + 1)
+and b = (n^2 + 1)
+
+Since a/b is irreducible, that implies gcd(a, b) = 1.
+
+gcd((n^2 - n + 1), (n^2 + 1)) = 1
+
+(n^2 - n + 1) = (n^2 + 1) * 1 - n
+              = n^2 - n + 1
+(n^2 + 1) = (-n)^2 + 1
+-n = 1 * (-n) + 0
+
+Thus, gcd((n^2 - n + 1), (n^2 + 1)) = 1. Meaning, (n^2 - n + 1)/(n^2 + 1) is irreduciable for all n ∈ N.
+
+*** Polished
+*Claim.* For n ∈ N, (n^2 - n + 1)/(n^2 + 1) is irreduciable.
+
+*Proof.* Let d = gcd((n^2 - n + 1), (n^2 + 1)).
+         Then, d | (n^2 - n + 1)-(n^2 + 1) = n.
+         Hence, d|n and d|n^2. But, d|(n^2 + 1). Therefore, d divides
+         (n^2 + 1) - n^2 = 1.
+
+Thus d|1, so d = 1. Therefore, gcd((n^2 - n + 1), (n^2 + 1)) = 1, and the fraction is irreducible.
 
 * Problem 3
 ** Task
@@ -71,7 +100,7 @@ Find all n ∈ N for which the fraction (n^2 - n + 1)/(n^2 + 1)
 
 ** Solution
 
-* Problem 9
+* Problem 9 [DONE]
 ** Task
 Prove that there exists an n ∈ N for which 11 | (2^n − 1).
 

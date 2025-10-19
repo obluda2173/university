@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-19 20:46>
+#+lastmod: <2025-10-19 21:26>
 #+options: num:t
 #+startup: overview
 
@@ -153,6 +153,11 @@ Solve the equation x^2 - 16y = 3, where x, y ∈ Z.
 Find all p ∈ N such that p, p + 10, and p + 14 are prime numbers.
 
 ** Solution
+- p is even
+  If p = 2, p + 10 = 12, which is not prime. So p must be odd.
+
+- p is odd
+
 
 * Problem 8 [DONE]
 ** Task

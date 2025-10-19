@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-19 15:35>
+#+lastmod: <2025-10-19 20:46>
 #+options: num:t
 #+startup: overview
 
@@ -92,15 +92,54 @@ Prove that if n is an odd integer, then n^2 ≡ 1 (mod 8).
 
          Thus every odd n satisfies n^2 ≡ 1 (mod 8).
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
 Find the remainder from the division of 2^2025 by 11.
 
 ** Solution
+*** Revision of congruence
+**** General
+a ≡ b (mod n)
 
+- This means that both a and b have same remainder if divided by n.
+- a = kn + b
+- n|(a - b)
+
+**** Congruences properties
+1. Compatability with addition/substraction:
+   If a ≡ b (mod m) and c ≡ d (mod m), then
+        a + c ≡ b + d (mod m)
+        a - c ≡ b - d (mod m)
+
+2. Compatability with multiplication:
+   If a ≡ b (mod m) and c ≡ d (mod m), then
+        a * c ≡ b * d (mod m)
+
+3. Exponentiation rule:
+   If a ≡ b (mod m), then for every integer r >= 1,
+        a^r ≡ b^r (mod m)
+
+4. Splitting exponents:
+   For integers u, v, r,
+        a^(uv+r) = (a^u)^v * a^r
+
+*** Original
+2^2025 = (2^10)^202 * 2^5
+
+FML:
+Since 11 is prime, then,
+2^10 ≡ 1 (mod 11)
+
+(2^10) ≡ 1 (mod 11)                     (raise to the power of 202 - exponentiation rule)
+(2^10)^202 ≡ 1^202 (mod 11)             (multiply by integer 2^5 - multiplication rule)
+(2^10)^202 * 2^5 ≡ 1^202 * 2^5 (mod 11) (simplify)
+2^2025 ≡ 2^5 (mod 11)                   (simplify)
+2^2025 ≡ 32 (mod 11)
+2^2025 ≡ 10 (mod 11)
 
 * Problem 5
 ** Task
+Solve the equation x^2 - 16y = 3, where x, y ∈ Z.
 
 ** Solution
 
@@ -111,13 +150,19 @@ Find the remainder from the division of 2^2025 by 11.
 
 * Problem 7
 ** Task
+Find all p ∈ N such that p, p + 10, and p + 14 are prime numbers.
 
 ** Solution
 
-* Problem 8
+* Problem 8 [DONE]
 ** Task
+It is October today. What are the chances that, in 250 months’ time, people will be swimming in the Danube?
 
 ** Solution
+250 + 10 = 260 (starting from January)
+260 % 12 = 8
+8 month is August
+Thus, highly likely.
 
 * Problem 9 [DONE]
 ** Task

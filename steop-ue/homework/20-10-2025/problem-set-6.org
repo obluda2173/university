@@ -2,12 +2,14 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-20 19:44>
+#+lastmod: <2025-10-20 19:52>
 #+options: num:t
 #+startup: overview
 
 * Problem 1
 ** Task
+In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
+
 ** Solution
 * Problem 2
 ** Task

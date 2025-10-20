@@ -1,0 +1,41 @@
+#+title: Problem Set 6
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-20>
+#+lastmod: <2025-10-20 19:44>
+#+options: num:t
+#+startup: overview
+
+* Problem 1
+** Task
+** Solution
+* Problem 2
+** Task
+** Solution
+* Problem 3
+** Task
+** Solution
+* Problem 4
+** Task
+** Solution
+* Problem 5
+** Task
+** Solution
+* Problem 6
+** Task
+** Solution
+* Problem 7
+** Task
+** Solution
+* Problem 8
+** Task
+** Solution
+* Problem 9
+** Task
+** Solution
+* Problem 10
+** Task
+** Solution
+* Problem 11
+** Task
+** Solution

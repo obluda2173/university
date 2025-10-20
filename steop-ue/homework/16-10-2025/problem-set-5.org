@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-19 21:26>
+#+lastmod: <2025-10-20 14:25>
 #+options: num:t
 #+startup: overview
 
@@ -143,10 +143,151 @@ Solve the equation x^2 - 16y = 3, where x, y ∈ Z.
 
 ** Solution
 
-* Problem 6
+* Problem 6 [DONE]
 ** Task
+Prove that a number whose decimal representation contains three 1 and several 0 can not be a perfect square.
+
+** Notes
+*** Understanding perfect squares and prime factorisation
+*What is a perfect square?*
+A *perfect square* is a number that can be expressed as as n^2 for some integer n.
+
+Examples:
+- 4 = 2^2
+- 9 = 3^2
+- 16 = 4^2
+- 36 = 6^2
+
+*The Fundamental Theorem of Arithmetics*
+/Every integer greater than 1 can be expressed uniquely as a product of prime numbers./
+
+Example:
+- 12 = 2^2 * 3
+- 60 = 2^2 * 3 * 5
+- 100 = 2^2 * 5^2
+
+*Main question* Why must exponents be even for perfect square?
+Lets imagine a perfect square be N = n^2 for n ∈ Z.
+First, let's factor n itself using primes. n = n1^(a1) * n2^(a2) * n3^(a3) * n4^(a4) * ...
+
+N = n^2 = (n1^(a1) * n2^(a2) * n3^(a3) * n4^(a4) * ...)^2
+N = n^2 = n1^(2a1) * n2^(2a2) * n3^(2a3) * n4^(2a4) * ...
+
+Notice that all powers are multiples of 2.
+
+*Conclusion.* When n is a perfect square, all exponents of its prime factorisation are even.
 
 ** Solution
+*** Original
+Let the number whose decimal representation contains three 1 and several 0, be expressed as:
+        N = 10^q + 10^r + 10^s
+        q > r > s.
+
+Factor out the smaller power of 10:
+        N = 10^s * (10^(q-s) + 10^(r-s) + 1) = 10^s * M
+        where M = 10^(q-s) + 10^(r-s) + 1
+
+Notice that for any k ∈ N, 2|10^k and 5|10^k. Thus,
+        10^k ≡ 0 (mod 2), 10^k ≡ 0 (mod 5).
+
+Hence, notice that:
+        M ≡ 0 + 0 + 1 ≡ 1 (mod 2)
+        M ≡ 0 + 0 + 1 ≡ 1 (mod 5)
+
+Therefore, M is not divisible by 2 and is not divisible by 5.
+Thus the only contributors of primes 2 and 5 to the prime factorisation should come from 10^r = 2^r * 5^r.
+
+For N to be a perfect square, all its prime factors should have even exponents.
+
+N = 10^s * M = 2^s * 5^s * M.
+Therefore, s = 2t, t ∈ Z
+
+Therefore, two cases:
+
+1. s is even.
+2. s is odd.
+
+1. Case 1 - s is even
+   N = 10^s * M = 10^(2t) * M
+   N = (10^t)^2 * M
+
+   In order for N to be a perfect square, M should also be a perfect square.
+
+   M = 10^(q-s) + 10^(r-s) + 1: a = q-s; b = r-s.
+   M = 10^a + 10^b + 1
+
+*** New approach
+Let the number whose decimal representation contains three 1 and several 0, be exressed as:
+        N = 10^a + 10^b + 10^c
+        where
+        a > b > c
+
+Now we would like to split the number into 2 parts:
+        N = 10^c * (10^(a-c) + 10^(b-c) + 1)
+
+        let M = 10^(a-c) + 10^(b-c) + 1
+        then, N = 10^c * M
+
+Since the perfect squares' factors have even exponents:
+        N = 10^c * M
+        N = (2^(2t) * 5^(2t)) * M
+
+        Therefore, M should be perfect square.
+
+Perfect squares have the property of having remainder patterns for specific modules. For module 9 they are: 0, 1, 4, 7.
+        Let r = a - c, q = b - c. (for M)
+        M = 10^r + 10^q + 1 ≡ 1 + 1 + 1 ≡ 3 (mod 9)
+        Therefore M is not a perfect square.
+
+Thus, the number whose decimal representation contains three 1 and several 0 can not be a perfect square.
+
+*** Last approach
+**** Lemmas
+***** Fundametnal Theory of Arithmetics
+  Each number can be expressed as a unique product of prime numbers.
+***** Square <--> Even Exponents
+An integes is a perfect square iff in its prime factorisation every prime has an even exponent.
+***** Congruence of powers of 10 mod 9
+10 ≡ 1 (mod 9), so 10^k ≡ 1 (mod 9) for all k.
+***** Quadratic residues mod 9.
+The only possible residues of a perfect square modulo 9 are {0, 1, 4, 7}
+**** Proof
+Let the number whose decimal representation contains three 1 and several 0, be exressed as:
+        N = 10^a + 10^b + 10^c
+        where
+        a > b > c
+
+Factor out 10^c:
+        N = 10^c * (10^(a-c) + 10^(b-c) + 1)
+
+        let M = 10^(a-c) + 10^(b-c) + 1
+        then, N = 10^c * M
+
+Case 1: c is odd
+        Notice that for k ∈ N, 2|10^k and 5|10^k. Thus,
+        10^k ≡ 0 (mod 2) and 10^k ≡ 0 (mod 5).
+
+        Hence,
+        M ≡ 0 + 0 + 1 ≡ 1 (mod 2)
+        M ≡ 0 + 0 + 1 ≡ 1 (mod 5)
+
+        This means that M is not divisible by 2 and is not divisible by 5.
+        Therefore it means that it can not contribute exponents of 2 and 5.
+
+        Since c is odd (10^c = 2^c * 5^c) and M does not contribute 2 or 5, this leaves 2 and 5 from 10^c having odd exponents. Since perfect square requires all prime factors to have even exponents, N can not be a berfect square.
+
+Case 2: c is even
+        Let c = 2t. Then, 10^c = (10^t)^2 is a perfect square.
+        For N to be a perfect square, M should also be a perfect square.
+        Perfect square modules of 9 are either 0, 1, 4 or 7.
+
+        Let r = a - c, q = b - c.
+        Since 10 ≡ 1 (mod 9)
+        M = 10^(r) + 10^(q) + 1 ≡ 1 + 1 + 1 ≡ 3 (mod 9)
+
+        Since 3 ∉ {0, 1, 4, 7}, therefore, M is not a perfect square.
+
+Conclusion: In both cases, N can not be a perfect square.
 
 * Problem 7
 ** Task
@@ -157,7 +298,6 @@ Find all p ∈ N such that p, p + 10, and p + 14 are prime numbers.
   If p = 2, p + 10 = 12, which is not prime. So p must be odd.
 
 - p is odd
-
 
 * Problem 8 [DONE]
 ** Task

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-20 17:55>
+#+lastmod: <2025-10-20 18:37>
 #+options: num:t
 #+startup: overview
 
@@ -395,7 +395,7 @@ Every integer is has remainder 0, 1 or 2 when divided by 3.
 
 - *Case 3:* p ≡ 2 (mod 3)
   - p ≡ 2 (mod 3)
-  - p + 10 ≡ 2 + 1 ≡ 1 (mod 3) -> p + 10 is divisible by 3
+  - p + 10 ≡ 2 + 1 ≡ 0 (mod 3) -> p + 10 is divisible by 3
   - p + 14 ≡ 2 + 2 ≡ 1 (mod 3)
 
 *Conclusion:* In every case, one of {p, p+10, p+14} is divisible by 3.

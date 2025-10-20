@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-20 14:25>
+#+lastmod: <2025-10-20 17:05>
 #+options: num:t
 #+startup: overview
 
@@ -137,7 +137,7 @@ Since 11 is prime, then,
 2^2025 ≡ 32 (mod 11)
 2^2025 ≡ 10 (mod 11)
 
-* Problem 5
+* Problem 5 [IN PROGRESS]
 ** Task
 Solve the equation x^2 - 16y = 3, where x, y ∈ Z.
 
@@ -289,15 +289,63 @@ Case 2: c is even
 
 Conclusion: In both cases, N can not be a perfect square.
 
-* Problem 7
+* Problem 7 [IN PROGRESS]
 ** Task
 Find all p ∈ N such that p, p + 10, and p + 14 are prime numbers.
 
 ** Solution
-- p is even
-  If p = 2, p + 10 = 12, which is not prime. So p must be odd.
+*** Original
+Let p = 2, then we have: 2, 12, 16. 12 = 3 * 4 not prime.
+Let p = 3, then we have: 3, 13, 17. All prime.
+Let p = 5, then we have: 5, 15, 19. 15 = 3 * 5 not a prime.
+Let p = 7, then we have: 7, 17, 21. 21 = 3 * 7 not a prime.
+Let p = 11, then we have: 11, 21, 25. 21 = 3 * 7 not a prime.
+Let p = 13, then we have: 13, 23, 27. 27 = 3 * 9 not a prime.
 
-- p is odd
+{12, 15, 21, 21, 27}
+For some reason in all of the cases, there are always a multiple of 3 number in each case.
+This mean that among p, p+10 and p+14 is a multiple of 3.
+
+Modulo 3 always gives the remainder of 0, 1, 2.
+
+Let 3|p, then,
+p+10 ≡ 1 (mod 3)
+p+14 ≡ 2 (mod 3)
+
+However, if p > 3, then p can not be divisible by 3, as otherwise, it would not be a prime number. But since as noticed before one of the numbers is divisible by 3, the only option for p to be prime is p = 3.
+
+*** Polished
+*Testing small values:*
+- p = 2, then we have: 2, 12, 16. 12 = 3 * 4 not prime.
+- p = 3, then we have: 3, 13, 17. All prime.
+- p = 5, then we have: 5, 15, 19. 15 = 3 * 5 not a prime.
+- p = 7, then we have: 7, 17, 21. 21 = 3 * 7 not a prime.
+
+Notice that one of the numbers is always divisible by 3.
+
+*Proof that one of {p, p+10, p+14} is always divisible by 3*
+Every integer is has remainder 0, 1 or 2 when divided by 3.
+
+- *Case 1:* p ≡ 0 (mod 3)
+  - p ≡ 0 (mod 3) -> p is divisible by 3
+  - p + 10 ≡ 0 + 1 ≡ 1 (mod 3)
+  - p + 14 ≡ 0 + 2 ≡ 2 (mod 3)
+
+- *Case 2:* p ≡ 1 (mod 3)
+  - p ≡ 1 (mod 3)
+  - p + 10 ≡ 1 + 10 ≡ 2 (mod 3)
+  - p + 14 ≡ 1 + 14 ≡ 0 (mod 3) -> p + 14 is divisible by 3
+
+- *Case 3:* p ≡ 2 (mod 3)
+  - p ≡ 2 (mod 3)
+  - p + 10 ≡ 2 + 1 ≡ 1 (mod 3) -> p + 10 is divisible by 3
+  - p + 14 ≡ 2 + 2 ≡ 1 (mod 3)
+
+*Conclusion:* In every case, one of {p, p+10, p+14} is divisible by 3.
+
+For all to be prime, the number is divisible by 3, must equal 3 itself.
+
+Therefore, p = 3 is the only solution.
 
 * Problem 8 [DONE]
 ** Task

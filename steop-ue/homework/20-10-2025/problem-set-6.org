@@ -2,26 +2,91 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-21 10:23>
+#+lastmod: <2025-10-21 13:44>
 #+options: num:t
 #+startup: overview
 
-* Problem 1
+* Problem 1 [IN PROGRESS]
 ** Task
 In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
 
 ** Solution
 
+* Problem 2 [DONE]
+** Task
+How many 10-digit numbers are there in which there are at least two identical digits?
 
-* Problem 2
-** Task
 ** Solution
-* Problem 3
+*** If with 0
+If the problem does not involve numbers with 0 at the start it complicates problem drastically.
+
+I will assume that 0 can be at the start.
+
+Again, 10^10 of all possible lists.
+
+10! ways to organise number with no repeated digit.
+
+Thus, 10^10 - 10!
+
+*** If without 0
+We have a range of all possible lists of 9000000000 (9999999999 - 1000000000 + 1).
+
+Lists with no repetition: 9 * 9!.
+
+Thus, 9 * 10^9 - 9 * 9!
+
+* Problem 3 [DONE]
 ** Task
+How many permutations of the letters ABCDEFGH contain the string 'ABC'?
+
 ** Solution
+Uhhh, so...
+
+Lets imagine the list of ((A, B, C), D, E, F, G, H).
+
+We will stick A, B, C together, like it is a list within a list.
+
+We can imagine it to move around like this:
+
+((A, B, C), D, E, F, G, H)
+(D, (A, B, C), E, F, G, H)
+(D, E, (A, B, C), F, G, H)
+(D, E, F, (A, B, C), G, H)
+(D, E, F, G, (A, B, C), H)
+(D, E, F, G, H, (A, B, C))
+
+Here we can notice that (A, B, C) had a total of a 6 positions inside of the list.
+
+Next we can imagine other letters to rearange with stationary (A, B, C):
+
+((A, B, C), E, D, F, G, H)
+((A, B, C), E, F, D, G, H)
+((A, B, C), E, F, G, D, H)
+((A, B, C), E, F, G, H, D)
+...
+
+This gives us a hint to see a shuffle in letters part as a separate permitation that we can find out.
+
+List (E, D, F, G, H) has a total of 5 objects. No repetitions are allowed, so the total amount of lists is 5!.
+
+Therefore, combining two small steps into one we get 6 * 5! of total lists having (A, B, C) in order.
+
 * Problem 4
 ** Task
+Are there more seven-digits numbers that contain the digit 1, or more that don't?
+
 ** Solution
+I have the feeling that I might better work it out by substracting the numbers that do not contain 1 from the all lists
+
+Ok, first of all I can calculate total amount of lists by:
+
+
+
+10^8 - 10^7 = 90000000.
+
+
+or we can imagine a some kind of empty array with
+
 * Problem 5
 ** Task
 ** Solution
@@ -37,9 +102,24 @@ In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are the
 * Problem 9
 ** Task
 ** Solution
-* Problem 10
+* Problem 10 [DONE]
 ** Task
+How many 6 digits numbers have strictly decreasing digits from left to right?
+For example 987654.
+
 ** Solution
+Maybe we can look on it as an array:
+
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+from which we need to remove 4 digits.
+
+So looking on it from different angle, we can rephrase it as:
+
+Find all combinations of 4 digits with no repetition.
+
+10C4
+
 * Problem 11
 ** Task
 ** Solution

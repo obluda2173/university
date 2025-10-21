@@ -1,0 +1,45 @@
+#+title: Relations
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-21>
+#+lastmod: <2025-10-21 09:29>
+#+options: num:t
+#+startup: overview
+
+* Book of proof
+** 11.1 Relations
+#+begin_quote
+*Definition 11.1* A relation on a set A is a subset R ∈ A x A. We often abbreviate the statement (x, y) ∈ R as xRy. The statement (x, y) ∉ R is abbreviated x!Ry.
+#+end_quote
+
+#+begin_quote
+*Example 11.1* Let A = {1, 2, 3, 4}, and consider the following set:
+
+R = {(1, 1), (2, 1), (2, 2), (3, 3), (3, 2), (3, 1), (4, 4), (4, 3), (4, 2), (4, 1)} ⊆ A x A.
+
+The set R is a relation on A, by the definition 11.1. Since (1, 1) ∈ R, we have 1R1. Similarly, 2R1 and 2R2, and so on. However, notice that (3, 4) ∉ R, so 3!R4. Observe that R is the familiar relation >= for the set A.
+#+end_quote
+
+#+begin_quote
+*Example 11.2* Let A = {1, 2, 3, 4}, and consider the following set:
+
+R = {(1, 1), (1, 3), (3, 1), (2, 2), (3, 3), (2, 4), (4, 4), (4, 2)} ⊆ A x A.
+
+Here we have 1S1, 1S3, 4S2, etc., but 3!S4 and 2!S1. What does this mean? Think of it as meaning "has the same parity as." Thus 1S1 reads "1 has the same parity as 1," and 42 reads "4 has the same parity as 2".
+#+end_quote
+
+#+begin_quote
+*Example 11.3* Consider realtion R and S of the previos two examples. Note that R∩S = {(1, 1), (2, 2), (3, 3), (3, 1), (4, 4), (4, 2)} ⊆ A x A is a relation on A.
+
+The expression x(R∩S)y means "x >= y, and has the same parity as y."
+
+#+end_quote
+
+#+begin_quote
+*Example 11.4* Let B ] {0, 1, 2, 3, 4, 5}, and consider the following set:
+
+U = {(1, 3), (3, 3), (5, 2), (2, 5), (4, 2)} ⊆ B x B.
+
+The relation U is a relation on B because U ⊆ B x B. You may be hard-pressed to invent any "meaning" for this particular relation. A relation does not have to have any meaning, Any random subset of B x B is a relation on B, whether or not is describes anything familiar.
+
+#+end_quote

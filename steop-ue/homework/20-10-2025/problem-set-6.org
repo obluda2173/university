@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-21 16:30>
+#+lastmod: <2025-10-21 17:16>
 #+options: num:t
 #+startup: overview
 
@@ -168,9 +168,24 @@ Therefore, 9000000 - 4251528 = 4748472 lists with digit '1' being an object in i
 * Problem 5
 ** Task
 ** Solution
-* Problem 6
+* Problem 6 [DONE]
 ** Task
+Find the coefficient of x^4 in (2x^3 - 1/x^2)^8
+
 ** Solution
+(2x^3 - 1/x^2)^8 = (2x^3 - x^-2)^8
+
+3 * (8 - i) - 2 * (i) = 4
+24 - 3i - 2i = 4
+i = 4
+
+Therefore,
+... + 8C4 * (2x^3)^4 * (-x^-2)^4 + ...
+... + 70 * 16x^12 * x^-8 + ...
+... + 1120x^4 + ...
+
+Thus, coefficient of x^4 is equal to 1120.
+
 * Problem 7
 ** Task
 ** Solution

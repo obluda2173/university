@@ -2,9 +2,49 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-21 13:44>
+#+lastmod: <2025-10-21 16:30>
 #+options: num:t
 #+startup: overview
+
+* Counting notes
+** What are permutations?
+- Permutation :: is the number of arrangements from a set of n items taken k at a time, where the order of arrengement matters. It's represented as P(n, k) or nPk.
+
+The formula of permutation is: P(n, k) = n! / (n - k)!
+
+So, when we start to select the objects starting from n, we go like this:
+
+n, n-1, n-2, ..., 1   (each number relate to the number of possible object choice at that moment)
+
+When we have to find the all lists with the lenght of the choice list, with no repetition in values we basically go from n * n-1 * n02 * ... * 1.
+
+However, when we need to find lists with certain length we won't need to multiply any further n - k, where k is the length of the wanted list.
+
+Therefore,
+
+n! / (n - k)!
+
+where (n - k)! stands for the multiplications of numbers from 1 to (n - k) (multiplications that we don't need.)
+
+** What are combinations?
+- Combination :: is a numebr of subsets that can be made from a larger set. It's represented as C(3, 4).
+
+Putting into a simple words, a combination is a permutation, but with no rearanged lists. Meaning while there are:
+
+[1, 2, 3]
+[2, 3, 1]
+[3, 2, 1]
+...
+
+there is only one
+
+[1, 2, 3]
+
+in combinations.
+
+Notice that there are always k! repetitions of a same list in permutations. Therefore, to get rid of them in combinations we simply divide all permutations by k!!:
+
+C(n, k) = n! / (n - k)! * k!
 
 * Problem 1 [IN PROGRESS]
 ** Task
@@ -71,21 +111,59 @@ List (E, D, F, G, H) has a total of 5 objects. No repetitions are allowed, so th
 
 Therefore, combining two small steps into one we get 6 * 5! of total lists having (A, B, C) in order.
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
 Are there more seven-digits numbers that contain the digit 1, or more that don't?
 
 ** Solution
-I have the feeling that I might better work it out by substracting the numbers that do not contain 1 from the all lists
+*** Notes
+Well, we have
 
-Ok, first of all I can calculate total amount of lists by:
+from
+1000000 to
+9999999
+
+maybe we can go through all cases like
+[1] [?] [?] [?] [?] [?] [?]
+
+or maybe we can go like this:
+
+from 1000000 to 1999999 is 999999
+from ?100000 to ?199999 is 99999
+from ??10000 to ??19999 is 9999
+from ???1000 to ???1999 is 999
+from ????100 to ????199 is 99
+from ?????10 to ?????19 is 9
+from ??????0 to ??????1 is 1
+
+so it becomes
+999999 + 99999 + 9999 + 999 + 99 + 9 + 1 = 1,111,105
 
 
+Calculate the number of lists of length 7 that do not consist of digit 1.
 
-10^8 - 10^7 = 90000000.
+Its a permutation.
 
+Therefore,
 
-or we can imagine a some kind of empty array with
+9^6 * 8 = 4251528 (how many numbers that do not include digit 1) (* 8 since the first digit can not be equal to 0 and 1)
+
+total amount of lists is 9000000
+
+therefore, 9000000 - 4251528 = 4748472
+
+*** Polished
+We better start by calculating the amount of cases when there are no digit 1 in the list of 7 digits.
+
+This would be
+        8 * 9^6 = 4251528
+
+8 because the first digit can not be 0 and 1
+9^6 because calculating all lists containing 7 objects (with repetitions)
+
+We have a range of all possible lists of 9000000 (9999999 - 100000 + 1).
+
+Therefore, 9000000 - 4251528 = 4748472 lists with digit '1' being an object in it.
 
 * Problem 5
 ** Task
@@ -116,9 +194,19 @@ from which we need to remove 4 digits.
 
 So looking on it from different angle, we can rephrase it as:
 
-Find all combinations of 4 digits with no repetition.
+Find all combinations of 4 digits with no repetition that we can remove from the array.
 
-10C4
+This way we will go though all the lists without changing the descending order.
+
+To be even more accurate, we don't even work with the ordered numbers. We work with the numbers that we remove from the list, since they are bijective to the descneding order numbers.
+
+Therefore, we can do a combination calculation:
+
+10! / (10 - 4)! * 4!
+
+** TODO
+- [X] Not very sure of why exaclty did the answer from the Problem 10 is a combination and not a permutation. Specifically, not getting why combinations, since they do not store the rearanged combinations.
+  - Got it, we don't need the rearanged removed objects, since that does not make any sense to remove the objects in different objects.
 
 * Problem 11
 ** Task

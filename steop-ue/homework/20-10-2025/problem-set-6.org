@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-21 17:16>
+#+lastmod: <2025-10-22 14:51>
 #+options: num:t
 #+startup: overview
 
@@ -186,15 +186,85 @@ Therefore,
 
 Thus, coefficient of x^4 is equal to 1120.
 
-* Problem 7
+* Problem 7 [IN PROGRESS]
 ** Task
+Let p be prime and 0 <= k <= p. Prove that p|(p k).
+
 ** Solution
+(p k) is basically
+
+(p k) = p! / (p - k)! * k!
+
 * Problem 8
 ** Task
 ** Solution
-* Problem 9
+* Problem 9 [DONE]
 ** Task
+How many permutations of the 26 letters of the English alphabet do not contain any of the strings 'math', 'love', 'quiz'?
+
 ** Solution
+*** Notes
+**** Silly
+- What does the question really mean?
+   I think it meant to find the number of lists (permutations) in which there would be no 'substrings' of 'math', 'love' and 'quiz'.
+
+It does not look like there are any repeating letters in those words, so I would say I understood the question right.
+
+Question also did not specify whether the words can come in that specific order or not. So I would assume it to be free. (no word sequence)
+
+All of the words are of length 4, with total of 12 letters, which leaves us with 14 'floating' letters.
+
+Maybe this question can be solved like the question 3?
+
+I think it is obvious that I shall find the possibilities fo the list having all of the three words and substract it from all lists.
+
+All lists size is 26!
+
+I imagine it like this:
+
+((m,a,t,h),(l,o,v,e),(q,u,i,z),b,c,d,f,g,j,k,n,p,r,s,w,x,y)
+
+I mean, I can find the number of lists that form exactly one word.
+
+That would be:
+26 - 4 = 22! of all lists with no math in it.
+
+Word 'math' can be located in 23 locations.
+
+Therefore, 23 * 22! = 23! - all lists with word math in it.
+
+Same for all of them ('love' aand 'quiz')
+
+I have the feeling that 23! might be an answer, since when there is a 'math' substring inside of the list, there can also be placed both 'love' and 'quiz'.
+
+*** Solution
+Here I will use the Iclusion-Exclusion Principle.
+- |A u B u C| = |A| + |B| + |C| - |A ∩ B| - |B ∩ C| - |A ∩ C| + |A ∩ B ∩ C|
+  It can be presented in Venn diagram.
+
+The idea is to find the number of permutations for all cases, such as:
+- 1 word present
+- 2 words present
+- 3 words present
+
+(in permutations, we will consider a word to be one object in a list instead of 4 seperate letters)
+
+*Permutations for 1 word:*
+        (1 + (26 - 4))! = 23!
+
+*Permutations for 2 word:*
+        (2 + (26 - 8))! = 20!
+
+*Permutations for 3 word:*
+        (3 + (26 - 12))! = 17!
+
+*Total permutations:* 26!
+
+Therefore,
+
+answer = 26! - (3 * 23! - 3 * 20! + 17!)
+       = 26! - 3 * 23! + 3 * 20! - 17!
+
 * Problem 10 [DONE]
 ** Task
 How many 6 digits numbers have strictly decreasing digits from left to right?

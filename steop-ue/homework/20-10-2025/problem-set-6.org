@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-22 21:01>
+#+lastmod: <2025-10-22 21:43>
 #+options: num:t
 #+startup: overview
 
@@ -246,7 +246,7 @@ Therefore,
 
 Thus, coefficient of x^4 is equal to 1120.
 
-* Problem 7 [IN PROGRESS]
+* Problem 7 [DONE]
 ** Task
 Let p be prime and 1 <= k <= p. Prove that p|(p k).
 
@@ -254,6 +254,18 @@ Let p be prime and 1 <= k <= p. Prove that p|(p k).
 (p k) is basically
 
 (p k) = p! / (p - k)! * k!
+
+(p k) * (p - k)! * k! = p!
+
+(p k) * (p - k)! * k! = p * (p-1)!
+
+Therefore, p|((p k) * (p - k)! * k!) or p|LHS
+
+- k! = 1 * 2 * ... * k, where k < p
+- (p-k)! = 1 * 2 * ... * (p-k), where (p-k) < p
+  (remember that p is prime, thus can not be represented as any product)
+
+Therefore, as neither k! and (p-k)! contribute the p factor to the LHS, (p k) must be a multiple of p.
 
 * Problem 8
 ** Task

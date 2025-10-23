@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-23 10:03>
+#+lastmod: <2025-10-23 11:03>
 #+options: num:t
 #+startup: overview
 
@@ -383,6 +383,64 @@ Therefore, we can do a combination calculation:
 - [X] Not very sure of why exaclty did the answer from the Problem 10 is a combination and not a permutation. Specifically, not getting why combinations, since they do not store the rearanged combinations.
   - Got it, we don't need the rearanged removed objects, since that does not make any sense to remove the objects in different objects.
 
-* Problem 11
+* Problem 11 [DONE]
 ** Task
+Let m, n ∈ N. How many solutions does the equation
+        x1 + x2 + ... xm = n
+have if
+1. all xi are nonegative integer numbers.
+2. all xi are natural numbers?
+
+/Hint. If you are not confident in your solution, try verifying particular cases for small values of m and n./
+
 ** Solution
+*** Original
+**** 1.
+Let x1, x2, ..., xm be sme boxes, and we have n number of abstract 1's.
+
+Therefore, we can regard this problem as /stars and bars/ type of problem.
+
+Thus, we have a total number of n+m-1 elements (boxes and 1's).
+
+Thus, we have to choose m-1 elements (bars) from the list of elements of size n+m-1.
+
+Therefore, the answer is (n+m-1)C(m-1)
+
+**** 2.
+Let x1, x2, ..., xm be sme boxes, and we have n number of abstract 1's.
+
+In this case, we are not allowed to put zero 1's into the box.
+
+Therefore, the total number of elements would be reduced by m. (We imagine putting 1 item to all boxes.)
+
+Thus, we have a total number of n+m-1-m = n-1.
+
+Thus, we have to choose the same m-1 elements from the list of elements of size n-1.
+
+Therefore, the answer is (n-1)C(m-1).
+
+*** Polished
+**** 1. Nonnegative Integer Solutions
+I use the start and bars method. Consider n indistinguishable objects (stars) to be among m distinguishable boxes (variables x1, x2, ..., xm).
+
+To represent distribution, I arrente n stars and m-1 separators in a sequence. Each arrengemenr corresponds to a unique solution.
+
+- The stars before first bar represent x1.
+- The stars between first and last bars represent x2, x3, ..., x(m-1).
+- The stars after last bar represent xm.
+
+The total number of positions in this arrengement is n+(m-1) (stars + bars).
+
+I choose m-1 positions in this arrangement n+m-1 positions for the bars.
+
+Answer: (n+m-1)C(m-1).
+
+**** Positive Integer Solutions
+Since each of xi must be at least 1, I allocate one unit to each of the m variables. This accounts for m unite of the total n.
+
+The remaining n-m units can be distributed freely among the m variables as nonnegative integers.
+
+By part 1, the number of ways to distribute n-m units among m variables (with nonnegative integer values) is:
+        (n-m+m-1)C(m-1) = (n-1)C(m-1)
+
+Answer: (n-1)C(m-1).

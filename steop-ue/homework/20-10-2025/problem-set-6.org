@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-23 11:03>
+#+lastmod: <2025-10-23 11:24>
 #+options: num:t
 #+startup: overview
 
@@ -46,11 +46,21 @@ Notice that there are always k! repetitions of a same list in permutations. Ther
 
 C(n, k) = n! / (n - k)! * k!
 
-* Problem 1 [IN PROGRESS]
+* Problem 1 [DONE]
 ** Task
 In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
 
 ** Solution
+Let B be the number of boys, and G be the number of girls.
+
+- Each boy knows 32 girls: total aquaintances = 32B.
+- Each girl knows 29 boys: total aquaintances = 29G.
+
+Since both count the same edges, so 32B = 29G.
+
+Hence G/B = 32/29 = 1,10345.
+
+So there are more girls, about 1.10345 times.
 
 * Problem 2 [DONE]
 ** Task

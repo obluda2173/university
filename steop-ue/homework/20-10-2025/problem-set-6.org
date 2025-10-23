@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-22 21:43>
+#+lastmod: <2025-10-23 10:03>
 #+options: num:t
 #+startup: overview
 
@@ -267,9 +267,27 @@ Therefore, p|((p k) * (p - k)! * k!) or p|LHS
 
 Therefore, as neither k! and (p-k)! contribute the p factor to the LHS, (p k) must be a multiple of p.
 
-* Problem 8
+* Problem 8 [DONE]
 ** Task
+Prove if n and m are integers with 1 <= m <= n, then m * nCm = n * (n-1)C(m-1). (Try to provide a combinatorial proof as well as an algebraic one.)
+
 ** Solution
+*** Algebraic
+m * nCm = n * (n-1)C(m-1)
+
+m*n! / ((n-m)!(m)!) = n(n-1)! / ((n-m)!(m-1)!)
+
+n! / ((n-m)!(m-1)!) = n! / ((n-m)!(m-1)!)
+
+*** Combinatorial
+m * nCm = n * (n-1)C(m-1)
+
+- LHS: counts ways to choose m items from n items, from these m items, chooses the special one.
+
+- RHS: chooses the special item from all n items, then chooses the remaining m-1 items from n-1 items in total.
+
+Both count the same thing, the number of ways to select m items from n, where one of the m items is designated as special.
+
 * Problem 9 [DONE]
 ** Task
 How many permutations of the 26 letters of the English alphabet do not contain any of the strings 'math', 'love', 'quiz'?

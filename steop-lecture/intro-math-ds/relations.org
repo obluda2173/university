@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-21>
-#+lastmod: <2025-10-22 09:08>
+#+lastmod: <2025-10-23 14:36>
 #+options: num:t
 #+startup: overview
 
@@ -44,11 +44,44 @@ The relation U is a relation on B because U ⊆ B x B. You may be hard-pressed t
 #+end_quote
 
 ** 11.2 Properties of Relations
-A relational expression xRy is an open sentence; it is either true or false. For example, 5 < 10 is true, while 10 < 5 is false. Since relational expression have T/F falies, we can combine them with logical operators; for example, xRy --> yRx is a statement or open sentence whose truth or falsity may depend on x and y.
+A relational expression xRy is an open sentence; it is either true or false. For example, 5 < 10 is true, while 10 < 5 is false. Since relational expression have T/F values, we can combine them with logical operators; for example, xRy --> yRx is a statement or open sentence whose truth or falsity may depend on x and y.
 
 #+begin_quote
 *Definition 11.2* Suppose R is a relation on set A.
 1. Relation R is reflexive if xRx for every x ∈ A.
    That is, R is reflexive if ∀x ∈ A, xRx.
-2.
+
+2. Relation R is symmetric if xRy implies yRx for all x,y ∈ A.
+   That is R is symetric if ∀x,y ∈ A, xRy --> yRx.
+
+3. Relation is transitive if whenever xRy and yRz, them also xRz.
+   That is R is transitive if ∀x,y,z ∈ A, ((xRy)∧(yRz)) --> yRx.
+#+end_quote
+
+|------------------+-----+------+-----+-----+------+------|
+| *Realtions on Z* | *<* | *<=* | *=* | *I* | *!I* | *!=* |
+|------------------+-----+------+-----+-----+------+------|
+| *Reflexive*      | no  | yes  | yes | yes | no   | no   |
+| *Symmetric*      | no  | no   | yes | no  | no   | yes  |
+| *Transitive*     | yes | yes  | yes | yes | no   | no   |
+|------------------+-----+------+-----+-----+------+------|
+#+begin_quote
+*Example 11.7* A = {b, c, d, e}, and R is the following relation on A:
+R = {(b,b), (b,c), (c,b), (c,c), (d,d), (b,d), (d,b), (c,d), (d,c)}.
+
+This relation is *not reflexive*, for although bRb, cRc, and dRd, it is not true taht eRe. For relation to be reflexive, xRx must be true for all x ∈ A.
+
+
+The relation R *is symmetric*, because whenever we have xRy, it follows that yRx too.
+
+(b,c) and (c,b); (b,d) and (d,b); (c,d) and (d,c).
+
+However, if we take out any of them, R would stop being symmetric.
+
+
+The relation R *is also transitive*, but it takes some work to check it.
+
+We must check that the statement (xRy ∧ yRz) --> xRz is true for all x,y,z ∈ A.
+
+For example, taking x = b, y = c, z = d, we have (bRd ∧ dRc) --> bRc is true.
 #+end_quote

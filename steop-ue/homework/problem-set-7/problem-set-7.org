@@ -1,0 +1,53 @@
+#+title: Problem Set 7
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-24>
+#+lastmod: <2025-10-24 10:33>
+#+options: num:t
+#+startup: overview
+
+* Problem 1
+** Task
+Define R on Z a mRn <--> 2|(m^2 + n^2) for all m,n ∈ Z. Is R an equivalence relation?
+
+** Solution
+A relation R is an equivalence relation if it is reflexive, symmetric and transitive.
+
+
+
+* Problem 2
+** Task
+** Solution
+* Problem 3
+** Task
+** Solution
+* Problem 4
+** Task
+** Solution
+* Problem 5
+** Task
+** Solution
+* Problem 6
+** Task
+** Solution
+* Problem 7
+** Task
+** Solution
+* Problem 8
+** Task
+** Solution
+* Problem 9
+** Task
+** Solution
+* Problem 10
+** Task
+** Solution
+* Problem 11
+** Task
+** Solution
+* Problem 12
+** Task
+** Solution
+* Problem 13
+** Task
+** Solution

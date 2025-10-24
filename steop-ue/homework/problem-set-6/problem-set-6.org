@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-24 09:06>
+#+lastmod: <2025-10-24 09:10>
 #+options: num:t
 #+startup: overview
 
@@ -175,7 +175,7 @@ We have a range of all possible lists of 9000000 (9999999 - 100000 + 1).
 
 Therefore, 9000000 - 4251528 = 4748472 lists with digit '1' being an object in it.
 
-* Problem 5 [DONE]
+* Problem 5 [DONE] [CHECHED]
 ** Task
 Give a proof of the Binomial Theorem by induction on n.
 

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-21>
-#+lastmod: <2025-10-24 11:58>
+#+lastmod: <2025-10-24 20:41>
 #+options: num:t
 #+startup: overview
 
@@ -156,6 +156,8 @@ Lastly, if ~ is an equivalence relation and a ∈ A, define the equivalence clas
 #+end_quote
 
 #+begin_quote
-*Definition 9.4.* A /relation/ on a set A is any ordered relationship between pairs of elements of A
+*Definition 9.4.* A /relation/ on a set A is any ordered relationship between pairs of elements of A for which the pair is either /related/ or is /not related/. If a,b ∈ A, we denote a ~ b is a is related to b, and a !~ b if a is not related to b.
 
+Lastly, if ~ is a relation and a ∈ A, define the /class containing/ a to be the set
+        {b ∈ A: a~b}
 #+end_quote

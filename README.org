@@ -2,12 +2,12 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-24 10:27>
+#+lastmod: <2025-10-24 21:27>
 #+options: num:t
 #+startup: overview
 
 * Overview
-  This file is the single index for the repository. Use it to quickly jump to lecture notes, code, books and homework. All links are relative to the repository root.
+This file is the single index for the repository. Use it to quickly jump to lecture notes, code, books and homework. All links are relative to the repository root.
 
 * Quick navigation
 - [[file:steop-lecture/intro-math-ds][steop-lecture/]] — lecture notes.
@@ -25,13 +25,6 @@
 - [[file:steop-lecture/intro-math-ds/logic.org][logic.org]]
 - [[file:steop-lecture/intro-math-ds/induction.org][induction.org]]
 - [[file:steop-lecture/intro-math-ds/direct-proof.org][direct-proof.org]]
-
-** Julia
-*** [[file:steop-lecture/julia/julia-notes.org][julia-notes.org]]
-Code examples:
-- [[file:steop-lecture/julia/code/hello_worlds.jl][hello_worlds.jl]]
-- [[file:steop-lecture/julia/code/types-and-variables.jl][types-and-variables.jl]]
-- [[file:steop-lecture/julia/code/abstract-types-and-multiple-dispatch.jl][abstract-types-and-multiple-dispatch.jl]]
 
 * steop-ue/homework
 Note: homework organized by date. Use the date folder to find submitted solutions and figures.

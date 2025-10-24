@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-23 11:24>
+#+lastmod: <2025-10-24 09:06>
 #+options: num:t
 #+startup: overview
 
@@ -46,7 +46,7 @@ Notice that there are always k! repetitions of a same list in permutations. Ther
 
 C(n, k) = n! / (n - k)! * k!
 
-* Problem 1 [DONE]
+* Problem 1 [DONE] [CHECKED]
 ** Task
 In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
 
@@ -62,7 +62,7 @@ Hence G/B = 32/29 = 1,10345.
 
 So there are more girls, about 1.10345 times.
 
-* Problem 2 [DONE]
+* Problem 2 [DONE] [CHECKED]
 ** Task
 How many 10-digit numbers are there in which there are at least two identical digits?
 
@@ -85,7 +85,7 @@ Lists with no repetition: 9 * 9!.
 
 Thus, 9 * 10^9 - 9 * 9!
 
-* Problem 3 [DONE]
+* Problem 3 [DONE] [CHECKED]
 ** Task
 How many permutations of the letters ABCDEFGH contain the string 'ABC'?
 
@@ -121,7 +121,7 @@ List (E, D, F, G, H) has a total of 5 objects. No repetitions are allowed, so th
 
 Therefore, combining two small steps into one we get 6 * 5! of total lists having (A, B, C) in order.
 
-* Problem 4 [DONE]
+* Problem 4 [DONE] [CHECKED]
 ** Task
 Are there more seven-digits numbers that contain the digit 1, or more that don't?
 
@@ -238,7 +238,7 @@ therefore, we shall add both equations
         ... + nCn * x^(n-n) * y^(n),
         for all n ∈ N.
 
-* Problem 6 [DONE]
+* Problem 6 [DONE] [CHECKED]
 ** Task
 Find the coefficient of x^4 in (2x^3 - 1/x^2)^8
 
@@ -256,7 +256,7 @@ Therefore,
 
 Thus, coefficient of x^4 is equal to 1120.
 
-* Problem 7 [DONE]
+* Problem 7 [DONE] [CHECKED]
 ** Task
 Let p be prime and 1 <= k <= p. Prove that p|(p k).
 
@@ -277,7 +277,7 @@ Therefore, p|((p k) * (p - k)! * k!) or p|LHS
 
 Therefore, as neither k! and (p-k)! contribute the p factor to the LHS, (p k) must be a multiple of p.
 
-* Problem 8 [DONE]
+* Problem 8 [DONE] [CHECKED]
 ** Task
 Prove if n and m are integers with 1 <= m <= n, then m * nCm = n * (n-1)C(m-1). (Try to provide a combinatorial proof as well as an algebraic one.)
 
@@ -393,7 +393,7 @@ Therefore, we can do a combination calculation:
 - [X] Not very sure of why exaclty did the answer from the Problem 10 is a combination and not a permutation. Specifically, not getting why combinations, since they do not store the rearanged combinations.
   - Got it, we don't need the rearanged removed objects, since that does not make any sense to remove the objects in different objects.
 
-* Problem 11 [DONE]
+* Problem 11 [DONE] [CHECKED]
 ** Task
 Let m, n ∈ N. How many solutions does the equation
         x1 + x2 + ... xm = n

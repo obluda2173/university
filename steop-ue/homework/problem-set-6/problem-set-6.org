@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-24 09:10>
+#+lastmod: <2025-10-24 09:23>
 #+options: num:t
 #+startup: overview
 
@@ -298,7 +298,7 @@ m * nCm = n * (n-1)C(m-1)
 
 Both count the same thing, the number of ways to select m items from n, where one of the m items is designated as special.
 
-* Problem 9 [DONE]
+* Problem 9 [DONE] [CHECKED]
 ** Task
 How many permutations of the 26 letters of the English alphabet do not contain any of the strings 'math', 'love', 'quiz'?
 

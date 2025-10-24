@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-21>
-#+lastmod: <2025-10-23 14:36>
+#+lastmod: <2025-10-24 11:58>
 #+options: num:t
 #+startup: overview
 
@@ -59,7 +59,7 @@ A relational expression xRy is an open sentence; it is either true or false. For
 #+end_quote
 
 |------------------+-----+------+-----+-----+------+------|
-| *Realtions on Z* | *<* | *<=* | *=* | *I* | *!I* | *!=* |
+| *Relations on Z* | *<* | *<=* | *=* | *I* | *!I* | *!=* |
 |------------------+-----+------+-----+-----+------+------|
 | *Reflexive*      | no  | yes  | yes | yes | no   | no   |
 | *Symmetric*      | no  | no   | yes | no  | no   | yes  |
@@ -84,4 +84,78 @@ The relation R *is also transitive*, but it takes some work to check it.
 We must check that the statement (xRy ∧ yRz) --> xRz is true for all x,y,z ∈ A.
 
 For example, taking x = b, y = c, z = d, we have (bRd ∧ dRc) --> bRc is true.
+#+end_quote
+
+** 11.3 Equivalence Relations
+#+begin_quote
+*Definition 11.3* A relation R on set A is an *equivalence relation* if it is reflexive, symmetric and transitive.
+#+end_quote
+
+* proofs james cummings
+** 9.1 Equivalence Relations
+Consider modular arithmetics:
+
+        -2 ≡ 3 (mod 5)
+         3 ≡ 3 (mod 5)
+         8 ≡ 3 (mod 5)
+        13 ≡ 3 (mod 5)
+
+Since, -2, 3, 8, 13 are all equivalen tto 3 (mod 5), there is an equivalence of sorts between these numbers. This can be seen if we flip the order and get:
+
+        3 ≡ -2 (mod 5)
+        3 ≡  3 (mod 5)
+        3 ≡  8 (mod 5)
+        3 ≡ 13 (mod 5)
+
+Furthermore, -2 ≡ 3 (mod 5) and 3 ≡ 13 (mod 5), show that both -2 and 13 are congruent to 3 (modulo 5), but more than that, they are also congruent to each other as -2 ≡ 13 (mod 5)
+
+So in this mod-5 way, every number in {-2, 3, 8, 13} is equivalent to every other number in this set, inlcuding to itself. And this will extend:
+
+        *Mod-5 Property.* If you pick any two numbers in the set
+
+        - {..., -10, -5, 0, 5, 10, 15, 20, 25, ...},
+
+        then they will be mod-5 equivalent to each other. Moreover, each number in this set is also mod-5 equivalent to itself. This property also holds for each of the following sets:
+
+        - {..., -9, -4, 1, 6, 11, 16, ...}
+        - {..., -8, -3, 2, 7, 12, 17, ...}
+        - {..., -7, -2, 3, 8, 13, 18, ...}
+        - {..., -6, -1, 4, 9, 14, 19, ...}
+
+        These five sets are called the /equivalence classes/ of the mod-5 /equivalence relation/. They also have this important property: They completely particion Z; that is, every integer is in precisely one of these sets.
+
+/Little recap/ A partition is simply any way to break up a set into a collection of subsets.
+
+#+begin_quote
+*Definition 9.1.* A partition of a set A is a collection of non-empty subsets of A for which each element of A is in one and only one of the subsets.
+#+end_quote
+
+/New symbol:/ ~
+        a ~ b     if     a ≡ b (mod 5).
+        (so ~ just shows the relation between the a and b)
+
+#+begin_quote
+- a ~ a for all a ∈ Z;
+- If a ~ b, then b ~ a for all a, b ∈ Z;
+- If a ~ b and b ~ c, then a ~ c for all a, b, c ∈ Z.
+#+end_quote
+
+If the following bullet points are all followed by the partition, then the relation is equivalent.
+
+#+begin_quote
+*Definition 9.3.* An /equivalence relation/ on set A is an ordered relationship between pairs of elements of A for which the pair is either related or is not related. If a, b ∈ A, we denote a ~ b if a is related to b, and a !~ b if a is not related to b.
+
+For ~ to be an equivalence realtion, it also must satisfy the following three properties:
+
+- Reflexive: a ~ a for all a ∈ A;
+- Symmetric: If a ~ b, then b ~ a for all a,b ∈ A;
+- Transitive: If a ~ b and b ~ c, then a ~ c for all a,b,c ∈ A.
+
+Lastly, if ~ is an equivalence relation and a ∈ A, define the equivalence class containint a to be the set
+        {b ∈ A: a ~ b}
+#+end_quote
+
+#+begin_quote
+*Definition 9.4.* A /relation/ on a set A is any ordered relationship between pairs of elements of A
+
 #+end_quote

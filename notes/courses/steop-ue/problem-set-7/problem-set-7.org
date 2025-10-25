@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-25 14:44>
+#+lastmod: <2025-10-25 15:27>
 #+options: num:t
 #+startup: overview
 
@@ -13,11 +13,62 @@ Define R on Z a mRn <--> 2|(m^2 + n^2) for all m,n ∈ Z. Is R an equivalence re
 ** Solution
 A relation R is an equivalence relation if it is reflexive, symmetric and transitive.
 
-
-
-* Problem 2
+* Problem 2 [TRY]
 ** Task
+Let R be a relation on the real numbers defined by xRy <--> x^2 = y^2. Is R an equivalence relation.
+
 ** Solution
+*** Notes
+The equivalence relation should follow the following points:
+
+#+begin_quote
+- a~a for all a ∈ Z.
+- If a~b, then b~a for all and a,b ∈ Z.
+- If a~b and b~c, then a~c for all a,b,c ∈ Z.
+#+end_quote
+
+Example:
+
+|---+---+---+---|
+|   | 1 | 2 | 3 |
+|---+---+---+---|
+| 1 | T | F | F |
+|---+---+---+---|
+| 2 | F | T | F |
+|---+---+---+---|
+| 3 | F | F | T |
+|---+---+---+---|
+The table does not violate any of the mentioned constraints, as it:
+- has a~a for all a ∈ Z.
+- does not have a~b, therefore no b~a for all and a,b ∈ Z.
+- does not have a~b and b~c, therefore no a~c for all a,b,c ∈ Z.
+
+Therefore, R is an equivalence relation.
+
+**** My wording
+- Relation must be reflexive
+  Meaning that there should be all a,b ∈ A. (i.e. {(1,1), (2, 2), (3, 3), ...})
+
+- Relation must be symmetric
+  Meaning that if there is a (a,b) there should also be (b,a)
+
+- Relation must be transitive
+  Meaning that if aRb and bRc, there should be aRc
+
+**** Formal notation
+#+begin_quote
+- a~a for all a ∈ Z.
+- If a~b, then b~a for all and a,b ∈ Z.
+- If a~b and b~c, then a~c for all a,b,c ∈ Z.
+#+end_quote
+
+**** Formal equivalence recreation
+#+begin_quote
+- a~a for all a ∈ Z.
+- If a~b, then b~a for all a,b ∈ Z.
+- If a~b and b~c, then a~c for all a,b,c ∈ Z.
+#+end_quote
+
 * Problem 3
 ** Task
 ** Solution
@@ -53,3 +104,4 @@ A relation R on ℝ is defined as xRy, <--> |x| <= |y|. Is this a total order?
 * Problem 13
 ** Task
 ** Solution
+* ERROR LOGS

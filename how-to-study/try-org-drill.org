@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-24 21:39>
+#+lastmod: <2025-10-25 10:52>
 #+options: num:t
 #+startup: overview
 
@@ -16,10 +16,7 @@ What is the capital of Austria?
 Vienna
 
 
-* How much time should I sleep?
-
-
-* What is the capital city of Estonia?    :drill:
+* What is the capital city of Estonia? :drill:
 ** The Answer
 Tallinn.
 

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-24 21:39>
+#+lastmod: <2025-10-25 11:50>
 #+options: num:t
 #+startup: overview
 
@@ -22,7 +22,7 @@
 * Small tricks
 - Link the notes to the book page it is referencing. (org-noter)
 - Write the Julia problems in org-babel.
-- Have a look on
+  - [[https://www.youtube.com/watch?v=D3FzMPZm7vY&t=644s][Video]] on exporting a src blocks from org to src files
 
 * TODO
 - [ ] Research on the anki extension in emacs and org-drill.
@@ -30,3 +30,31 @@
 - [ ] Have a look on the org-agenda and org-habit.
 - [ ] Also have a look on the pomodoro technique. If it is worth it, then use org-pomodoro.
 - [ ] Check C-c C-d
+
+* Personal study method
+1. Go though the problem set. Try to solve the questions by yourself. Keep all notes/solutions.
+
+   This will help to fully analyse the problems thoroughly, seeing personal thinking pattern.
+
+2. Go through problems, noting what sub-topic does each problem relate to. If do not know, use help of LLM, but only request the topics of the problems!
+
+   This would help to focus on the relevant chapters of the books.
+
+3. Go through the book chapters outlined by the problems.
+
+   Saw definition/theorem?
+   - Read for 60 seconds and then reproduce it from memory.
+   - Write it down into org-drill cards.
+
+   Saw proof?
+   - Redo the proof with some steps removed. Repeat until reproduce whole proof.
+   - Break down the proof to smaller steps or lemmas. Systemize it.
+
+4. Go back to problem set and try to solve it alone.
+
+5. If some questions are too hard, search on the internet. LLM last option (provide error logs for analysis).
+
+- Why this method?
+  As professors have said, exams are going to be based on the problem sets fully. This means that if problem sets are used wisely, they will help to reduce the amount of potentially "unrelevant" information to learn, by simply following the books.
+
+  Also the course topics are being taught randomly, with no strict sequence of book chapters. Some of the topics are not even in the books. This removes the accent from the book style education (more systematic) to a more flexible style, shifting the educational base fully on problem sets.

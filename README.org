@@ -2,36 +2,25 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-24 21:27>
+#+lastmod: <2025-10-25 18:34>
 #+options: num:t
 #+startup: overview
 
-* Overview
-This file is the single index for the repository. Use it to quickly jump to lecture notes, code, books and homework. All links are relative to the repository root.
+* About This Repository
+This repository serves as a personal workspace for my studies.
+It contains my notes, exercises, and reference materials, all structured and organized in one place for clarity and accessibility.
 
-* Quick navigation
-- [[file:steop-lecture/intro-math-ds][steop-lecture/]] — lecture notes.
-- [[file:steop-ue/homework/][steop-ue/homework/]] — exercise sheets & answers.
+Its main purpose is to streamline note-taking and maintain a coherent archive of my academic progress.
 
-* steop-lecture
-** Books
-- [[file:books/proofs/][books]]
-- [[file:books/proofs/book-of-proof.pdf][book-of-proof.pdf]]
-- [[file:books/proofs/how-to-prove-it.pdf][how-to-prove-it.pdf]]
-- [[file:books/proofs/proofs-james-cummings.pdf][proofs-james-cummings.pdf]]
+This repository is *not* intended for public distribution of study materials.
+Therefore, no university or program names are included.
 
-** Intro Math / Discrete Structures
-- [[file:steop-lecture/intro-math-ds/sets.org][sets.org]]
-- [[file:steop-lecture/intro-math-ds/logic.org][logic.org]]
-- [[file:steop-lecture/intro-math-ds/induction.org][induction.org]]
-- [[file:steop-lecture/intro-math-ds/direct-proof.org][direct-proof.org]]
+* Tools & Conventions
+All files are written primarily in =Org Mode= for Doom Emacs.
+Mathematical or scientific notes may include =LaTeX= snippets and code blocks in =C=, =C++=, =Python=, or =Julia=.
 
-* steop-ue/homework
-Note: homework organized by date. Use the date folder to find submitted solutions and figures.
-- [[file:./steop-ue/homework/problem-set-1][problem-set-1]]
-- [[file:./steop-ue/homework/problem-set-2][problem-set-2]]
-- [[file:./steop-ue/homework/problem-set-3][problem-set-3]]
-- [[file:./steop-ue/homework/problem-set-4][problem-set-4]]
-- [[file:./steop-ue/homework/problem-set-5][problem-set-5]]
-- [[file:./steop-ue/homework/problem-set-6][problem-set-6]]
-- [[file:./steop-ue/homework/problem-set-7][problem-set-7]]
+* Future Plans
+
+* License
+All material in this repository is personal and for private use only.
+Redistribution or publication of any content is not permitted.

@@ -1,0 +1,8 @@
+#+title: Index
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-25>
+#+lastmod: <2025-10-25 14:49>
+#+options: num:t
+#+startup: overview
+

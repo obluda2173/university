@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-24 10:33>
+#+lastmod: <2025-10-25 14:44>
 #+options: num:t
 #+startup: overview
 
@@ -35,6 +35,8 @@ A relation R is an equivalence relation if it is reflexive, symmetric and transi
 ** Solution
 * Problem 8
 ** Task
+A relation R on ℝ is defined as xRy, <--> |x| <= |y|. Is this a total order?
+
 ** Solution
 * Problem 9
 ** Task

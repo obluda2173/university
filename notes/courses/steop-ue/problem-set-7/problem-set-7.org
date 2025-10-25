@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-25 15:27>
+#+lastmod: <2025-10-25 16:53>
 #+options: num:t
 #+startup: overview
 
@@ -13,7 +13,9 @@ Define R on Z a mRn <--> 2|(m^2 + n^2) for all m,n ∈ Z. Is R an equivalence re
 ** Solution
 A relation R is an equivalence relation if it is reflexive, symmetric and transitive.
 
-* Problem 2 [TRY]
+* Problem 2 [DONE]
+*Problem topic:* Relations - Equivalence.
+
 ** Task
 Let R be a relation on the real numbers defined by xRy <--> x^2 = y^2. Is R an equivalence relation.
 
@@ -28,16 +30,16 @@ The equivalence relation should follow the following points:
 #+end_quote
 
 Example:
+|-----------+---+---+---|
+| x^2 = y^2 | 1 | 2 | 3 |
+|-----------+---+---+---|
+|         1 | T | F | F |
+|-----------+---+---+---|
+|         2 | F | T | F |
+|-----------+---+---+---|
+|         3 | F | F | T |
+|-----------+---+---+---|
 
-|---+---+---+---|
-|   | 1 | 2 | 3 |
-|---+---+---+---|
-| 1 | T | F | F |
-|---+---+---+---|
-| 2 | F | T | F |
-|---+---+---+---|
-| 3 | F | F | T |
-|---+---+---+---|
 The table does not violate any of the mentioned constraints, as it:
 - has a~a for all a ∈ Z.
 - does not have a~b, therefore no b~a for all and a,b ∈ Z.
@@ -69,8 +71,47 @@ Therefore, R is an equivalence relation.
 - If a~b and b~c, then a~c for all a,b,c ∈ Z.
 #+end_quote
 
+*** Solution
+**** Original
+#+begin_quote
+*Formal Definition*
+An *equivalence relation* on a set A is an ordered relationship between pairs of elements of A for which the pair is either related of is not relatied. If a,b ∈ A, we denote a~b if a is related to b, and a!~b if a is not related to b.
+
+Additionally, for ~ to be an equivalence relation, it also must satisfy the following three properties:
+- *Reflexive:* a~a for all a ∈ A.
+- *Symmetric:* if a~b, then b~a for all a,b ∈ A.
+- *Transitive:* if a~b and b~c, then a~c for all a,b,c ∈ A.
+#+end_quote
+
+Since xRy <--> x^2 = y^2,
+        xRy <--> x^2 = y^2      (take root from both sides)
+        xRy <--> x = y.
+
+xRy <--> x = y is a~a for all a ∈ Z.
+
+Now I feel a little bit stuck as I intuitively know that it is also true for 2 other points, but not sure how to formulate it.
+**** Polished
+#+begin_quote
+*Formal Definition*
+An *equivalence relation* on a set A is an ordered relationship between pairs of elements of A for which the pair is either related of is not relatied. If a,b ∈ A, we denote a~b if a is related to b, and a!~b if a is not related to b.
+
+Additionally, for ~ to be an equivalence relation, it also must satisfy the following three properties:
+- *Reflexive:* a~a for all a ∈ A.
+- *Symmetric:* if a~b, then b~a for all a,b ∈ A.
+- *Transitive:* if a~b and b~c, then a~c for all a,b,c ∈ A.
+#+end_quote
+
+*Proof.*
+- *Reflexive:* For any x ∈ R, x^2 = x^2. Hence xRx.
+- *Symmetric:* If xRy, then x^2 = y^2. That equality is symmetric, so x^2 = y^2, hence xRy.
+- *Transitive:* If xRy and yRz, then x^2 = y^2 and y^2 = z^2. Thus, x^2 = z^2, so xRz.
+
+Since all three hold, R is an equivalence relation.
+
 * Problem 3
 ** Task
+Define R on Z as xRy <--> 4|(x + 3y) for all x,y ∈ Z. Is R an equivalence relation?
+
 ** Solution
 * Problem 4
 ** Task

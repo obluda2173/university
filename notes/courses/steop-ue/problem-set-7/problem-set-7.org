@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-25 16:53>
+#+lastmod: <2025-10-25 18:48>
 #+options: num:t
 #+startup: overview
 
@@ -109,10 +109,62 @@ Additionally, for ~ to be an equivalence relation, it also must satisfy the foll
 Since all three hold, R is an equivalence relation.
 
 * Problem 3
+*Problem topic:* Relations - Equivalence.
 ** Task
 Define R on Z as xRy <--> 4|(x + 3y) for all x,y ∈ Z. Is R an equivalence relation?
 
 ** Solution
+*** Notes
+#+begin_quote
+- a~a for all a ∈ A.
+- If a~b, then b~a for all a,b ∈ A.
+- If a~b and b~c, then a~c for all a,b,c ∈ A.
+#+end_quote
+
+- Other ways to write it
+  4|(x + 3y)
+  4k = x + 3y for k ∈ Z.
+  x + 3y ≡ 0 (mod 4)
+
+Truth table:
+|----------------+---+---+---|
+| x+3y≡0 (mod 4) | 1 | 2 | 3 |
+|----------------+---+---+---|
+|              1 | T | F | F |
+|----------------+---+---+---|
+|              2 | F | T | F |
+|----------------+---+---+---|
+|              3 | F | F | T |
+|----------------+---+---+---|
+
+This table leads to my hypothesis of truth table being only true for the x=y.
+Maybe I should prove that there are no other combination except of x=y that would satisfy the relation?
+
+*HINT:*
+
+3 ≡ -1 (mod 4)
+3 ≡ -1 + 4 (mod 4)
+3y ≡ -y + 4y (mod 4)
+So 3y and -y differ by the multiple of 4
+3y ≡ -y (mod 4)
+Thus,
+x - y ≡ 0 (mod 4)
+Therefore,
+x + 3y ≡ x - y (mod 4)
+Therefore,
+4|(x + 3y) iff x - y ≡ 0 (mod 4)
+i.e. x ≡ y (mod 4)
+
+proof tryout:
+#+begin_quote
+*Proof.*
+- *Reflexive:* For any x ∈ Z, x + 3x = 4x; so 4|(x+3x). Thus xRx.
+- *Symmetric:* If xRy, then x + 3y ≡ 0 (mod 4). Since 3 ≡ -1 (mod 4), this gives x - y ≡ 0 (mod 4). Hence y - x ≡ 0 and y + 3x ≡ 0 (mod 4). So yRx.
+- *Transitive:*
+#+end_quote
+
+*** Solution
+
 * Problem 4
 ** Task
 ** Solution

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-26 16:25>
+#+lastmod: <2025-10-26 19:11>
 #+options: num:t
 #+startup: overview
 
@@ -386,9 +386,30 @@ There are five different equivalence relations on the set A = {a,b,c}. Describe 
 | c | T | T | T |
 |---+---+---+---|
 
-* Problem 6
+* Problem 6 [IN PROGRESS]
 ** Task
+Let S be the set of all triangles in the plane. Define T1 ~ T2 if T1 is similar to T2. Prove that ~ is an equivalence relation.
+
 ** Solution
+*** Notes
+- What does the "similar triangle" mean?
+  It means the triangles with equal angles and prortional sides.
+
+  Thus, two triangles are related if one can be obtained from the other by resizing (scaling), possibly rotating or flipping.
+
+*** Solution
+*Remark.* Two triangles are similar iff their corresponding angles are equal (equivalently, corresponding lengths are proportional).
+
+*Proof.*
+
+*Reflexive.* For any triangle T ∈ S the identity map is a similarity taking T to itself. Thus, T~T for all T ∈ S.
+
+*Symmetric.* If T1~T2, then there exists a similarity transformation f that makes T2 of T1. Similarity transformations are invertible and their inverses are again similarity transformations. The inverse f^-1 turns T2 to T1, so T2~T1.
+
+*Transitive.* If T1~T2 and T2~T3, let f be similarity mapping T1 to T2 and g a similarity mapping T2 to T3. The composition f*g is again a similarity transformation, and maps T1 to T3. Hence T1~T3.
+
+*Conclusion.* Since ~ is reflexive, symmetric and transitive, it is an equivalence relation on S.
+
 * Problem 7
 ** Task
 ** Solution

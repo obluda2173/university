@@ -2,9 +2,33 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-25 18:48>
+#+lastmod: <2025-10-26 13:16>
 #+options: num:t
 #+startup: overview
+
+* How to prove equivalence relation?
+Proof sceleton.
+
+1. *State goal briefly.*
+   /Goal:/ show ~ is reflexive, symmetric, transitive on A.
+
+2. *Relfexive.*
+   Let a ∈ A. Show a~a. (one sentence: reason why the relation includes (a,a) or why the property holds.)
+
+   Therefore, ∀a ∈ A, a~a.
+
+3. *Symmetric.*
+   Let a,b ∈ A, and assume a~b. Show b~a. (once sentence: use definition or algebraic symmetry.)
+
+   Therefore, ∀a,b ∈ A, a~b --> b~a.
+
+4. *Transitive.*
+   Let a,b,c ∈ A, and assume a~b and b~c. Show a~c. (one sentence: combine assumptions via definition/transitivity property.)
+
+   Therefore, ∀a,b,c ∈ A, (a~b ∧ b~c) --> a~c.
+
+5. *Conclude.*
+   Since three properties hold, ~ is an equivalence relation.
 
 * Problem 1
 ** Task
@@ -17,7 +41,7 @@ A relation R is an equivalence relation if it is reflexive, symmetric and transi
 *Problem topic:* Relations - Equivalence.
 
 ** Task
-Let R be a relation on the real numbers defined by xRy <--> x^2 = y^2. Is R an equivalence relation.
+Let R be a relation on the real numbers defined by xRy <--> x^2 = y^2. Is R an equivalence relation?
 
 ** Solution
 *** Notes
@@ -108,7 +132,7 @@ Additionally, for ~ to be an equivalence relation, it also must satisfy the foll
 
 Since all three hold, R is an equivalence relation.
 
-* Problem 3
+* Problem 3 [IN PROGRESS]
 *Problem topic:* Relations - Equivalence.
 ** Task
 Define R on Z as xRy <--> 4|(x + 3y) for all x,y ∈ Z. Is R an equivalence relation?
@@ -164,6 +188,56 @@ proof tryout:
 #+end_quote
 
 *** Solution
+
+1. *Goal.* Show ~ <--> 4|(x + 3y) is an equivalence relation for all x,y ∈ Z.
+
+2. *Reflexive.*
+   Let x ∈ Z. Therefore, (x + 3x) = 4x. Thus, 4|4x for all x ∈ Z.
+
+   Therefore, ∀x ∈ Z, x~x.
+
+3. *Symmetric.* (show b~a; 4|(y + 3x))
+   Let x,y ∈ Z. Assume 4|(x + 3y). Therefore,
+
+   x + 3y ≡ 0 (mod 4)
+
+   Notice:
+   3 ≡ -1 (mod 4)
+   3y ≡ -1y (mod 4)
+
+   Thus,
+   x + 3y - 3y ≡ 0 + y (mod 4)
+   x ≡ y (mod 4)
+   x - y ≡ 0 (mod 4)
+   2x - 2y ≡ 0 (mod 4)
+
+   Hence,
+   x + 3y ≡ 0 (mod 4)
+   x + 3y + 2x - 2y ≡ 0 (mod 4)
+   3x + y ≡ 0 (mod 4)
+
+   Therefore, ∀x,y ∈ Z, x~y --> y~x.
+
+4. *Transitive.*
+   Let x,y,z ∈ Z. Assume 4|(x + 3y) and 4|(y + 3z). Therefore,
+
+   Going through all steps from /Symmetric/, we come to:
+
+   x ≡ y (mod 4);
+   y ≡ z (mod 4).
+
+   Thus,
+   x ≡ z (mod 4)
+
+   And since x ≡ z (mod 4), we can go backwards in steps of /Symmetric/, and get:
+
+   x + 3z ≡ 0 (mod 4)
+
+   Therefore, ∀x,y,z ∈ Z, (x~y ∧ y~x) --> x~z.
+
+5. *Conclusion.*
+   Since three properties holds, ~ is an equivalence relation.
+
 
 * Problem 4
 ** Task

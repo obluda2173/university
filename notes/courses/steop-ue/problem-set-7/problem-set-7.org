@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-26 13:16>
+#+lastmod: <2025-10-26 13:55>
 #+options: num:t
 #+startup: overview
 
@@ -132,7 +132,7 @@ Additionally, for ~ to be an equivalence relation, it also must satisfy the foll
 
 Since all three hold, R is an equivalence relation.
 
-* Problem 3 [IN PROGRESS]
+* Problem 3 [DONE]
 *Problem topic:* Relations - Equivalence.
 ** Task
 Define R on Z as xRy <--> 4|(x + 3y) for all x,y ∈ Z. Is R an equivalence relation?
@@ -188,7 +188,7 @@ proof tryout:
 #+end_quote
 
 *** Solution
-
+**** Original
 1. *Goal.* Show ~ <--> 4|(x + 3y) is an equivalence relation for all x,y ∈ Z.
 
 2. *Reflexive.*
@@ -238,6 +238,42 @@ proof tryout:
 5. *Conclusion.*
    Since three properties holds, ~ is an equivalence relation.
 
+**** Polished
+Let R on Z be defined as xRy <--> 4|(x + 3y).
+
+*Goal.* Show R is an equivalence relation.
+
+*Relfexive.* Let x ∈ Z. Then, x + 3x = 4x, and 4|4x.
+
+Therefore, ∀x ∈ Z, x~x.
+
+*Symmetric.* Let x,y ∈ Z. Assume xRy, i.e. 4|(x + 3y).
+
+Since,
+3 ≡ -1 (mod 4)
+3y ≡ -y (mod 4)
+
+Thus,
+x + 3y ≡ x - y ≡ 0 (mod 4)
+x ≡ y (mod 4)
+
+Hence,
+y + 3x ≡ 0 (mod 4)
+
+Therefore, ∀x,y ∈ Z, x~y --> y~x.
+
+*Transitive.* Let x,y,z ∈ Z. Assume xRy and yRz.
+
+From the same simplification, we get x ≡ y (mod 4) and y ≡ z (mod 4).
+
+Hence, x ≡ z (mod 4). Thus,
+
+x + 3z ≡ z + 3z ≡ 4z ≡ 0 (mod 4)
+
+Therefore, ∀x,y,z ∈ Z, (x~y ∧ y~x) --> x~z.
+
+*Conclusion.*
+R is relfexive, symmetric and transitive, so it is an equivalence relation.
 
 * Problem 4
 ** Task

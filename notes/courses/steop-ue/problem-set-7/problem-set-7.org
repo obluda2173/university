@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-26 19:11>
+#+lastmod: <2025-10-26 19:17>
 #+options: num:t
 #+startup: overview
 
@@ -386,7 +386,7 @@ There are five different equivalence relations on the set A = {a,b,c}. Describe 
 | c | T | T | T |
 |---+---+---+---|
 
-* Problem 6 [IN PROGRESS]
+* Problem 6 [DONE]
 ** Task
 Let S be the set of all triangles in the plane. Define T1 ~ T2 if T1 is similar to T2. Prove that ~ is an equivalence relation.
 
@@ -410,9 +410,15 @@ Let S be the set of all triangles in the plane. Define T1 ~ T2 if T1 is similar 
 
 *Conclusion.* Since ~ is reflexive, symmetric and transitive, it is an equivalence relation on S.
 
-* Problem 7
+* Problem 7 [DONE]
 ** Task
+Consider the partition P = {{0}, {-1,1}, {-2,2}, {-3,3}, ...} of Z. Describe the equivalence relation whose equivalence classes are the elements of P.
+
 ** Solution
+Its xRy <--> x^2 = y^2 for x,y ∈ Z.
+
+(solved quickly because of the Problem 4)
+
 * Problem 8 [NO NEED]
 ** Task
 A relation R on ℝ is defined as xRy, <--> |x| <= |y|. Is this a total order?

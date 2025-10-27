@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-27 18:21>
+#+lastmod: <2025-10-27 18:48>
 #+options: num:t
 #+startup: overview
 
@@ -578,7 +578,7 @@ Therefore,
 *Minimal elements:* minimal = least, so the single last-place team.
 
 *** Problem 10
-*Greatest:* Suppose (x0, y0) was the least. Then for every
+*Greatest:*
 Suppose, for contradiction, that (x, y) ∈ ℝ² is a greatest element. Then for all (a, b) ∈ ℝ², we must have (a, b) ≼ (x, y), which means:
 
 .|x - a| <= y - b
@@ -633,6 +633,5 @@ Let A given by A = {m/n : m, n ∈ N, m < n}  be a subset of R with the standard
   1. 1 is an upper bound: m/n < 1 (since m/n < n/n = 1) for all m/n ∈ A.
 
   2.
-
 
 * ERROR LOGS

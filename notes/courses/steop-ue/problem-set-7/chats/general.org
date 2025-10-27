@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-27 12:50>
+#+lastmod: <2025-10-27 19:02>
 #+options: num:t
 #+startup: overview
 
@@ -73,3 +73,65 @@ I apologize for the confusion. Please find below such a table, which represents 
 | c | F | F | T |
 
 Here, T stands for True, representing the presence of a relation, and F stands for False, representing the absence of a relation. The only "True" values are found on the diagonal, since in antisymmetric relations, a ≼ a is the only case when a ≼ b and b ≼ a hold at the same time.
+
+* Could you please exlain in more detail problem 10 maximal and minimal element:
+** Task
+For the problems above, where there is a partial order, decide which elements are:
+- greatest/least
+- maximal/minimal
+
+** Solution
+*Greatest element:* an element g ∈ S, such that for every x ∈ S, x ≼ g.
+Unique element
+
+*Least element:* an element l ∈ S, such that for every x ∈ S, l ≼ x.
+Unique element
+
+*Maximal element:* an element m ∈ S, is maximal iff there is no x ∈ S, (m ≼ x) ∧ (x != m).
+Multiple elements possible
+
+*Minimal element:* an element n ∈ S, is minimal iff there is no x ∈ S, (x ≼ m) ∧ (x != m).
+Multiple elements possible
+
+Therefore,
+
+*** Problem 10
+*Greatest:*
+Suppose, for contradiction, that (x, y) ∈ ℝ² is a greatest element. Then for all (a, b) ∈ ℝ², we must have (a, b) ≼ (x, y), which means:
+
+.|x - a| <= y - b
+
+Consider the point (x, y - 1) ∈ ℝ². Since (x, y) is assumed to be a greatest element, we require:
+
+.|x - x| <= y - (y - 1)
+0 <= 1
+
+This holds. However, we also need this for (x + 2, y - 1):
+
+.|x - (x + 2)| <= y - (y - 1)
+
+2 <= 1
+
+*Least:*
+Suppose, for contradiction, that (x, y) ∈ ℝ² is a least element. Then for all (a, b) ∈ ℝ², we must have (x, y) ≼ (a, b), which means:
+
+.|a − x| <= b − y
+
+Consider the point (x + 1, y - 2) ∈ ℝ². Since (x, y) is assumed to be a least element, we require:
+
+.|(x+1) - x| <= (y - 2) - y
+1 <= -2
+
+This is a contradiction. Therefore, no least element exists.
+
+*Maximal elements:*
+Proof. Let (x, y) ∈ ℝ² be arbitrary. Suppose (a, b) ∈ ℝ² satisfies (x, y) ≼ (a, b). By the same argument as in the proof for minimal elements (with roles reversed), we can show that (a, b) ≼ (x, y), and consequently (x, y) = (a, b).
+Therefore, there is no element (a, b) ≠ (x, y) with (x, y) ≼ (a, b) and (a, b) ⋠ (x, y). Hence (x, y) is maximal. Since (x, y) was arbitrary, every element of ℝ² is maximal. ∎
+
+*Minimal elements:*
+Suppose (a, b) ≼ (x, y), so |x - a| ≤ y - b
+For (a, b) to be "strictly below" (x, y), we'd need (x, y) ⋠ (a, b)
+But if |x - a| ≤ y - b, then moving back requires |a - x| ≤ b - y
+Since |a - x| = |x - a| ≤ y - b, we'd need y - b ≤ b - y, so y ≤ b
+Combined with y - b ≥ 0 (from |x - a| ≥ 0), we get y = b and thus x = a
+So there's no point strictly below any given point!

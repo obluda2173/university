@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-26 19:17>
+#+lastmod: <2025-10-27 12:42>
 #+options: num:t
 #+startup: overview
 
@@ -30,7 +30,7 @@ Proof sceleton.
 5. *Conclude.*
    Since three properties hold, ~ is an equivalence relation.
 
-* Problem 1 [NO NEED]
+* Problem 1 [SKIP]
 ** Task
 Define R on Z a mRn <--> 2|(m^2 + n^2) for all m,n ∈ Z. Is R an equivalence relation?
 
@@ -419,16 +419,43 @@ Its xRy <--> x^2 = y^2 for x,y ∈ Z.
 
 (solved quickly because of the Problem 4)
 
-* Problem 8 [NO NEED]
+* Problem 8 [SKIP]
 ** Task
 A relation R on ℝ is defined as xRy, <--> |x| <= |y|. Is this a total order?
 
 ** Solution
-* Problem 9
+* Problem 9 [IN PROGRESS]
 ** Task
+In a basketball tournament, each team plays every other team exactly once. Define a relation ≼ on the set of all teams as: for two teams A and B, we say A ≼ B <--> the final ranking of B is at least as high as that of A. Is ≼ a partial order? Is it a total order?
+
+** Notes
+- What is the difference between the =partial order= and the =total order=?
+  A partial order satisfies three conditions:
+
+  - *Reflexivity:* Every element is less than or equal to itself. a ≼ a.
+
+  - *Antisymmetry:* If a ≼ b and b ≼ a then a = b.
+
+  - *Transitivity:* If a ≼ b and b ≼ c then a ≼ c.
+
+  It is a "partial" because not every pair of elements need to be comparable. For example, in a set of subsets, set A is only less than or equal to set B if every member of A is also a member of B.
+
+  A total order is a partial order with the additional property of compatability or totality.
+
+  - *Compatability/Totality:* For any two elements a and b, a ≼ b or b ≼ a.
+
+  In a total order, every pair of  elements is comparable. For example, the usual order of numebrs is a total order because of any two numbers, one number is always less than or equal to the other.
+
+
 ** Solution
-* Problem 10
+
+* Problem 10 [IN PROGRESS]
 ** Task
+A relation ≼ on R^2 is defined as
+        (x1, y1) ≼ (x2, y2) <--> |x2 - x1| <= y2 - y1.
+
+Prove that ≼ is a partial order. Is it a total order?
+
 ** Solution
 * Problem 11
 ** Task

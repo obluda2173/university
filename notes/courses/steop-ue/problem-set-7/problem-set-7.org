@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-27 12:42>
+#+lastmod: <2025-10-27 14:43>
 #+options: num:t
 #+startup: overview
 
@@ -424,7 +424,7 @@ Its xRy <--> x^2 = y^2 for x,y ∈ Z.
 A relation R on ℝ is defined as xRy, <--> |x| <= |y|. Is this a total order?
 
 ** Solution
-* Problem 9 [IN PROGRESS]
+* Problem 9 [DONE]
 ** Task
 In a basketball tournament, each team plays every other team exactly once. Define a relation ≼ on the set of all teams as: for two teams A and B, we say A ≼ B <--> the final ranking of B is at least as high as that of A. Is ≼ a partial order? Is it a total order?
 
@@ -446,8 +446,23 @@ In a basketball tournament, each team plays every other team exactly once. Defin
 
   In a total order, every pair of  elements is comparable. For example, the usual order of numebrs is a total order because of any two numbers, one number is always less than or equal to the other.
 
-
 ** Solution
+To qualify relation as a pratial order, a relation needs to be *reflexive*, *antisymmetric*, and *transitive*.
+
+1. *Reflexive.* The team is always ranked as highly as itself. So A ≼ A. Thus, the relation is reflexive.
+
+2. *Antisymmetric.* If A ≼ B and B ≼ A, then A = C. This holds true since two teams can't rank higher than each other at the same time in this tournament. If A ranks as high as B and vice versa, they are in the same rank. Thus, the relation is antisymmetric.
+
+3. *Transitive.* If A ≼ B and B ≼ C, then A ≼ C. If team B is ranked as high as team A and team C is ranked as high as team B, then C is ranked as high as A. Thus, the relation is transitive.
+
+Since, ≼ is reflexive, antisymmetric, and transitive, it is a partial order.
+
+
+To qualify relation as a total order, a relation needs to have additional parameter of *Totality*, i.e. either A ≼ B or B ≼ A for all A, B ∈ S.
+
+In a basketball tournament, we could always compare ony two teams, either A ≼ B of B ≼ A due to the rule that every team plays every other team exaclty once. This relation satisfies the *Totality* property. Thus, ≼ is a total order as well.
+
+4. *Totality.*
 
 * Problem 10 [IN PROGRESS]
 ** Task

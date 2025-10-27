@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-27 12:42>
+#+lastmod: <2025-10-27 12:50>
 #+options: num:t
 #+startup: overview
 
@@ -40,6 +40,7 @@ Since ≼ is reflexive, antisymmetric, and transitive, it is a partial order.
 To qualify as a total order, a relation needs to be a partial order and connex (or comparability property must hold), i.e., either A ≼ B or B ≼ A for all A and B.
 
 In a basketball tournament, we could always compare any two teams, either A ≼ B or B ≼ A due to the rule that every team plays every other team exactly once. This relation satisfies the comparability property. Thus, ≼ is a total order as well.
+
 * Do I understand rigth partial relation, specifically the "antisymmetry"?
 I understand partial relation to be relation that satisfies the follwing points:
 

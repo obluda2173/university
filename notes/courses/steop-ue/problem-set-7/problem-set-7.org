@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-27 15:58>
+#+lastmod: <2025-10-27 17:12>
 #+options: num:t
 #+startup: overview
 
@@ -460,11 +460,9 @@ Since, ≼ is reflexive, antisymmetric, and transitive, it is a partial order.
 
 To qualify relation as a total order, a relation needs to have additional parameter of *Totality*, i.e. either A ≼ B or B ≼ A for all A, B ∈ S.
 
-In a basketball tournament, we could always compare ony two teams, either A ≼ B of B ≼ A due to the rule that every team plays every other team exaclty once. This relation satisfies the *Totality* property. Thus, ≼ is a total order as well.
+In a basketball tournament, we could always compare any two teams, either A ≼ B of B ≼ A due to the rule that every team plays every other team exaclty once. This relation satisfies the *Totality* property. Thus, ≼ is a total order as well.
 
-4. *Totality.*
-
-* Problem 10 [IN PROGRESS]
+* Problem 10 [DONE]
 ** Task
 A relation ≼ on R^2 is defined as
         (x1, y1) ≼ (x2, y2) <--> |x2 - x1| <= y2 - y1.
@@ -533,10 +531,26 @@ Hence,
 (x1, y1) ≼ (x3, y3)
 
 *Conclusion.*
-Since the relation is reflexive, antisymmetric and transitive, it is a partial order on R^2
-.
+Since the relation is reflexive, antisymmetric and transitive, it is a partial order on R^2.
+
+Is it a *total order*?
+To be a total order it would have to compare every pair; for any two points (x1, y1) and (x2, y2) either (x1, y1) ≼ (x2, y2) or (x2, y2) ≼ (x1, y1). That fails, since:
+
+A = (0, 0) and B = (2, 1).
+
+Then,
+.|2 - 0| = 2 !<= 1 - 0 = 1.
+
+So A !≼ B, and,
+
+.|0 - 2| = 2 !<= 0 - 1 = -1.
+
+So B !≼ A. Thus A and B are incomparable, so the order is not total.
+
 * Problem 11
 ** Task
+For the problems above, where there is a partial order, decide which element, must
+
 ** Solution
 * Problem 12
 ** Task

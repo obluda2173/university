@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-27 14:43>
+#+lastmod: <2025-10-27 15:58>
 #+options: num:t
 #+startup: overview
 
@@ -471,7 +471,70 @@ A relation ≼ on R^2 is defined as
 
 Prove that ≼ is a partial order. Is it a total order?
 
+** Notes
+(x1, y1) ≼ (x2, y2) <--> |x2 - x1| <= y2 - y1.
+
+|-----+---+---+---+----|
+| y\x | 1 | 2 | 3 | .. |
+|-----+---+---+---+----|
+|   1 | T |   |   |    |
+|-----+---+---+---+----|
+|   2 |   | T |   |    |
+|-----+---+---+---+----|
+|   3 |   |   | T |    |
+|-----+---+---+---+----|
+|  .. |   |   |   | T  |
+|-----+---+---+---+----|
+
 ** Solution
+*Reflexive.* Take any (x,y) ∈ R^2. Then,
+.|x - x| <= y - y
+0 <= 0
+
+So (x, y) ≼ (x, y). Hence relation is reflexive.
+
+*Antisymmetric.* Assume (x1, y1) ≼ (x2, y2) and (x2, y2) ≼ (x1, y1). That gives:
+.|x2 - x1| <= y2 - y1  and  |x2 - x1| <= y1 - y2
+
+Add 2 inequalities,
+        2|x2 - x1| <= (y2 - y1) + (y1 - y2)
+        2|x2 - x1| <= 0
+
+Hence,
+.|x2 - x1| = 0
+
+Therefore,
+x2 = x1
+
+Pluggin back to original inequalities:
+0 <= y2 - y1 and 0 <= y1 - y2
+
+Thus,
+y1 = y2
+
+So,
+(x1, y1) = (x2, y2).
+
+That proves antisymmetry.
+
+*Transitive.* Assume (x1, y1) ≼ (x2, y2) and (x2, y2) ≼ (x3, y3), So,
+.|x2 - x1| <= y2 - y1  and  |x3 - x2| <= y3 - y2
+
+Notice,
+x3 - x1 = (x3 - x2) + (x2 - x1)
+
+Therefore,
+.|x3 - x1| <= |x3 - x2| + |x2 - x1|
+
+Combine the 2 assumed inequalities:
+.|x3 - x1| = (y3 - y2) + (y2 - y1) = y3 - y1
+
+Hence,
+(x1, y1) ≼ (x3, y3)
+
+*Conclusion.*
+Since the relation is reflexive, antisymmetric and transitive, it is a partial order on R^2
+.
 * Problem 11
 ** Task
 ** Solution

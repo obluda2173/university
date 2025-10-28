@@ -1,0 +1,34 @@
+#+title: Functions
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-10-28>
+#+lastmod: <2025-10-28 16:42>
+#+options: num:t
+#+startup: overview
+
+* proofs by james cummings
+#+begin_quote
+*Definition 8.1.* Given a pair of sets A and B, suppose that each element x ∈ A is associated, in some way, to unique element of B, which we denote f(x). Then f is said to be a function from A to B. This often denoted
+
+        f : A -> B.
+
+Furthermore, A is called the domain of f, and B is called the codomain of f. The set {f(x) : x ∈ A} is called the range of f.
+#+end_quote
+
+Little bit on terminology:
+
+- Domain :: think of it as the inputs of f.
+- Range :: as the outputs of f.
+- Codomain :: as a possibly larger set in which all the outputs live.
+
+In the end, all three are just sets, with some correspondence to each other via f.
+
+Examples:
+
+- f : ℝ -> ℤ where f(x) = floor(x).
+
+  This is the floor function, where you just round down. E.g., floor(3,2) = 3, floor(-3,2) = -4.
+
+- g : {1,2,3,4,5} -> {1,4,9,16,25,36,49} where g(x) = x^2.
+
+  This is the usual square function, except that you can not plug anything besides 1,2,3,4,5 into g. For example, g(-2) and g(6) do not mean anything since g is only defined to accept elements from its domain. Notice that g's range is {1,4,9,16,25}.

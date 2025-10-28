@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-27 19:02>
+#+lastmod: <2025-10-28 15:42>
 #+options: num:t
 #+startup: overview
 
@@ -135,3 +135,12 @@ But if |x - a| ≤ y - b, then moving back requires |a - x| ≤ b - y
 Since |a - x| = |x - a| ≤ y - b, we'd need y - b ≤ b - y, so y ≤ b
 Combined with y - b ≥ 0 (from |x - a| ≥ 0), we get y = b and thus x = a
 So there's no point strictly below any given point!
+
+
+Your explanation outlines the concept of greatest, least, maximal, and minimal elements in set theory and partial orders in detail. It then applies this knowledge to problem 10, finding out the nature of these elements in the set ℝ² under the given partial order ≼.
+
+Just to summarize:
+
+1. You demonstrated that there is no greatest or least element in ℝ² under this relation. You've used contradiction technique, showing that for each candidate supposed to be a greatest or least element, you can always find another point in ℝ² so that the requirement for being the greatest or the least is not satisfied.
+
+2. The same approach shows that every element in ℝ² is both maximal and minimal. You've reasoned that for any given element, there exists no other element that is strictly above or strictly below it under the given partial order. Thus, every element is maximal and minimal because it cannot be surpassed or belittled by any other distinct element.

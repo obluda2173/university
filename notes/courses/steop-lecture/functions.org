@@ -2,11 +2,12 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-28 16:42>
+#+lastmod: <2025-10-28 17:28>
 #+options: num:t
 #+startup: overview
 
 * proofs by james cummings
+** 8.1 Approaching functions
 #+begin_quote
 *Definition 8.1.* Given a pair of sets A and B, suppose that each element x ∈ A is associated, in some way, to unique element of B, which we denote f(x). Then f is said to be a function from A to B. This often denoted
 
@@ -32,3 +33,45 @@ Examples:
 - g : {1,2,3,4,5} -> {1,4,9,16,25,36,49} where g(x) = x^2.
 
   This is the usual square function, except that you can not plug anything besides 1,2,3,4,5 into g. For example, g(-2) and g(6) do not mean anything since g is only defined to accept elements from its domain. Notice that g's range is {1,4,9,16,25}.
+
+** 8.2 Injections, Surjections and Bijections
+#+begin_quote
+*Definition 8.4.* A function f : A -> B is *injective* if f(a1) = f(a2) implies that a1 = a2.
+#+end_quote
+
+Basically, to be injective means that you do not have two arrows pointing at the same point.
+
+- Example
+  Injective (One-to-One) Function Example:
+  For X={A, B, C} and Y={1, 2, 3}
+
+  One possible injective map is -
+  f(A) = 1, f(B) = 2, f(C) = 3.
+
+  In this case, each element in set Y is mapped to by at most one element in set X.
+
+  Non-Injective (Not One-to-One) Function Example:
+  f: X → Y
+  For X={A, B, C} and Y={1, 2}
+
+  One possible non-injective map is -
+  f(A) = 1, f(B) = 1, f(C) = 2.
+    f: X → Y
+
+#+begin_quote
+*Definition 8.5.* A function f : A -> B is *surjective* if, for every b ∈ B, there exists some a ∈ A such that f(a) = b.
+#+end_quote
+
+#+begin_quote
+When defining a function f : A -> B, the ideas of /existence/ and /uniqueness/ were focused on A - For every x ∈ A, we demanded that f(x) exist and be unique.
+
+To be injective and surjective, the attention shifts to B. To be surjective means that B has an existence criterion (for every b ∈ B, there exists some a ∈ A that maps to it).
+
+And to be injective means that B has a uniqueness-type criterion (for every b ∈ B, there is at most one a ∈ A that maps to it).
+#+end_quote
+
+#+begin_quote
+*Definition 8.7.* A function f : A -> B is *bijective* if it is both injective and surjective.
+#+end_quote
+
+Being bijective means that every element in A is paired up with precisely one element of B.

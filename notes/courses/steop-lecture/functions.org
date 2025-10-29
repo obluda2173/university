@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-29 10:17>
+#+lastmod: <2025-10-29 10:47>
 #+options: num:t
 #+startup: overview
 
@@ -131,22 +131,57 @@ Being bijective means that every element in A is paired up with precisely one el
        Since, f(x) = f(y) does not imply x = y, f is not injective.
        #+end_quote
 
-       #+begin_quote Injection proof
+       #+begin_quote Surjection proof
        *Proposition.* f(x) = x^2 : ℝ -> ℝ is not surjection.
 
-       *Proof.* Assume x,y ∈ ℝ and f(x) = f(y).
+       *Proof.* Assume f(x) ∈ ℝ.
 
-       Let x = 2, and y = -2.
-       Thus, f(x) = 4; f(y) = 4.
+       Let f(x) = -4.
 
-       f(x) = 4 = f(y)
-       While, x != y.
+       Thus x = 2i.
 
-       Since, f(x) = f(y) does not imply x = y, f is not injective.
+       Since, x is not in the domain of the function, f is not surjective.
+       #+end_quote
+
+       #+begin_quote Bijection proof
+       Since f is neither injective nor surjective, f is not bijective.
        #+end_quote
 
   b) f : ℝ+ -> ℝ where g(x) = x^2 is injective, but not surjective or bijective.
+     - *Solution*
+       Domain: ℝ+.
+       Codomain: ℝ.
+
+       #+begin_quote Injection proof
+       *Proposition.* g : ℝ+ -> ℝ is injective.
+
+       *Proof.* Assume x,y ∈ ℝ+ and g(x) = g(y). Then,
+
+              g(x) = g(y)
+               x^2 = y^2
+       (x^2)^(1/2) = (y^2)^(1/2)
+
+       In the reals, this gives two possibilities: x = y, x = -y. However, since we know that x,y ∈ ℝ+, the only option is that they are both positive, and so x = y. Thus, g is injective.
+
+       Since g(x) = x^2 >= 0 for all x ∈ ℝ+, there does not exist and x ∈ ℝ for which g(x) = -4.
+
+       #+end_quote
+
+       #+begin_quote Surjection proof
+       *Proposition.* g : ℝ+ -> ℝ is not surjective.
+
+       *Proof.* Assume g(x) ∈ ℝ.
+
+        Since g(x) = x^2 >= 0 for all x ∈ ℝ+, there does not exist and x ∈ ℝ for which g(x) = -4. And since -4 is in g's codomain, this proves g is not surjective.
+       #+end_quote
+
+       #+begin_quote Bijection proof
+       *Proposition.* g : ℝ+ -> ℝ is not bijective.
+
+       *Proof.* Since g is injective, but not surjective, g can not be bijective.
+       #+end_quote
+
 
   c) f : ℝ -> ℝ+ where h(x) = x^2 is surjective, but not injective or bijective.
 
-  d) f : ℝ+ -> ℝ+ where k(x) = x^2 is surjective, injective and bijective.
+  d) f : ℝ+ -> ℝ+ where k(x) = x^2 is surjective, injective and bijective,

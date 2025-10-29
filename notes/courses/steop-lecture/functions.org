@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-29 10:47>
+#+lastmod: <2025-10-29 10:48>
 #+options: num:t
 #+startup: overview
 
@@ -180,7 +180,6 @@ Being bijective means that every element in A is paired up with precisely one el
 
        *Proof.* Since g is injective, but not surjective, g can not be bijective.
        #+end_quote
-
 
   c) f : ℝ -> ℝ+ where h(x) = x^2 is surjective, but not injective or bijective.
 

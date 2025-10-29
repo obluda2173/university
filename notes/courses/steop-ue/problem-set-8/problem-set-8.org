@@ -2,11 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-29 09:49>
+#+lastmod: <2025-10-29 11:39>
 #+options: num:t
 #+startup: overview
 
-* Problem 1
+* Problem 1 [IN PROGRESS]
 ** Task
 Is this a function from ℝ to ℝ?
 
@@ -26,7 +26,6 @@ Is this a function from ℝ to ℝ?
 ** Solution
 1. f = {(x^2, x); x ∈ ℝ}.
 
-
 * Problem 2
 ** Task
 ** Notes
@@ -43,14 +42,75 @@ Is this a function from ℝ to ℝ?
 ** Task
 ** Notes
 ** Solution
-* Problem 6
+* Problem 6 [IN PROGRESS]
 ** Task
+Given a list of numbers 1, ..., n, we want to find all possible permutations such that none of the numbers occupies its original place. Lets call them /interesting/. For example, for n = 3, we have thow interesting permutations: 312 and 231.
+
+1. Find the number of interesting permutations for n = 4,5,6,7,8.
+2. Study how the ratio of the total number of permutations to the number of interesting permutations behaves.
+
 ** Notes
+Isn't it just a Ceasar encription algorithm, in which we just increment each of the letters indexes?
+
+Thus, n = 3 would be:
+123
+312
+231
+123
+
 ** Solution
-* Problem 7
+#+begin_src julia :results output
+
+#+end_src
+
+#+RESULTS:
+: hello world?
+
+* Problem 7 [DONE]
 ** Task
+How many numbers between 1111111 and 9999999 are divisible by 3 or 5 but not 11?
+
 ** Notes
+Its way to easy. Maybe I can work on optimisation. Like skipping if number ends by 2,4,6,8.
+
 ** Solution
+- Solution 1
+  #+begin_src julia :results output
+  function count_numbers()
+      function statement(n::Int)
+          if (n % 3 == 0) && (n % 5 == 0) && (n % 11 != 0)
+              return true
+          end
+          return false
+      end
+
+      counter = 0
+      i = 1111111
+      while i <= 9999999
+          if statement(i)
+              counter += 1
+          end
+          i += 1
+      end
+
+      println("number of found numbers:", counter)
+  end
+
+  count_numbers()
+  #+end_src
+
+  #+RESULTS:
+  : count_numbers (generic function with 1 method)
+  : number of found numbers:538720
+
+- Solution 2
+  #+begin_src julia :results output
+  println("number of found numbers: ", count(n -> (n % 3 == 0) && (n % 5 == 0) && (n % 11 != 0), 1111111:9999999))
+  #+end_src
+
+  #+RESULTS:
+  : Number of found numbers: 538720
+
 * Problem 8
 ** Task
 ** Notes

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-28 16:02>
+#+lastmod: <2025-10-29 09:49>
 #+options: num:t
 #+startup: overview
 
@@ -18,9 +18,15 @@ Is this a function from ℝ to ℝ?
 
 - What is the function?
 - What does it mean "a function from ℝ to ℝ"?
--
+  Meaninng that the function input and function output are both real numbers.
+
+  f : ℝ -> ℝ
+  Both, the doman and codomain are ℝ numbers.
 
 ** Solution
+1. f = {(x^2, x); x ∈ ℝ}.
+
+
 * Problem 2
 ** Task
 ** Notes

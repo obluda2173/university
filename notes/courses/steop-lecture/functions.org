@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-28 17:28>
+#+lastmod: <2025-10-29 10:17>
 #+options: num:t
 #+startup: overview
 
@@ -75,3 +75,78 @@ And to be injective means that B has a uniqueness-type criterion (for every b �
 #+end_quote
 
 Being bijective means that every element in A is paired up with precisely one element of B.
+
+
+*Proving x-jectiveness, for x ∈ {in, sur, bi}*
+
+- *Injectiveness proof*
+  #+begin_quote
+  *Proposition.* f : A -> B is an injection.
+
+  *Proof.* Assume x,y ∈ A and f(x) = f(y).
+
+          - apply algebra,
+          - logic, techniques
+
+  Therefore, x = y.
+
+  Since f(x) = f(y) implies x = y, f is injective.
+  #+end_quote
+
+  Alternatively, one could use the contrapositive, which would mean one starts by assuming x != y, and then concludes that f(x) != f(y).
+
+- *Surjectiveness proof*
+  #+begin_quote
+  *Proposition.* f : A -> B is a surjection.
+
+  *Proof.* Assume b ∈ B.
+
+        - Magic to find an a ∈ A
+        - where f(a) = b
+
+  Since every b ∈ B has an a ∈ A where f(a) = b, f is surjective.
+  #+end_quote
+
+- *Example 8.8.*
+  Let ℝ+ denote the nonnegative real numbers. Prove the following.
+
+  a) f : ℝ -> ℝ where f(x) = x^2 is not injective, surjective or bijective.
+     - *Solution*
+       - What exactly does this function even mean?
+         A function f(x) that takes any ℝ number, and returns the ℝ number f(x) = x^2.
+
+       Since the f(x) = x^2 is a parabola, for every x ∈ ℝ+, such that f(x) ∈ ℝ+, there exists x ∈ ℝ-, such that f(x) ∈ ℝ+.
+
+       #+begin_quote Injection proof
+       *Proposition.* f(x) = x^2 : ℝ -> ℝ is not injection.
+
+       *Proof.* Assume x,y ∈ ℝ and f(x) = f(y).
+
+       Let x = 2, and y = -2.
+       Thus, f(x) = 4; f(y) = 4.
+
+       f(x) = 4 = f(y)
+       While, x != y.
+
+       Since, f(x) = f(y) does not imply x = y, f is not injective.
+       #+end_quote
+
+       #+begin_quote Injection proof
+       *Proposition.* f(x) = x^2 : ℝ -> ℝ is not surjection.
+
+       *Proof.* Assume x,y ∈ ℝ and f(x) = f(y).
+
+       Let x = 2, and y = -2.
+       Thus, f(x) = 4; f(y) = 4.
+
+       f(x) = 4 = f(y)
+       While, x != y.
+
+       Since, f(x) = f(y) does not imply x = y, f is not injective.
+       #+end_quote
+
+  b) f : ℝ+ -> ℝ where g(x) = x^2 is injective, but not surjective or bijective.
+
+  c) f : ℝ -> ℝ+ where h(x) = x^2 is surjective, but not injective or bijective.
+
+  d) f : ℝ+ -> ℝ+ where k(x) = x^2 is surjective, injective and bijective.

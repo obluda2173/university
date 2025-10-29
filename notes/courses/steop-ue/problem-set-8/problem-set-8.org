@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-29 19:26>
+#+lastmod: <2025-10-29 21:06>
 #+options: num:t
 #+startup: overview
 
@@ -26,10 +26,60 @@ Is this a function from ℝ to ℝ?
 ** Solution
 1. f = {(x^2, x); x ∈ ℝ}.
 
+   Yes, since
+
 * Problem 2
 ** Task
+A function f : ℤ x ℤ -> ℤ is defined as f(m,n) = 3n - 4m. Verify whether this function is injective and whether it is surjective.
+
 ** Notes
+- Injective is when each element of codomain has at most one relation with element of domain
+
+- Surjective is when each element of codomain has relation(s) with element(s) of domain
+
+- Function takes Cartesian product of two integer sets and returns an integer
+
 ** Solution
+#+begin_quote Surjection proof
+*Proposition.* f : ℤ x ℤ -> ℤ where f(m,n) = 3n - 4m is surjective.
+
+*Proof.*
+
+2k = 3n - 4n    # prove that any integer can be written as 3n - 4k.
+
+1 = 3 * -1 - 4 * -1     = -3 + 4
+2 = 3 * -2 - 4 * -2     = -6 + 8
+3 = 3 * -3 - 4 * -3     = -9 + 12
+...
+
+General formula:
+
+Let n = m, n ∈ ℤ
+
+n = -n * (3 - 4)
+n = -n * -1
+n = n
+
+This means that any integer can be written as 3n - 4m, where n,m ∈ ℤ.
+
+Thus, f is surjective.
+#+end_quote
+
+#+begin_quote
+*Proposition.* f : ℤ x ℤ -> ℤ where f(m,n) = 3n - 4m is injective.
+
+*Proof.* Assume b ∈ ℤ.
+
+Let b = 1.
+
+Since,
+1 = 3 * -1 - 4 * -1
+and
+1 = 3 * 3 - 4 * 2.
+
+Since 1 can be written in multiple ways in the form of 3n - 4m, function f is not injective.
+#+end_quote
+
 * Problem 3
 ** Task
 ** Notes
@@ -124,7 +174,7 @@ Its way to easy. Maybe I can work on optimisation. Like skipping if number ends 
           i += 1
       end
 
-      println("number of found numbers:", counter)
+      println("number of found numbers: ", counter)
   end
 
   count_numbers()

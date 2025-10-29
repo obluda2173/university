@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-29 21:06>
+#+lastmod: <2025-10-29 21:35>
 #+options: num:t
 #+startup: overview
 
@@ -28,7 +28,7 @@ Is this a function from ℝ to ℝ?
 
    Yes, since
 
-* Problem 2
+* Problem 2 [DONE]
 ** Task
 A function f : ℤ x ℤ -> ℤ is defined as f(m,n) = 3n - 4m. Verify whether this function is injective and whether it is surjective.
 
@@ -80,10 +80,20 @@ and
 Since 1 can be written in multiple ways in the form of 3n - 4m, function f is not injective.
 #+end_quote
 
-* Problem 3
+* Problem 3 [IN PROGRESS]
 ** Task
+Prove that the function f : ℝ \ {2} -> ℝ \ {5} defined by f(x) = (5x+1)/(x-2) is bijective.
+
 ** Notes
+ℝ \ {2} all real numbers except 2
+ℝ \ {5} all real numbers except 5
+
+Injective, all codomain elements have at most one relation with domain element.
+Surjective, all codomain elements have at least one relation with domain elements.
+
 ** Solution
+
+
 * Problem 4
 ** Task
 ** Notes

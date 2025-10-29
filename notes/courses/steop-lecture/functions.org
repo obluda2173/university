@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-29 10:48>
+#+lastmod: <2025-10-29 17:18>
 #+options: num:t
 #+startup: overview
 
@@ -147,7 +147,7 @@ Being bijective means that every element in A is paired up with precisely one el
        Since f is neither injective nor surjective, f is not bijective.
        #+end_quote
 
-  b) f : ℝ+ -> ℝ where g(x) = x^2 is injective, but not surjective or bijective.
+  b) g : ℝ+ -> ℝ where g(x) = x^2 is injective, but not surjective or bijective.
      - *Solution*
        Domain: ℝ+.
        Codomain: ℝ.
@@ -162,9 +162,6 @@ Being bijective means that every element in A is paired up with precisely one el
        (x^2)^(1/2) = (y^2)^(1/2)
 
        In the reals, this gives two possibilities: x = y, x = -y. However, since we know that x,y ∈ ℝ+, the only option is that they are both positive, and so x = y. Thus, g is injective.
-
-       Since g(x) = x^2 >= 0 for all x ∈ ℝ+, there does not exist and x ∈ ℝ for which g(x) = -4.
-
        #+end_quote
 
        #+begin_quote Surjection proof
@@ -181,6 +178,76 @@ Being bijective means that every element in A is paired up with precisely one el
        *Proof.* Since g is injective, but not surjective, g can not be bijective.
        #+end_quote
 
-  c) f : ℝ -> ℝ+ where h(x) = x^2 is surjective, but not injective or bijective.
+  c) h : ℝ -> ℝ+ where h(x) = x^2 is surjective, but not injective or bijective.
+     - *Solution*
+       Domain: ℝ.
+       Codomain: ℝ*.
 
-  d) f : ℝ+ -> ℝ+ where k(x) = x^2 is surjective, injective and bijective,
+       surjective is when all elements of codomain are linked to elements of domain
+
+       #+begin_quote Surjection proof
+       *Statement.* h : ℝ -> ℝ+ is surjective.
+
+       *Proof.* Assume h(x) ∈ ℝ+.
+
+       Since h(x) >= 0, its positive square roots exists. Let's call this square root x; that is, x = h(x)^(1/2). Since x ∈ ℝ+ as well and
+
+                h(x) = x^2 = ((h(x))^(1/2))^2 = h(x)
+
+       we have shown that for every h(x) ∈ ℝ+ there exists an x ∈ ℝ+ such that h(x) = h(x). Thus, g is surjective.
+       #+end_quote
+
+       #+begin_quote Injection proof
+       *Statement.* h : ℝ -> ℝ+ is not injective.
+
+       *Proof.* Let x = 2, y = -2,
+
+       Then, h(x) = 4, h(y) = 4.
+
+       Since, h(x) = h(y) does not imply x = y, f is not injective.
+       #+end_quote
+
+       #+begin_quote Bijection proof
+       *Statement.* h : ℝ -> ℝ+ is not bijective.
+
+       *Proof.* h is not bijective, since bijection implies function to be both surjective and injective, while h is surjective only.
+       #+end_quote
+
+  d) k : ℝ+ -> ℝ+ where k(x) = x^2 is surjective, injective and bijective.
+     - *Solution*
+       Domain: ℝ+.
+       codomain: ℝ+.
+
+       I need to prove that k's codomain has only one representation in domain
+
+       #+begin_quote Injection proof
+       *Statement.* k : ℝ+ -> ℝ+ is injective.
+
+       *Proof.* Assume x,y ∈ ℝ+ and k(x) = k(y). Then
+
+              k(x) = k(y)
+        k(x)^(1/2) = k(y)^(1/2)
+       (x^2)^(1/2) = (y^2)^(1/2)
+
+       In the reals, this gives two possibilities: x = y or x = -y. However, with the given domain of ℝ+, only one option left that both x,y >= 0. This k is injective.
+       #+end_quote
+
+       I need to prove that all k's codomain has a representation in domain
+
+       #+begin_quote Surjection proof
+       *Statement.* k : ℝ+ -> ℝ+ is surjective.
+
+       *Proof.* Assume b ∈ ℝ+.
+
+       Since b >= 0, its positive square root exists. Let's call this square root x; that is x = b^(1/2). Since x ∈ ℝ+ as well and
+
+                k(x) = x^2 = (b^(1/2))^2 = b
+
+       we have shown that for every b ∈ ℝ+ there exists an x ∈ ℝ+ such that k(x) = b. This proves that k is injective.
+       #+end_quote
+
+       #+begin_quote Bijection proof
+       *Statement.* k : ℝ+ -> ℝ+ is bijective.
+
+       *Proof.* k is bijective since k is both injective and surjective, as being proved above.
+       #+end_quote

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-29 11:39>
+#+lastmod: <2025-10-29 12:03>
 #+options: num:t
 #+startup: overview
 
@@ -111,7 +111,56 @@ Its way to easy. Maybe I can work on optimisation. Like skipping if number ends 
   #+RESULTS:
   : Number of found numbers: 538720
 
-* Problem 8
+* Problem 8 [DONE]
 ** Task
+Let us call a natural number charismatic if the sum of its digits is a perfect square. Find the sum of all charismatic numbers between 111111 and 999999.
+
 ** Notes
 ** Solution
+- Solution 1
+  #+begin_src julia :results output
+  find_sum() = begin
+      statement(n) = begin
+          sum_of_digits = sum(map(x -> parse(Int, x), collect(string(n))))
+          sqrt_sum = sqrt(sum_of_digits)
+          return sqrt_sum == floor(sqrt_sum)
+      end
+
+      i = 111111
+      sum_char = 0
+      while i <= 999999
+          if statement(i)
+              sum_char += i
+          end
+          i += 1
+      end
+
+      println("sum of all charismatic numbers: ", sum_char)
+  end
+
+  find_sum()
+  #+end_src
+
+  #+RESULTS:
+  : find_sum (generic function with 1 method)
+  : sum of all charismatic numbers: 47061011005
+
+- Solution 2
+  #+begin_src julia :results output
+  is_charismatic(n) = begin
+      s = sum(parse.(Int, collect(string(n))))
+      sqrt(s) == floor(sqrt(s))
+  end
+
+  find_sum() = begin
+      total = sum(i for i in 111111:999999 if is_charismatic(i))
+      println("sum of all charismatic numbers: ", total)
+  end
+
+  find_sum()
+  #+end_src
+
+  #+RESULTS:
+  : is_charismatic (generic function with 1 method)
+  : find_sum (generic function with 1 method)
+  : sum of all charismatic numbers: 47061011005

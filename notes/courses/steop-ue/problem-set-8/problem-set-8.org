@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-30 13:42>
+#+lastmod: <2025-10-30 13:58>
 #+options: num:t
 #+startup: overview
 
@@ -218,7 +218,7 @@ Since each element of codomain must has maximum of one relation to domain. Thus,
   Thus, each domain element is linked with unique element of codomain, resulting in a list of 7 pairs.
   Therefore, there are 7! ways to arrange the pairs.
 
-* Problem 5 [IN PROGRESS]
+* Problem 5 [DONE]
 ** Task
 Prove that f : ℕ x ℕ -> ℕ defined as f(m,n) = 2^(m-1) * (2n - 1) is bijective.
 
@@ -251,8 +251,21 @@ Thus, every ℕ number can be represented in the form of 2^(m-1) * (2n - 1). The
 #+begin_quote Injection proof
 *Proposition.* f : ℕ x ℕ -> ℕ, f(m,n) = 2^(m-1) * (2n - 1) is injective.
 
-*Proof.*
+*Proof.* Assume f(m,n) = f(m',n'). Write a = m - 1, a' = m' - 1. Then,
 
+2^(m-1) * (2n - 1) = 2^(m'-1) * (2n' - 1)
+2^a * (2n - 1) = 2^a' * (2n' - 1)
+
+WLOG suppose a <= a', dividing by 2^a gives:
+(2n - 1) = 2^(a'-a) * (2n' - 1)
+
+LFS is odd. If a'-a > 0, RHS would be even. Meaning that a = a', thus, m = m'.
+
+2^(m-1) * (2n - 1) = 2^(m-1) * (2n' - 1)       (divide both sides by 2^(m-1))
+          (2n - 1) = (2n' - 1)                 (add 1 and divide by 2 both sides)
+                 n = n'
+
+Thus, since f(m,n) = f(m',n') implies (m,n) = (m',n'), f is injective.
 #+end_quote
 
 ** Solution
@@ -271,6 +284,32 @@ f(m,n) = 2^(m-1) * (2n - 1)
        = k.
 
 Thus, every k ∈ ℕ has a preimage (m,n), so f is surjective.
+#+end_quote
+
+#+begin_quote Injection proof
+*Proposition.* f : ℕ x ℕ -> ℕ, f(m,n) = 2^(m-1) * (2n - 1) is injective.
+
+*Proof.* Assume f(m,n) = f(m',n'). Write a = m - 1, a' = m' - 1. Then,
+
+2^(m-1) * (2n - 1) = 2^(m'-1) * (2n' - 1)
+2^a * (2n - 1) = 2^a' * (2n' - 1)
+
+WLOG suppose a <= a', dividing by 2^a gives:
+(2n - 1) = 2^(a'-a) * (2n' - 1)
+
+LFS is odd. If a'-a > 0, RHS would be even. Meaning that a = a', thus, m = m'.
+
+2^(m-1) * (2n - 1) = 2^(m-1) * (2n' - 1)       (divide both sides by 2^(m-1))
+          (2n - 1) = (2n' - 1)                 (add 1 and divide by 2 both sides)
+                 n = n'
+
+Thus, since f(m,n) = f(m',n') implies (m,n) = (m',n'), f is injective.
+#+end_quote
+
+#+begin_quote
+*Proposition.* f : ℕ x ℕ -> ℕ, f(m,n) = 2^(m-1) * (2n - 1) is bijective.
+
+*Proof.* Since f is both surjective and injective, f is bijective.
 #+end_quote
 
 * Problem 6 [DONE]

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-13>
-#+lastmod: <2025-10-25 18:34>
+#+lastmod: <2025-10-30 14:00>
 #+options: num:t
 #+startup: overview
 
@@ -20,6 +20,7 @@ All files are written primarily in =Org Mode= for Doom Emacs.
 Mathematical or scientific notes may include =LaTeX= snippets and code blocks in =C=, =C++=, =Python=, or =Julia=.
 
 * Future Plans
+To graduate successfully.
 
 * License
 All material in this repository is personal and for private use only.

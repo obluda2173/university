@@ -2,11 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-30 10:47>
+#+lastmod: <2025-10-30 11:01>
 #+options: num:t
 #+startup: overview
 
-* Problem 1 [IN PROGRESS]
+* Problem 1 [DONE]
 ** Task
 Is this a function from ℝ to ℝ?
 
@@ -26,7 +26,15 @@ Is this a function from ℝ to ℝ?
 ** Solution
 1. f = {(x^2, x); x ∈ ℝ}.
 
-   Yes, since
+   No, since x^2 = 4 could lead to:
+   x =  2 = (4,  2) ∈ ℝ
+   x = -2 = (4, -2) ∈ ℝ
+
+   Thus, the same input of 4 gives the two different outputs of 2 and -2.
+
+2. f = {(x^3, x); x ∈ ℝ}.
+
+   Yes, since x^3 is strictly increasing function. With each x giving unique x^3, and each x^3 corresponding to unique x.
 
 * Problem 2 [DONE]
 ** Task

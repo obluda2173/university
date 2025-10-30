@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-30 11:01>
+#+lastmod: <2025-10-30 11:57>
 #+options: num:t
 #+startup: overview
 
@@ -161,10 +161,63 @@ Since f(x) = f(y) implies x = y, f is injective.
 *Proof.* Since f is both surjective and injective, f is bijective.
 #+end_quote
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
+Consider all functions from {A,B,C,D,E,F,G} to {1,2,3,4,5,6,7}. How many different functions are there? How many of these functions are injective? How many are there surjective? How many are bijective?
+
 ** Notes
+Domain: {A,B,C,D,E,F,G}
+Codomain: {1,2,3,4,5,6,7}
+
+The question is in how many ways can I link elements of domain with elements of codomain.
+
+*Bijective*
+First of all, there are 7! bijective functions.
+With each domain element being related to one codomain element.
+
+*Surjective*
+Since each element of codomain must be related to the element of domain, and since there are the same number of elements in both, and since no element of domain can be related to the multiple of elements of codomain, there are 7! surjection functions
+
+*Injective*
+Since each element of codomain must has maximum of one relation to domain. Thus, there are 7! * 7 injection functions.
+
 ** Solution
+- *Definitions.*
+  - A function :: assigns to each domain element exactly one element of codomain.
+  - Injective :: no two distinct domain elements map to the same codomain element.
+  - Surjective :: every codomain element is hit by at least one domain element.
+  - Bijective :: both injective and surjective.
+
+- *Total functions.*
+  Each of the domain elements can be assigned to any of the 7 codomain elements. So the number of functions is 7^7.
+
+  Total functions {A,B,C,D,E,F,G} -> {1,2,3,4,5,6,7} = 7^7
+
+- *Injective functions.*
+  - each domain element must be assigned to one element of codomain
+  - no multiple elements of domain point to the same element of codomain
+  - number of elements in domain and codomain are equal
+
+  Thus, each domain element is linked with unique element of codomain, resulting in a list of 7 pairs.
+  Therefore, there are 7! ways to arrange the pairs.
+
+- *Surjective functions.*
+  - each domain element must be assigned to one element of codomain
+  - every codomain element must be hit by at least one domain element
+  - number of elements in domain and codomain are equal
+
+  Thus, each domain element is linked with unique element of codomain, resulting in a list of 7 pairs.
+  Therefore, there are 7! ways to arrange the pairs.
+
+- *Bijective functions.*
+  - each domain element must be assigned to one element of codomain
+  - every codomain element must be hit by at least one domain element
+  - no multiple elements of domain point to the same element of codomain
+  - number of elements in domain and codomain are equal
+
+  Thus, each domain element is linked with unique element of codomain, resulting in a list of 7 pairs.
+  Therefore, there are 7! ways to arrange the pairs.
+
 * Problem 5
 ** Task
 ** Notes

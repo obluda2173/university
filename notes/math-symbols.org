@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-28>
-#+lastmod: <2025-10-28 15:57>
+#+lastmod: <2025-10-30 12:09>
 #+options: num:t
 #+startup: overview
 
@@ -41,6 +41,7 @@
 ≽ - greater than or equivalent to (curvy).
 
 ** Number Sets
+ℕ - set of naturals.
 ℤ - set of integers.
 ℚ - set of rational numbers.
 ℝ - set of real numbers.

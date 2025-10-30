@@ -2,7 +2,31 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-25>
-#+lastmod: <2025-10-25 14:49>
+#+lastmod: <2025-10-30 14:19>
 #+options: num:t
 #+startup: overview
 
+* Navigation
+** Core Study Materials
+- [[file:how-to-study/how-to-study.org][How to Study Guide]]
+- [[file:math-symbols.org][Math Symbols Reference]]
+
+** STeOP Courses
+*** Lecture Notes
+- [[file:courses/steop-lecture/sets.org][Sets]]
+- [[file:courses/steop-lecture/logic.org][Logic]]
+- [[file:courses/steop-lecture/functions.org][Functions]]
+- [[file:courses/steop-lecture/relations.org][Relations]]
+- [[file:courses/steop-lecture/induction.org][Induction]]
+- [[file:courses/steop-lecture/counting.org][Counting]]
+- [[file:courses/steop-lecture/direct-proof.org][Direct Proof]]
+
+*** Problem Sets
+- [[file:courses/steop-ue/problem-set-1/problem-set-1.org][problem-set-1]]
+- [[file:courses/steop-ue/problem-set-2/problem-set-2.org][problem-set-2]]
+- [[file:courses/steop-ue/problem-set-3/problem-set-3.org][problem-set-3]]
+- [[file:courses/steop-ue/problem-set-4/problem-set-4.org][problem-set-4]]
+- [[file:courses/steop-ue/problem-set-5/problem-set-5.org][problem-set-5]]
+- [[file:courses/steop-ue/problem-set-6/problem-set-6.org][problem-set-6]]
+- [[file:courses/steop-ue/problem-set-7/problem-set-7.org][problem-set-7]]
+- [[file:courses/steop-ue/problem-set-8/problem-set-8.org][problem-set-8]]

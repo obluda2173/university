@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-24>
-#+lastmod: <2025-10-27 18:48>
+#+lastmod: <2025-10-31 08:00>
 #+options: num:t
 #+startup: overview
 
@@ -621,7 +621,7 @@ So there's no point strictly below any given point!
 * Problem 12 [SKIP]
 ** Task
 ** Solution
-* Problem 13 [IN PROGRESS]
+* Problem 13 [SKIP]
 ** Task
 Let A given by A = {m/n : m, n ∈ N, m < n}  be a subset of R with the standard order ≤. Find sup A, inf A, max A and min A (if they exist).
 

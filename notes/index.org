@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-25>
-#+lastmod: <2025-10-30 14:19>
+#+lastmod: <2025-10-31 10:52>
 #+options: num:t
 #+startup: overview
 
@@ -13,13 +13,13 @@
 
 ** STeOP Courses
 *** Lecture Notes
-- [[file:courses/steop-lecture/sets.org][Sets]]
 - [[file:courses/steop-lecture/logic.org][Logic]]
-- [[file:courses/steop-lecture/functions.org][Functions]]
-- [[file:courses/steop-lecture/relations.org][Relations]]
+- [[file:courses/steop-lecture/sets.org][Sets]]
 - [[file:courses/steop-lecture/induction.org][Induction]]
-- [[file:courses/steop-lecture/counting.org][Counting]]
 - [[file:courses/steop-lecture/direct-proof.org][Direct Proof]]
+- [[file:courses/steop-lecture/counting.org][Counting]]
+- [[file:courses/steop-lecture/relations.org][Relations]]
+- [[file:courses/steop-lecture/functions.org][Functions]]
 
 *** Problem Sets
 - [[file:courses/steop-ue/problem-set-1/problem-set-1.org][problem-set-1]]

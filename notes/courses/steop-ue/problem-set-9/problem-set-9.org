@@ -2,18 +2,18 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-02 12:21>
+#+lastmod: <2025-11-02 14:01>
 #+options: num:t
 #+startup: overview
 
-* Problem 1 [IN PROGRESS]
+* Problem 1 [DONE]
 ** Task
 Consider the function g : (-1,1) -> ℝ defined by g(x) = x/(1-x^2). Prove that g is a bijection. Find g^-1.
 
 ** Notes
 - I don't really understand the point of writing "(-1,1) -> ℝ". Do we pass the (-1,1) and get the ℝ as the output?
 
-  Function g takes an input x, from the range of -1 to 1 excluded, and returns an integer as output.
+  Function g takes an input x, from the range of -1 to 1 excluded, and returns a real number as output.
 
 - Find g^-1
   g(x) = x/(1-x^2)
@@ -57,22 +57,140 @@ Every element of codomain has at least one relation with element of domain.
 #+begin_quote Surjection
 *Proposition.* g : (-1,1) -> ℝ, g(x) = x/(1-x^2) is surjective.
 
-*Proof.* Assume y ∈ ℝ. Then,
+*Proof.* Let y ∈ ℝ be arbitrary. We need to find x ∈ (-1,1), such that g(x) = y.
+
+From y = x/(1-x^2), we get:
 
            y = x / (1 - x^2)
   y(1 - x^2) = x
    -yx^2 + y = x
 yx^2 + x - y = 0
 
-Thus,
+Using the quadratic formula:
+
 x = (-1 ± (1 + 4y^2)^(1/2))/(2y)
 
+Key issues to adress:
+- Which sign (+ or -) do we choose?
+- Is this x actually in (-1,1)?
+- What if y = 0?
 
+*Case 1: y = 0*
+        Then g(x) = 0 gives x/(1-x^2) = 0, so x = 0. Since 0 ∈ (-1,1), this works.
+
+*Case 2: y != 0*
+        We have: x = (-1 ± (1 + 4y^2)^(1/2))/(2y)
+        Notice that (1 + 4y^2)^(1/2) > 1. (for y != 0)
+
+        - If y > 0: x > 0, so we take the positive sign.
+          x = (-1 + (1 + 4y^2)^(1/2))/(2y) = positive / positive  : yes
+          x = (-1 - (1 + 4y^2)^(1/2))/(2y) = negative / positive  : no
+
+        - If y < 0: x < 0, so we take the negative sign.
+          x = (-1 + (1 + 4y^2)^(1/2))/(2y) = positive / negative  : yes
+          x = (-1 - (1 + 4y^2)^(1/2))/(2y) = negative / negative  : no
+
+        Thus, we select a positive sign.
+                x = (-1 + (1 + 4y^2)^(1/2))/(2y)
+
+        Now, we must verify |x|<1. This requires showing that for any y ∈ ℝ, x ∈ (-1,1).
+
+        Thus,
+        .|(-1 + (1 + 4y^2)^(1/2))/(2y)| < 1
+        -1 + (1 + 4y^2)^(1/2)) < 2|y|
+        (1 + 4y^2)^(1/2)) < 1 + 2|y|    (squaring both sides)
+        1 + 4y^2 < 1 + 4|y| + 4y^2
+        0 < 4|y| (for y != 0)
+
+*Conclusion.* Therefore, g is surjective.
 #+end_quote
 
 ** Solution
+Only one element of domain is related to one element of codomain.
+#+begin_quote Injective
+*Proposition.* g : (-1,1) -> ℝ, g(x) = x/(1-x^2) is injective.
+
+*Proof.*
+g(x) = x/(1-x^2)
+g'(x) = (1+x^2)/(1-x^2)^2
+
+Since,
+- Numerator: 1+x^2
+  For all x ∈ ℝ, x^2 >= 0.
+  So 1+x^2 >= 1 > 0, for x ∈ ℝ.
+
+- Denominator: (1-x^2)^2
+  For all x ∈ ℝ, x^2 >= 0.
+  (1-x^2)^2 > 0. (can not be equal to 0)
+
+Thus, g' is always positive in the range of (-1,1)
+
+Since, the derivative of the function is always > 0, g is striclty monotone increasing function. Thus, g is injective.
+#+end_quote
+
+Every element of codomain has at least one relation with element of domain.
+#+begin_quote Surjection
+*Proposition.* g : (-1,1) -> ℝ, g(x) = x/(1-x^2) is surjective.
+
+*Proof.* Let y ∈ ℝ be arbitrary. We need to find x ∈ (-1,1), such that g(x) = y.
+
+From y = x/(1-x^2), we get:
+
+           y = x / (1 - x^2)
+  y(1 - x^2) = x
+   -yx^2 + y = x
+yx^2 + x - y = 0
+
+Using the quadratic formula:
+
+x = (-1 ± (1 + 4y^2)^(1/2))/(2y)
+
+Key issues to adress:
+- Which sign (+ or -) do we choose?
+- Is this x actually in (-1,1)?
+- What if y = 0?
+
+*Case 1: y = 0*
+        Then g(x) = 0 gives x/(1-x^2) = 0, so x = 0. Since 0 ∈ (-1,1), this works.
+
+*Case 2: y != 0*
+        We have: x = (-1 ± (1 + 4y^2)^(1/2))/(2y)
+        Notice that (1 + 4y^2)^(1/2) > 1. (for y != 0)
+
+        - If y > 0: x > 0, so we take the positive sign.
+          x = (-1 + (1 + 4y^2)^(1/2))/(2y) = positive / positive  : yes
+          x = (-1 - (1 + 4y^2)^(1/2))/(2y) = negative / positive  : no
+
+        - If y < 0: x < 0, so we take the negative sign.
+          x = (-1 + (1 + 4y^2)^(1/2))/(2y) = positive / negative  : yes
+          x = (-1 - (1 + 4y^2)^(1/2))/(2y) = negative / negative  : no
+
+        Thus, we select a positive sign.
+                x = (-1 + (1 + 4y^2)^(1/2))/(2y)
+
+        Now, we must verify |x|<1. This requires showing that for any y ∈ ℝ, x ∈ (-1,1).
+
+        Thus,
+        .|(-1 + (1 + 4y^2)^(1/2))/(2y)| < 1
+        -1 + (1 + 4y^2)^(1/2)) < 2|y|
+        (1 + 4y^2)^(1/2)) < 1 + 2|y|    (squaring both sides)
+        1 + 4y^2 < 1 + 4|y| + 4y^2
+        0 < 4|y| (for y != 0)
+
+*Conclusion.* Therefore, g is surjective.
+#+end_quote
+
+#+begin_quote Bijection
+*Proposition.* g : (-1,1) -> ℝ, g(x) = x/(1-x^2) is bijective.
+
+*Proof.* Since g is injective and surjective, g is also bijective.
+#+end_quote
+
 * Problem 2
 ** Task
+Define the symmetric difference A△B of sets A and B as
+       A△B := (A\B)∪(B\A).
+Prove that if A and B are finite sets and |A|=|B|, then |A△B| is even.
 ** Notes
 ** Solution
 * Problem 3

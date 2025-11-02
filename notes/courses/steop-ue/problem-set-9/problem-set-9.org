@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-02 14:44>
+#+lastmod: <2025-11-02 15:13>
 #+options: num:t
 #+startup: overview
 
@@ -281,10 +281,45 @@ If |A| = |B|,
 Thus, |A△B| is even.
 #+end_quote
 
-* Problem 3
+* Problem 3 [DONE]
 ** Task
+Find an exmaple of a function f : X -> Y and sets A,B ⊂ X, such that
+
+        f(A△B) != f(A)△f(B).
+
 ** Notes
+It means:
+Find a function and two sets, such that a function on element of A xor B, gives output that is element of both f(A) and f(B).
+
+Ok. let,
+A = {1,2,3}
+B = {-1,-2,-3}
+X = {-3,-2,-1,0,1,2,3}
+
+f = x^2
+Thus,
+f(A) = {1,4,9}
+f(B) = {1,4,9}
+
+Check:
+f(A)△f(B) = {1,4,9}△{1,4,9} = ∅
+f(A△B) = {1,4,9} != ∅ = {1,4,9}△{1,4,9} = f(A)△f(B)
+
 ** Solution
+Let,
+A = {1,2,3}
+B = {-1,-2,-3}
+X = {-3,-2,-1,0,1,2,3}
+f = x^2
+
+Thus,
+f(A) = {1,4,9}
+f(B) = {1,4,9}
+
+Check:
+f(A)△f(B) = {1,4,9}△{1,4,9} = ∅
+f(A△B) = {1,4,9} != ∅ = {1,4,9}△{1,4,9} = f(A)△f(B)
+
 * Problem 4
 ** Task
 ** Notes

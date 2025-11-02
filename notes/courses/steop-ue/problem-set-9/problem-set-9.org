@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-02 15:13>
+#+lastmod: <2025-11-02 16:27>
 #+options: num:t
 #+startup: overview
 
@@ -320,10 +320,67 @@ Check:
 f(A)△f(B) = {1,4,9}△{1,4,9} = ∅
 f(A△B) = {1,4,9} != ∅ = {1,4,9}△{1,4,9} = f(A)△f(B)
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
+Determine whether the following function f is odd, even, or neither. In each case, the domain of f is the the largest subset of ℝ, where f is defined.
+
+1. f(x) = 5x-x^5
+2. f(x) = 3/(x-5) - 4/(x-6) - 3/(x+5) + 4/(x+6)
+3. f(x) = (1+x^3)^(1/3)
+4. f(x) = (1+x+x^2)^(1/2) - (1-x+x^2)^(1/2)
+5. f(x) = log2((1-x)/(1+x))
+
 ** Notes
+- What is an even function?
+
+  Even function is a real function, such that
+        f(-x) = f(x)
+
+- What is an odd function?
+
+  Even function is a real function, such that
+        f(-x) = -f(x)
+
 ** Solution
+1. f(x) = 5x-x^5
+   *Domain:* ℝ
+   *Parity:* odd.
+   *Reason:* f(-x) = -5x+x^5 = -(5x-x^5) = -f(x).
+
+2. f(x) = 3/(x-5) - 4/(x-6) - 3/(x+5) + 4/(x+6)
+   *Domain:* ℝ \ {±5,±6}
+   *Parity:* even.
+   *Reason:* f(-x) = 3/(-x-5) - 4/(-x-6) - 3/(-x+5) + 4/(-x+6)
+                   = - 3/(x+5) + 4/(x+6) + 3/(x-5) - 4/(x-6)
+                   = f(x).
+
+3. f(x) = (1+x^3)^(1/3)
+   *Domain:* ℝ
+   *Parity:* neither.
+   *Reason:* counterexample:
+             f(1) = (1+1)^(1/3) = 2^(1/3)
+             f(-1) = (1-1)^(1/3) = 0
+             0 != 2^(1/3)
+
+4. f(x) = (1+x+x^2)^(1/2) - (1-x+x^2)^(1/2)
+   *Domain:* ℝ
+   *Parity:* odd.
+   *Reason:* f(-x) = (1-x+x^2)^(1/2) - (1+x+x^2)^(1/2)
+                   = -((1+x+x^2)^(1/2) - (1-x+x^2)^(1/2))
+                   = -f(x)
+
+5. f(x) = log2((1-x)/(1+x))
+   *Domain:* (-1,1)
+             (1-x)/(1+x) = (1-x)^2 / (1-x^2)
+             Thus,
+             x^2 < 1
+             .|x| < 1
+   *Parity:* odd.
+   *Reason:* f(-x) = log2((1+x)/(1-x))
+                   = log2((1-x)/(1+x))^-1
+                   = -log2((1-x)/(1+x))
+                   = -f(x)
+
 * Problem 5
 ** Task
 ** Notes

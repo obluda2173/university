@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-02 14:01>
+#+lastmod: <2025-11-02 14:44>
 #+options: num:t
 #+startup: overview
 
@@ -186,13 +186,101 @@ Key issues to adress:
 *Proof.* Since g is injective and surjective, g is also bijective.
 #+end_quote
 
-* Problem 2
+* Problem 2 [DONE]
 ** Task
 Define the symmetric difference A△B of sets A and B as
-       A△B := (A\B)∪(B\A).
+
+        A△B := (A\B)∪(B\A).
+
 Prove that if A and B are finite sets and |A|=|B|, then |A△B| is even.
+
 ** Notes
+- What is a symmetric difference of sets?
+
+  It is when an element its either in set A or set B, but not in both of them.
+
+A△B := (A\B)∪(B\A)
+
+A△B := (A∪B)\(A∩B)
+
+#+begin_quote
+*Proposition.* If A and B are finite sets and |A|=|B|, then |A△B| is even.
+
+If |A|=|B|, then,
+
+(4 cases)
+- |A| = |B| = 2n
+  - (A∩B) = 2k
+    Thus, both
+    .|A\(A∩B)| = B\(A∩B) = 2j
+
+    Since
+    A△B := (A\B)∪(B\A)
+        := (A∪B)\(A∩B)
+        := A\(A∩B) ∪ B\(A∩B)
+
+    .|A△B| = 2*2j
+
+  - (A∩B) = 2k+1
+    Thus, both
+    .|A\(A∩B)| = B\(A∩B) = 2j+1
+
+    Since
+    A△B := (A\B)∪(B\A)
+        := (A∪B)\(A∩B)
+        := A\(A∩B) ∪ B\(A∩B)
+
+    .|A△B| = 2*(2j+1)
+
+- |A| = |B| = 2n+1
+  - (A∩B) = 2k
+    Thus, both
+    .|A\(A∩B)| = B\(A∩B) = 2j+1
+
+    Since
+    A△B := (A\B)∪(B\A)
+        := (A∪B)\(A∩B)
+        := A\(A∩B) ∪ B\(A∩B)
+
+    .|A△B| = 2*(2j+1)
+
+  - (A∩B) = 2k+1
+    Thus, both
+    .|A\(A∩B)| = B\(A∩B) = 2j
+
+    Since
+    A△B := (A\B)∪(B\A)
+        := (A∪B)\(A∩B)
+        := A\(A∩B) ∪ B\(A∩B)
+
+    .|A△B| = 2*2j
+
+
+#+end_quote
+
 ** Solution
+#+begin_quote
+*Proposition.* If A and B are finite sets and |A|=|B|, then |A△B| is even.
+
+A△B := (A\B)∪(B\A)
+    := (A∪B)\(A∩B)
+
+.|A△B| := |A∪B|-|A∩B|
+
+But
+.|A∪B| = |A| + |B| - |A∩B|
+
+Thus,
+.|A△B| := |A| + |B| - 2|A∩B|
+
+If |A| = |B|,
+
+.|A△B| := 2|A| - 2|A∩B|
+       := 2(|A| - |A∩B|)
+
+Thus, |A△B| is even.
+#+end_quote
+
 * Problem 3
 ** Task
 ** Notes

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-03 14:45>
+#+lastmod: <2025-11-03 16:02>
 #+options: num:t
 #+startup: overview
 
@@ -485,10 +485,41 @@ Let f1 : [a,b] -> ℝ and f2 : [a,b] -> ℝ. What can we say about the monotonic
    - *Strictly decreasing:* f1(x) = x, f2(x) = -3x. Thus, F(x) = -2x is *strictly decreasing*.
    - *Striclty increasing:* f1(x) = 2x, f2(x) = -x. Thus, F(x) = x is *strictly increasing*.
 
-* Problem 7
+* Problem 7 [IN PROGRESS]
 ** Task
+Let A and B be countable sets. Prove that A x B is also countable.
+
 ** Notes
+*Proposition.* If A and B be countable sets, A x B is also countable.
+
+*Proof.*
+
+- Define countable sets
+  Since A and B are countable, their elements can be listed.
+  A is countable infinite and can be listed as A = {a1,a2,a3,...}.
+  Same with B. B = {b1,b2,b3,...}.
+
+- Define Cartesian product
+  A Cartesian product AxB is a set of all pairs (a,b), such that a∈A and b∈B.
+
+- Define a collection of sets
+  For each element of ai ∈ A, form a set by taking the Cartesian product of ai and B.
+  {ai} x B = {(ai,b1),(ai,b2),(ai,b3),...}
+
+- Establish countability on each set
+  Since B is countable, each set {ai} x B can be put into a one-to-one correspondence with the natural numbers. Therefore, each {ai} x B is countable set.
+
+-
+
 ** Solution
+- Enumerate A and B
+  Since A and B are countable, their elements can be listed.
+  A is countable infinite and can be listed as A = {a1,a2,a3,...}.
+  Same with B. B = {b1,b2,b3,...}.
+
+- Reduce by showing ℕ x ℕ is countable
+  The map (i,j) |-> (ai,bj) is a bijection between the index set {(i,j) ∈ ℕxℕ | ai and bj exist} and A x B. Thus it suffices to prove that ℕxℕ is countable.
+
 * Problem 8
 ** Task
 ** Notes

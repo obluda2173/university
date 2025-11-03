@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-03 16:02>
+#+lastmod: <2025-11-03 16:42>
 #+options: num:t
 #+startup: overview
 
@@ -485,7 +485,7 @@ Let f1 : [a,b] -> ℝ and f2 : [a,b] -> ℝ. What can we say about the monotonic
    - *Strictly decreasing:* f1(x) = x, f2(x) = -3x. Thus, F(x) = -2x is *strictly decreasing*.
    - *Striclty increasing:* f1(x) = 2x, f2(x) = -x. Thus, F(x) = x is *strictly increasing*.
 
-* Problem 7 [IN PROGRESS]
+* Problem 7 [DONE]
 ** Task
 Let A and B be countable sets. Prove that A x B is also countable.
 
@@ -512,15 +512,44 @@ Let A and B be countable sets. Prove that A x B is also countable.
 -
 
 ** Solution
-- Enumerate A and B
-  Since A and B are countable, their elements can be listed.
-  A is countable infinite and can be listed as A = {a1,a2,a3,...}.
-  Same with B. B = {b1,b2,b3,...}.
+Let A and B be countable sets.
 
-- Reduce by showing ℕ x ℕ is countable
-  The map (i,j) |-> (ai,bj) is a bijection between the index set {(i,j) ∈ ℕxℕ | ai and bj exist} and A x B. Thus it suffices to prove that ℕxℕ is countable.
+1. List elements
+   Since A and B are countable, we can list their elements as
 
-* Problem 8
+   A = {a1,a2,a3,...}
+   B = {b1,b2,b3,...}
+
+2. Describe the product
+   The Cartesian product consists of pairs (ai,bj) where ai ∈ A, bj ∈ B.
+
+3. Visualise the pairs
+   Arrange the pairs the following way:
+
+   (a1,b1) (a1,b2) (a1,b3) ...
+
+   (a2,b1) (a2,b2) (a2,b3)
+
+   (a3,b1) (a3,b2) (a3,b3)
+
+   ...
+
+4. Enumerate the pairs diagonally
+   (a1,b1),(a1,b2),(a2,b1),(a1,b3),(a2,b2),(a3,b1),...
+
+   In this way, every pair (ai,bj) will appear after a finite number of steps.
+
+5. Conclusion
+   Since we can list all elements of AxB one by one without missing any, AxB is countable.
+
+* Problem 8 [IN PROGRESS]
 ** Task
+Prove or disprove the following:
+
+1. There exists a bijective function f : ℚ -> ℝ.
+2. If A,B,C are sets such that A ⊂ B ⊂ C and A and C are countable, then B is countable.
+3. The set S = {root(5)/2n : n ∈ ℕ} is countable.
+4. There exists a countable subset of the set of irrational numbers.
+
 ** Notes
 ** Solution

@@ -2,11 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-02 17:03>
+#+lastmod: <2025-11-03 14:45>
 #+options: num:t
 #+startup: overview
 
-* Problem 1 [DONE]
+* Problem 1 [DONE] [REDO]
 ** Task
 Consider the function g : (-1,1) -> ℝ defined by g(x) = x/(1-x^2). Prove that g is a bijection. Find g^-1.
 
@@ -283,7 +283,7 @@ Thus, |A△B| is even.
 
 * Problem 3 [DONE]
 ** Task
-Find an exmaple of a function f : X -> Y and sets A,B ⊂ X, such that
+Find an example of a function f : X -> Y and sets A,B ⊂ X, such that
 
         f(A△B) != f(A)△f(B).
 
@@ -381,7 +381,7 @@ Determine whether the following function f is odd, even, or neither. In each cas
                    = -log2((1-x)/(1+x))
                    = -f(x)
 
-* Problem 5 [DONE]
+* Problem 5 [DONE] [REDO]
 ** Task
 Determine on which intervals the function f : ℝ -> ℝ is monotone (increasing/decreasing), if
 
@@ -427,10 +427,64 @@ Determine on which intervals the function f : ℝ -> ℝ is monotone (increasing
 
    *Conclusion.* f is stirctly decreasing on (-∞,0), and stricly increasing on (0,∞). (no value at x=0). (At x = 0, there is a local minimum.)
 
-* Problem 6
+* Problem 6 [DONE]
 ** Task
+Let f1 : [a,b] -> ℝ and f2 : [a,b] -> ℝ. What can we say about the monotonicity of F : [a,b] -> ℝ defined as F = f1 + f2.
+
+- If f1,f2 are increasing.
+- If f1,f2 are non-decreasing.
+- If f1 is increasing and f2 is decreasing.
+
 ** Notes
+- If f1,f2 are increasing.
+
+  If f1 and f2 are both increasing on [a,b], then F is also (non-decreasing) monotone increasing.
+
+  *Proof.* Let a <= x < y <= b.
+
+  Then, f1(x) < f1(y) and f2(x) < f2(y).
+
+  So, F(x) = f1(x) + f2(x) < f1(y) + f2(y) = F(y)
+
+- If f1,f2 are non-decreasing.
+
+  If f1 and f2 are both non-decreasing on [a,b], then F is also non-decreasing.
+
+  *Proof.* Let a <= x <= y <= b.
+
+  Then, f1(x) <= f1(y) and f2(x) <= f2(y).
+
+  So, F(x) = f1(x) + f2(x) <= f1(y) + f2(y) = F(y)
+
+- If f1 is increasing and f2 is decreasing.
+
+  Since two functions have different monotonicities, and we have no information about both of them, nothing can be concluded definetely about F. It might be increasing, decreasing, constant or not monotone at all.
+
 ** Solution
+1. If f1,f2 are strictly increasing on [a,b]:
+
+   Let a <= x < y <= b. Then f1(x) < f1(y) and f2(x) < f2(y).
+
+   Thus, F(x) = f1(x) + f2(x) < f1(y) + f2(y) = F(y).
+
+   F is strictly increasing.
+
+2. If f1,f2 are non-decreasing on [a,b]:
+
+   Let a <= x < y <= b. Then f1(x) <= f1(y) and f2(x) <= f2(y).
+
+   Thus, F(x) = f1(x) + f2(x) <= f1(y) + f2(y) = F(y).
+
+   F is non-decreasing.
+
+3. If f1 is increasing and f2 is decreasing.
+   Since two functions have different monotonicities, and we have no information about both of them, nothing can be concluded definetely about F. It might be increasing, decreasing, constant or not monotone at all.
+
+   Examples:
+   - *Constant:* f1(x) = x, f2(x) = 1 - x on [0,1]. Thus, F(x) = 1 is *constant*.
+   - *Strictly decreasing:* f1(x) = x, f2(x) = -3x. Thus, F(x) = -2x is *strictly decreasing*.
+   - *Striclty increasing:* f1(x) = 2x, f2(x) = -x. Thus, F(x) = x is *strictly increasing*.
+
 * Problem 7
 ** Task
 ** Notes

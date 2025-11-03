@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-03 16:42>
+#+lastmod: <2025-11-03 17:57>
 #+options: num:t
 #+startup: overview
 
@@ -542,7 +542,7 @@ Let A and B be countable sets.
 5. Conclusion
    Since we can list all elements of AxB one by one without missing any, AxB is countable.
 
-* Problem 8 [IN PROGRESS]
+* Problem 8 [DONE]
 ** Task
 Prove or disprove the following:
 
@@ -552,4 +552,70 @@ Prove or disprove the following:
 4. There exists a countable subset of the set of irrational numbers.
 
 ** Notes
+No notes(
+
 ** Solution
+1. There exists a bijective function f : ℚ -> ℝ.
+   *Rational number* is any real number that can be written in the form of a/b in which a,b ∈ ℤ, and b != 0.
+
+   *Proposition.* There exists a bijective function f : ℚ -> ℝ.
+
+   *Proof.* Lets assume f : ℚ -> ℝ.
+
+   e ∈ ℝ
+
+   e is irrational and can not be written in the form of a/b.
+
+   Thus, there is no preimage of e in domain of f. Thus f is not surjective.
+
+   Since bijection implies surjectivity, f is not bijective.
+
+2. If A,B,C are sets such that A ⊂ B ⊂ C and A and C are countable, then B is countable.
+
+   *Definition.* A set is *countable* if it has the same cardinality as some subset of the natural numbers.
+
+   In other words, if there exists a bijective function between the set and a subset of the natural numebrs.
+
+   Given: A ⊂ B ⊂ C are countable.
+
+   Since C is countable, there exists a bijective function f from C to a subset of natural numbers.
+
+   And since B is a subset of C, for every element b in B, there existgs a natural number n such that f(b) = n. TJHis creates a function g from B to a subset of natural numbers.
+
+   Thus, B is countable.
+
+3. The set S = {root(5)/2n : n ∈ ℕ} is countable.
+
+   Yes, S = {root(5)/2n : n ∈ ℕ} is countable.
+
+   *Proof.*
+
+   A set is countable when there exists a bijective function from the set of natural numbers to the set in the question.
+
+   In our case the function is f : ℕ -> S defined by f(n) = root(5)/2n, for all n in ℕ is a bijection.
+
+   a. Injective
+      Assume f(n) = f(m) for some natural number of n and m.
+
+      Then by definition of f, root(5)/2n = root(5)/2m.
+
+      After cleaning equation we get:
+
+      2n = 2m
+
+      And hence m = n, and f is surjective.
+
+   b. Surjective
+      For every element a in S, there exists n in N, such that f(n) = a by definition of the set S.
+
+      Thus f is surjective.
+
+   Hence, by definition, the set S is countable.
+
+4. There exists a countable subset of the set of irrational numbers.
+
+   Lets take e (Euler number).
+
+   S = {ne : n ∈ ℕ} = {1e,2e,3e,...}
+
+   S is countable, since it is basically set of natural numbers, with each element being multiplied by irrational number e, forming a subset of the set of irrational numbers. Since e * n : n ∈ ℕ (multiplying irrational number by rational) gives irrational number.

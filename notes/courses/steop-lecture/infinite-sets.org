@@ -2,7 +2,61 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-03 11:37>
+#+lastmod: <2025-11-04 12:26>
 #+options: num:t
 #+startup: overview
 
+* Proofs James Cummings
+** Counting Infinities
+- Hilbert's Hotel experiment
+  - Assume every room at the infinite hotel is occupied, and there is no empty room. With most hotels this would mean that if someone else arrives at the hotel, they will not be given a room. However! if for n ∈ ℕ, the patron in room 1 moves to room n + 1, then nobody is left without a room and suddenly room 1 is completely open. We created room out of nothing?
+
+  - Now lets imagine two people arrived to the hotel. We can also accommodate them with the same logic. Now everyone move from room n to room n + 2. This leaves rooms 1 and 2 open for new customers.
+
+  - What if, however, we have infinitely many people lined up wanting a room? Can we accommodate all of them? Yes! We still can. Just leave the person in room n and move to room 2n. Then all of the odd numbered rooms are vacant and the infinite line of people can take these rooms.
+- Specific Sets
+  #+begin_quote Example 8.23
+  There are the same number of natural numbers as there are natural numbers larger than 1 (|ℕ| = |{2,3,4,...}|). What is the bijection that shows this? Let
+
+       f : ℕ -> {2,3,4,...} where f(n) = n + 1.
+
+  In other words this is the pairing
+
+       1<->2 2<->3 3<->4
+  #+end_quote
+
+  *The Moral* Two sets can have the same size even though one is a proper subset of the other.
+
+  - Integers
+    One of the most popular ways to prove the remarkable fact that |ℤ| = |ℕ| is:
+
+    Imagine integer set:
+
+    ℤ = {..., -2, -1, 0, 1, 2, ...}
+
+    Thus, we can reshape it into:
+
+    ℤ = {0, 1, -1, 2, -2, 3, -3, ...}
+
+    This way we can have a clean start of counting, propper incremention technique, that does not miss any elements of the set. Thus ℤ is countable.
+
+  - Rationals
+    Construc the following table:
+
+    1/1  2/1  3/1  4/1  5/1 ...
+
+    1/2  2/2  3/2  4/2  5/2
+
+    1/3  2/3  3/3  4/3  5/3
+
+    1/4  2/4  3/4  4/4  5/4
+
+    1/5  2/5  3/5  4/5  5/5
+
+    ...
+
+    And now, starting from 1/1, we will go diagonally, collecting all of the values, so it would look like:
+
+    {1/1, 2/1, 1/2, 3/1, 2/2, 1/3, ...}
+
+    With this, it is the case that |ℕ| = |ℤ| = |ℚ|

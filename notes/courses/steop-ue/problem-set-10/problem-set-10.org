@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-04>
-#+lastmod: <2025-11-04 11:49>
+#+lastmod: <2025-11-04 11:53>
 #+options: num:t
 #+startup: overview
 * NB?
@@ -13,7 +13,19 @@ Below, asnwering "finite" or "infinite" to "How many?" is not enough. We care wh
 
 * Problem 1
 ** Task
+Prove that the set of finite bit strings is countable. (A bit string is a sequence of 0 and 1. like 0001101.)
+
 ** Notes
+So I understand the set of finite of bit strings as:
+
+{"0000", "0001", "0010", "0011", ...}
+
+With each next element being a  natural binary number (including 0).
+
+Though, we should notice that problem states "sequence of 0 and 1", meaning that set lacks "0000" and "1111".
+
+
+
 ** Solution
 * Problem 2
 ** Task

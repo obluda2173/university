@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-27>
-#+lastmod: <2025-10-31 09:07>
+#+lastmod: <2025-11-03 19:17>
 #+options: num:t
 #+startup: overview
 
@@ -218,7 +218,7 @@ Since each element of codomain must has maximum of one relation to domain. Thus,
   Thus, each domain element is linked with unique element of codomain, resulting in a list of 7 pairs.
   Therefore, there are 7! ways to arrange the pairs.
 
-* Problem 5 [DONE]
+* Problem 5 [DONE] [CHECKED]
 ** Task
 Prove that f : ℕ x ℕ -> ℕ defined as f(m,n) = 2^(m-1) * (2n - 1) is bijective.
 
@@ -312,7 +312,7 @@ Thus, since f(m,n) = f(m',n') implies (m,n) = (m',n'), f is injective.
 *Proof.* Since f is both surjective and injective, f is bijective.
 #+end_quote
 
-* Problem 6 [DONE]
+* Problem 6 [DONE] [CHECKED]
 ** Task
 Given a list of numbers 1, ..., n, we want to find all possible permutations such that none of the numbers occupies its original place. Lets call them /interesting/. For example, for n = 3, we have thow interesting permutations: 312 and 231.
 
@@ -367,7 +367,7 @@ end
 : n = 7, derangements = 1854
 : n = 8, derangements = 14833
 
-* Problem 7 [DONE]
+* Problem 7 [DONE] [CHECKED]
 ** Task
 How many numbers between 1111111 and 9999999 are divisible by 3 or 5 but not 11?
 
@@ -412,7 +412,7 @@ Its way to easy. Maybe I can work on optimisation. Like skipping if number ends 
   #+RESULTS:
   : Number of found numbers: 538720
 
-* Problem 8 [DONE]
+* Problem 8 [DONE] [CHECKED]
 ** Task
 Let us call a natural number charismatic if the sum of its digits is a perfect square. Find the sum of all charismatic numbers between 111111 and 999999.
 

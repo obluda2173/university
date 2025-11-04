@@ -2,11 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-03 17:57>
+#+lastmod: <2025-11-04 11:33>
 #+options: num:t
 #+startup: overview
 
-* Problem 1 [DONE] [REDO]
+* Problem 1 [DONE] [CHECKED]
 ** Task
 Consider the function g : (-1,1) -> ℝ defined by g(x) = x/(1-x^2). Prove that g is a bijection. Find g^-1.
 
@@ -186,7 +186,7 @@ Key issues to adress:
 *Proof.* Since g is injective and surjective, g is also bijective.
 #+end_quote
 
-* Problem 2 [DONE]
+* Problem 2 [DONE] [CHECKED]
 ** Task
 Define the symmetric difference A△B of sets A and B as
 
@@ -281,7 +281,7 @@ If |A| = |B|,
 Thus, |A△B| is even.
 #+end_quote
 
-* Problem 3 [DONE]
+* Problem 3 [DONE] [CHECKED]
 ** Task
 Find an example of a function f : X -> Y and sets A,B ⊂ X, such that
 
@@ -320,7 +320,7 @@ Check:
 f(A)△f(B) = {1,4,9}△{1,4,9} = ∅
 f(A△B) = {1,4,9} != ∅ = {1,4,9}△{1,4,9} = f(A)△f(B)
 
-* Problem 4 [DONE]
+* Problem 4 [DONE] [CHECKED]
 ** Task
 Determine whether the following function f is odd, even, or neither. In each case, the domain of f is the the largest subset of ℝ, where f is defined.
 
@@ -427,7 +427,7 @@ Determine on which intervals the function f : ℝ -> ℝ is monotone (increasing
 
    *Conclusion.* f is stirctly decreasing on (-∞,0), and stricly increasing on (0,∞). (no value at x=0). (At x = 0, there is a local minimum.)
 
-* Problem 6 [DONE]
+* Problem 6 [DONE] [CHECKED]
 ** Task
 Let f1 : [a,b] -> ℝ and f2 : [a,b] -> ℝ. What can we say about the monotonicity of F : [a,b] -> ℝ defined as F = f1 + f2.
 
@@ -485,7 +485,7 @@ Let f1 : [a,b] -> ℝ and f2 : [a,b] -> ℝ. What can we say about the monotonic
    - *Strictly decreasing:* f1(x) = x, f2(x) = -3x. Thus, F(x) = -2x is *strictly decreasing*.
    - *Striclty increasing:* f1(x) = 2x, f2(x) = -x. Thus, F(x) = x is *strictly increasing*.
 
-* Problem 7 [DONE]
+* Problem 7 [DONE] [CHECKED]
 ** Task
 Let A and B be countable sets. Prove that A x B is also countable.
 
@@ -542,7 +542,7 @@ Let A and B be countable sets.
 5. Conclusion
    Since we can list all elements of AxB one by one without missing any, AxB is countable.
 
-* Problem 8 [DONE]
+* Problem 8 [DONE] [REDO]
 ** Task
 Prove or disprove the following:
 
@@ -574,13 +574,13 @@ No notes(
 
    *Definition.* A set is *countable* if it has the same cardinality as some subset of the natural numbers.
 
-   In other words, if there exists a bijective function between the set and a subset of the natural numebrs.
+   In other words, if there exists a bijective function between the set and a subset of the natural numbers.
 
    Given: A ⊂ B ⊂ C are countable.
 
    Since C is countable, there exists a bijective function f from C to a subset of natural numbers.
 
-   And since B is a subset of C, for every element b in B, there existgs a natural number n such that f(b) = n. TJHis creates a function g from B to a subset of natural numbers.
+   And since B is a subset of C, for every element b in B, there existgs a natural number n such that f(b) = n. This creates a function g from B to a subset of natural numbers.
 
    Thus, B is countable.
 
@@ -603,7 +603,7 @@ No notes(
 
       2n = 2m
 
-      And hence m = n, and f is surjective.
+      And hence m = n, and f is injective.
 
    b. Surjective
       For every element a in S, there exists n in N, such that f(n) = a by definition of the set S.

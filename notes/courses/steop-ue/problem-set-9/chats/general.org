@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-03 17:57>
+#+lastmod: <2025-11-04 11:31>
 #+options: num:t
 #+startup: overview
 
@@ -107,3 +107,7 @@ The number 'e' is an irrational number, which means it cannot be expressed as a 
 The set of natural numbers is countable, and this set maintains that countability because there's a straightforward bijective (one-to-one and onto) correspondence between the natural numbers and the elements in your set. You have simply scaled the natural numbers by the factor 'e', but there's still an unambiguous way to associate each element in your set with a unique natural number.
 
 So yes, {e, 2e, 3e, ...} is a countable subset of the set of all irrational numbers. It's a simple yet very effective example. Well done!
+
+input is mapped to a unique output. But it's not surjective, because there are real numbers, for example, any negative real number, for which there is no pre-image in the domain of f (subset of real numbers).
+
+So, f(x) = e^x is not a bijective function from ℚ to ℝ. It would be a bijection if we considered its domain and codomain to be the set of all real numbers, except that the logarithm is undefined for negative real numbers.

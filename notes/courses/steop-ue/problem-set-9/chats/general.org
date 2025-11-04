@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-04 11:31>
+#+lastmod: <2025-11-04 11:40>
 #+options: num:t
 #+startup: overview
 
@@ -108,6 +108,29 @@ The set of natural numbers is countable, and this set maintains that countabilit
 
 So yes, {e, 2e, 3e, ...} is a countable subset of the set of all irrational numbers. It's a simple yet very effective example. Well done!
 
-input is mapped to a unique output. But it's not surjective, because there are real numbers, for example, any negative real number, for which there is no pre-image in the domain of f (subset of real numbers).
+* Is this a valid proof?
+1. There exists a bijective function f : ℚ -> ℝ.
+   *Rational number* is any real number that can be written in the form of a/b in which a,b ∈ ℤ, and b != 0.
 
-So, f(x) = e^x is not a bijective function from ℚ to ℝ. It would be a bijection if we considered its domain and codomain to be the set of all real numbers, except that the logarithm is undefined for negative real numbers.
+   *Proposition.* There exists a bijective function f : ℚ -> ℝ.
+
+   *Proof.* Lets assume f : ℚ -> ℝ.
+
+   e ∈ ℝ
+
+   e is irrational and can not be written in the form of a/b.
+
+   Thus, there is no preimage of e in domain of f. Thus f is not surjective.
+
+   Since bijection implies surjectivity, f is not bijective.
+
+
+Yes, the proof is correct. A bijective function (or bijection) requires both injectivity (each element of the domain maps to a unique element in the codomain) and surjectivity (each element of the codomain has a preimage in the domain). In your case, you present that there exist real numbers (irrational numbers in particular) that cannot be represented by any rational number, which implies no surjectivity, hence the proposed function f is not bijective.
+* But what about conterexample of f(x) = ex?
+
+
+The function you're proposing, f(x) = e^x, is not a counterexample because it's not a bijection.
+
+A bijection, or bijective function, is a function f: A -> B that is both injective (or one-to-one) and surjective (or onto).
+
+The function f(x) = e^x from ℚ (rational numbers) to ℝ (real numbers) is injective, because each

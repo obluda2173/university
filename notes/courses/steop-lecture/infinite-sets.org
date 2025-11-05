@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-04 12:26>
+#+lastmod: <2025-11-05 18:35>
 #+options: num:t
 #+startup: overview
 
@@ -60,3 +60,86 @@
     {1/1, 2/1, 1/2, 3/1, 2/2, 1/3, ...}
 
     With this, it is the case that |ℕ| = |ℤ| = |ℚ|
+
+* Cantor-Schröder-Bernstein Theorem
+#+begin_quote
+*Theorem.*
+If there is an injection f : A -> B and g B -> A, then there exists a bijection h : A -> B.
+
+In cardinality language, if |A| <= |B| and |B| <= |A|, then |A| = |B|.
+#+end_quote
+
+** Theorem proof
+*** General plan
+- Set up and definitions
+- Lemma 1 - Well definedness of the second case
+- Lemma 2 - The equivalence of b ∈ f(A*) <--> g(b) ∈ A*
+- Corollary - Disjointness of the two image sets used by h
+
+*** Proof
+- *Set up and definitions*
+
+  Let A, B be sets with injective functions f : A -> B and g : B -> A.
+
+  *Define.*
+
+  - A0 = A \ g(B)
+
+    A0 is the set of elements of A that are not mapped by any element of B with g.
+    or
+    A0 are the A0 nodes with no incoming arrows from B.
+
+  - For each n >= 0, define
+
+    An+1 = g(f(An))
+
+    First apply f to the whole set An, you get subset of B. Then apply g on that subset, and get subset of A. So A1 = g(f(A0)) and etc.
+
+  - Let A* = U(n>=0)(An)
+
+    A* is the union of these iterated images. A* is a subset of A, containing elements that can be reached by using above An+1 = g(f(An)) method.
+
+  And lastly, we define the candidate bijection function h : A -> B:
+
+        h(a) = / f(a) for a ∈ A*,
+               \ b ∈ B, g(b) for a ∉ A*.
+
+  We need to justify two things about this definition:
+  1. that there exist such unique b ∈ B (second case)
+  2. h is a bijection
+
+- *Lemma 1 - Well definedness of the second case*
+
+  *Claim.* If a ∉ A*, then ∃ b ∈ B, g(b) = a.
+
+  *Proof.* By definition A0 = A \ g(B),
+
+  - a ∈ A0 iff a ∉ g(B).
+  - a ∉ A0 iff a ∈ g(B).
+
+  Since A0 ⊆ A, and a ∉ A*, a ∉ A0. Thus, a ∈ g(B).
+
+  Since g is injective, the preimage of a, b is unique. Proved.
+
+- *Lemma 2 - The equivalence of b ∈ f(A*) <--> g(b) ∈ A**
+
+  *Claim.* For every b ∈ B:
+
+  b ∈ f(A*)  and  g(b) ∈ A*.
+
+  *Proof.*
+  - (-->) Suppose b ∈ f(A*), then b = f(a) for some a ∈ A*. Than a ∈ A* means a ∈ An for some n. By definition, An+1 = gf(An), so gf(An) ⊆ An+1 ⊆ A*. In particular g(f(a)) ∈ A*. But g(f(a)) = g(b). Hence g(b) ∈ A*.
+
+  - (<--) Suppose g(b) ∈ A*, then g(b) ∈ Am for some m >= 0. For m = 0, we have A0 = A \ g(B), but g(b) ∈ g(B), so m can not be 0. Hence m >= 0. By the recursive definition, for m >= 1 there exists some a ∈ Am-1 with
+
+        g(f(a)) = (an element of g(f(Am-1)) = Am)
+
+    Because g(b) ∈ Am = g(f(Am-1)), there exists a ∈ Am-1 with g(f(a)) = g(b). But g is injective, so f(a) = b. Therefore, b ∈ f(Am-1) ⊆ f(A*). Proved.
+
+- *Corollary - Disjointness of the two image sets used by h*
+
+  From the equivalence, we get important separation:
+
+  - If a ∈ A*, then h(a) = f(a) ∈ f(A*)
+
+  - If a ∉ A*, then h(a) = b, with g(b) = a. By the equivalence, g(b) = a ∉ A* implies b ∉ f(A*). Hence in this case h(a) ∈ B \ f(A*).

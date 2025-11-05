@@ -1,0 +1,76 @@
+#+title: General
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-11-04>
+#+lastmod: <2025-11-04 15:54>
+#+options: num:t
+#+startup: overview
+
+* Below I provide you my notes on the current math problem I am solving. Please have a look on them and tell me whether the approach is correct or not. If correct, then please teach me how to put it into a more structured way. If not show me the way how it should be done and where do I had a wrong assumption:
+
+** Problem 1
+*** Task
+Prove that the set of finite bit strings is countable. (A bit string is a sequence of 0 and 1. like 0001101.)
+
+*** Notes
+So I understand the set of finite of bit strings as:
+
+{"0000", "0001", "0010", "0011", ...}
+
+With each next element being a natural binary number (including 0).
+
+Though, we should notice that problem states "sequence of 0 and 1", meaning that set lacks "0000" and "1111".
+
+
+How to prove?
+
+We can link each element of the bit strings set to a natural number, in our case it would look like:
+
+We imagine each of the bits being the 2^n, where n is the index of the bit (it doesn't really matter if we count it from right or from left).
+
+Thus, it would look like this:
+
+|---+-----+-----+-----+-----|
+|   | 2^3 | 2^2 | 2^1 | 2^0 |
+|---+-----+-----+-----+-----|
+| 1 |   0 |   0 |   0 |   1 |
+|---+-----+-----+-----+-----|
+| 2 |   0 |   0 |   1 |   0 |
+|---+-----+-----+-----+-----|
+| 3 |   0 |   0 |   1 |   1 |
+|---+-----+-----+-----+-----|
+0001 <-> 1
+0010 <-> 2
+0011 <-> 3
+0100 <-> 4
+...
+
+And since a *countable set* is the set all of whose elements can be put into one-to-one relation with the natural numbers, means its elements can be listed in a sequence.
+
+And since all binary strigns are repesentation of natural numbers in binary number system, meaning that each element of binary strings set is into one-to-one relation with a natural numbers.
+
+** Answer
+Your logic is technically correct but it's more complicated than it needs to be and could use a bit of fine-tuning. Here's a simpler approach:
+
+We are trying to show that the set of all finite bit strings is countable. To do this, we need to find a way to list all the bit strings in a sequence which includes every bit string exactly once.
+
+We can list the bit strings in order of length, and for those of equal length, in dictionary order (also known as lexicographic order). In this way:
+
+	empty string
+	0
+	1
+	00
+	01
+	10
+	11
+	000
+	001
+	...
+
+For each natural number n, there is a corresponding bit string at the nth position in this sequence. So, we have set up a one-to-one correspondence between the set of all finite bit strings and the set of natural numbers, which means the set of all finite bit strings is countably infinite.
+
+You mentioned that the set lacks "0000" and "1111", but these strings are not absented in your set. In binary language, "0000" represents the number 0 and "1111" represents the number 15, so they should be added in the proper sequence.
+
+Also, all leading zeros are usually dropped from binary representations of natural numbers, so the sequence will be as above. However, you could include leading zeros or not, what matters is that there is a finite number of strings of each length, and each such string corresponds to a distinct natural number.
+
+And remember that the empty string is usually considered a part of the set of all finite bit strings.

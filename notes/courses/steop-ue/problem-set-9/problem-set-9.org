@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-04 11:33>
+#+lastmod: <2025-11-07 00:41>
 #+options: num:t
 #+startup: overview
 
@@ -556,19 +556,49 @@ No notes(
 
 ** Solution
 1. There exists a bijective function f : ℚ -> ℝ.
-   *Rational number* is any real number that can be written in the form of a/b in which a,b ∈ ℤ, and b != 0.
+   - Wrong solution
+     *Rational number* is any real number that can be written in the form of a/b in which a,b ∈ ℤ, and b != 0.
 
-   *Proposition.* There exists a bijective function f : ℚ -> ℝ.
+     *Proposition.* There exists a bijective function f : ℚ -> ℝ.
 
-   *Proof.* Lets assume f : ℚ -> ℝ.
+     *Proof.* Lets assume f : ℚ -> ℝ.
 
-   e ∈ ℝ
+     e ∈ ℝ
 
-   e is irrational and can not be written in the form of a/b.
+     e is irrational and can not be written in the form of a/b.
 
-   Thus, there is no preimage of e in domain of f. Thus f is not surjective.
+     Thus, there is no preimage of e in domain of f. Thus f is not surjective.
 
-   Since bijection implies surjectivity, f is not bijective.
+     Since bijection implies surjectivity, f is not bijective.
+
+   - Right solution
+     - ℚ is countable (diagonal matrix proof)
+     - For any function f : ℚ -> ℝ, the image f(ℚ) = {f(q1), f(q2), ...} is at most countable.
+     - ℝ is uncountable (Cantor's diagonal argument)
+       - Imagine that all ℝ in [0,1] are listed as following:
+
+         0.20000...
+         0.12345...
+         0.14159...
+         0.54321...
+         0.21436...
+         ...
+
+         Let new number differ from each listed numbers diagonally:
+
+         0.[2]0000...
+         0.1[2]345...
+         0.14[1]59...
+         0.543[2]1...
+         0.2143[6]...
+         ...
+         0.33237... (just a simple +1)
+
+         Thus, new number is not equal to any of the listed numbers. Which is a contradiction to the assumption that all ℝ in [0,1] can be listed.
+
+         Therefore, ℝ is uncountable.
+
+     - A countable set can not be equal to uncountable set, so f(ℚ) != ℝ. Therefore, f can not be surjective, and hence no bijection ℚ -> ℝ exists.
 
 2. If A,B,C are sets such that A ⊂ B ⊂ C and A and C are countable, then B is countable.
 

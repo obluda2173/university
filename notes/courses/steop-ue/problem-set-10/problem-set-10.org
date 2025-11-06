@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-04>
-#+lastmod: <2025-11-06 23:50>
+#+lastmod: <2025-11-06 23:52>
 #+options: num:t
 #+startup: overview
 
@@ -129,6 +129,7 @@ How many disjoints intervals (a,b) are in ℝ?
 
 ** Notes
 - The rational numbers ℚ are countable and dense in ℝ.
+- [[https://www.youtube.com/watch?v=z9UkzT2a3w8&t=119s][Video on rational dense in reals]]
 
 ** Solution
 #+begin_quote

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-05 18:35>
+#+lastmod: <2025-11-06 17:21>
 #+options: num:t
 #+startup: overview
 
@@ -75,6 +75,118 @@ In cardinality language, if |A| <= |B| and |B| <= |A|, then |A| = |B|.
 - Lemma 1 - Well definedness of the second case
 - Lemma 2 - The equivalence of b ∈ f(A*) <--> g(b) ∈ A*
 - Corollary - Disjointness of the two image sets used by h
+
+*** Detailed plan
+- High-level road-map
+  1. *Setup and data* - inputs and what we will use.
+  2. *Isolate forward starting points* - build A0, A1, A2, ... A*. Purpose: find the part of A you will map with f.
+  3. *Define a candidate bjection h* - rule that depends on membership in A*.
+  4. *Show the rule is well defined* = show that second case actually chooses a unique element.
+  5. *Prove the key equivalence* - b ∈ f(A*) <--> g(b) ∈ A*.
+  6. *Deduce the partition property* -
+  7. *Prove injectivity* - no two a's map to the same b.
+  8. *PRove surjectivity* - every b ∈ B is hit by some a.
+  9. *Conclude bijection* - gather pieces.
+
+- *Block 1 - Setup and data*
+  - *Goal:* establish notations and assumptions.
+
+  - *Given:* sets A and B, and bijections f : A -> B and g : B -> A.
+
+  - *Why necessary:* every other step is build on f and g functions injectivity.
+
+  - *What is permits:* defining images f(X), g(Y) and taking preimages uniquely when maps are injective.
+
+- *Block 2 - Isolate forward starting points*
+  - *Definitions:*
+    - A0 = A \ g(B)  (those a with no incoming g arrow)
+
+    - An = f(g(An-1))
+      or
+      An+1 = f(g(An))
+
+    - A* = U(n>=0)(An)
+
+  - *Goal:* identify exaclty those a ∈ that lie on components that start in A (no predecessor).
+
+  - *Guaranties:* an explicit subset A* ∈ A that collects all A-nodes that are reachable from A0 by alternating f,g.
+
+- *Block 3 - Define h*
+  - *Rule:* for a ∈ A
+    - if a ∈ A*, h(a) = f(a)
+    - if a ∉ A*, h(a) = b, such that g(b) = a
+
+  - *Goal:* give a single function that will be proven bijective.
+
+  - *Immediate questions to attack next:* is the second case well defined? and do the two pieces collide?
+
+- *Block 4 - Well-definedness of second case*
+  - *Claim:* if a ∉ A*, then a ∈ g(B), so there exist a unique b with g(b) = a.
+
+  - *Uses:* A0 = A \ g(B) and A0 ⊆ A*.
+
+  - *Why necessary:* otherwise rule is ill-specified.
+
+- *Block 5 - Prove key equivalence*
+  - *Statement:* for any b ∈ B:
+
+        b ∈ f(A*) <--> g(b) ∈ A*
+
+  - *Why this matters:* it ties two parts of the definition of h together; it says "b is in the forward image of A* exactly when its g-arrows lands inside A*".
+
+  - *Uses:* the recursive definition of An and injectivity of g (to move from g(f(a)) = g(b) to f(a) = b).
+
+- *Block 6 - Partition/separation corollary*
+  - *Statement:* f(A*) and B \ f(A*) are exactly the images of the two branches of h. Concretely:
+
+    - if a ∈ A*, h(a) ∈ f(A*)
+    - if a ∉ A*, h(a) ∈ B \ f(A*)
+
+  - *Why this mattes:* ensures no collision between a mapped by f and an a' mapped by g^-1. This is a structural reason injectivity works.
+
+  - *Uses:* equivalence from Block 5.
+
+- *Block 7 - Injectivity on h*
+  - *Strategy:* split into three exhaustive cases:
+    - both from A* -> reduce to unjectivity of f.
+    - both not from A* -> reduce to injectivity of g.
+    - one in A* -> impossible because of the separation from Block 6.
+
+  - *Why it matters:* shows no 2 different a's map to the same b.
+
+  - *Uses:* Blocks 4-6 and injectivity of f,g.
+
+- *Block 8 - Surjectivity on h*
+  - *Strategy:* take any b ∈ B. Two cases by Block 5:
+    - if b ∈ f(A*), then pick that a ∈ A* with f(a) = b and h(a) = b
+
+    - if b ∉ f(A*), then g(B) ∉ A*; by Block 4 the rule picks h(g(b)) = b
+
+  - *Why it matters:* ensures every b is hit.
+
+  - *Uses:* Block 4-5 and definition of h.
+
+- *Block 9 - Conclusion*
+  - *Combining:* well-defined (Block 4) + injective (Block 6) + surjective (Block 7) --> h is a bijection A -> B.
+
+*** Block-dependency graph
+- Setup → (defines f,g).
+
+- Setup → Block 2 (builds A*).
+
+- Block 2 → Block 3 (definition of
+
+- Block 2 + Setup → Block 4 (well-definedness).
+
+- Block 2 → Block 5 (equivalence).
+
+- Block 5 → Block 6 (separation).
+
+- Block 6 + Setup → Block 7 (injectivity).
+
+- Block 4 + Block 5 → Block 8 (surjectivity).
+
+- Blocks 4,7,8 → Block 9 (conclusion).
 
 *** Proof
 - *Set up and definitions*

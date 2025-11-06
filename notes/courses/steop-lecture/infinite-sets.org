@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-03>
-#+lastmod: <2025-11-06 17:21>
+#+lastmod: <2025-11-06 18:33>
 #+options: num:t
 #+startup: overview
 
@@ -188,6 +188,12 @@ In cardinality language, if |A| <= |B| and |B| <= |A|, then |A| = |B|.
 
 - Blocks 4,7,8 → Block 9 (conclusion).
 
+*** Minimal checklist
+- Show that A0 = A \ f(B), An = f(g(An-1)), A* = U(n>=0)(An).
+- Define h(a) = f(a) for a ∈ A*, and if a ∉ A* then h(a) = b for g(b) = a.
+- Check well-definedness of if a ∉ A* then h(a) = b for g(b) = a.
+- Prove b ∈ f(A*) <--> g(b) ∈ A*.
+- Use
 *** Proof
 - *Set up and definitions*
 
@@ -240,7 +246,7 @@ In cardinality language, if |A| <= |B| and |B| <= |A|, then |A| = |B|.
   b ∈ f(A*)  and  g(b) ∈ A*.
 
   *Proof.*
-  - (-->) Suppose b ∈ f(A*), then b = f(a) for some a ∈ A*. Than a ∈ A* means a ∈ An for some n. By definition, An+1 = gf(An), so gf(An) ⊆ An+1 ⊆ A*. In particular g(f(a)) ∈ A*. But g(f(a)) = g(b). Hence g(b) ∈ A*.
+  - (-->) Suppose b ∈ f(A*), then b = f(a) for some a ∈ A*. Then a ∈ A* means a ∈ An for some n. By definition, An+1 = gf(An), so gf(An) ⊆ An+1 ⊆ A*. In particular g(f(a)) ∈ A*. But g(f(a)) = g(b). Hence g(b) ∈ A*.
 
   - (<--) Suppose g(b) ∈ A*, then g(b) ∈ Am for some m >= 0. For m = 0, we have A0 = A \ g(B), but g(b) ∈ g(B), so m can not be 0. Hence m >= 0. By the recursive definition, for m >= 1 there exists some a ∈ Am-1 with
 

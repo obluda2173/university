@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-04>
-#+lastmod: <2025-11-04 15:20>
+#+lastmod: <2025-11-06 20:43>
 #+options: num:t
 #+startup: overview
 * NB?
@@ -11,7 +11,7 @@ Below, asnwering "finite" or "infinite" to "How many?" is not enough. We care wh
 - ℵ is an aleph number, that represents the cardinality of infinite sets.
 - ℵ0 in our case stands for the cardinality of natural numbers set, which is the smallest along all aleph numbers sequence.
 
-* Problem 1
+* Problem 1 [DONE]
 ** Task
 Prove that the set of finite bit strings is countable. (A bit string is a sequence of 0 and 1. like 0001101.)
 
@@ -53,6 +53,56 @@ And since a *countable set* is the set all of whose elements can be put into one
 And since all binary strigns are repesentation of natural numbers in binary number system, meaning that each element of binary strings set is into one-to-one relation with a natural numbers.
 
 ** Solution
+#+begin_quote Solution 1
+*Proposition.* The set of finite bit strings is countable.
+
+*Proof.* Let S be the set of all finite bit strings. For a string s ∈ S, |s| would be its length. For each n ∈ ℕ define:
+
+        Sn = {s ∈ S : |s| = n},
+
+the set of all bit strings:
+
+        S = U(n=0)(Sn),
+
+because every finite string has some finite length n.
+
+Each Sn is finite: |Sn| = 2^n, since every bit position is binary.
+
+So we can imagine S looking like:
+
+        S = {"", "0", "1", "00", "01", "10", "11", "000", ...},
+
+with
+
+        S0 = {""}
+        S1 = {"0", "1"}
+        S2 = {"00", "01", "10", "11"}
+        S3 = {...}
+
+Thus, every level of Sn is finite, and we list them in order: 0,1,2,3,...
+#+end_quote
+
+#+begin_quote Solution 2
+*Proposition.* The set of finite bit strings is countable.
+
+*Proof.*
+
+For n ∈ ℕ let Sn = {s ∈ S : |s| = n} be the set of all bit-strings of finite length n.
+
+Clearly, S = U(n=0)(Sn)
+
+For each n the set Sn is finite, in fact: |Sn| = 2^n.
+
+Now:
+
+        S0 = {""}
+        S1 = {"0", "1"}
+        S2 = {"00", "01", "10", "11"}
+        S3 = {...}
+
+Because each Sn is finite, concatenating these lists produces a single sequence that contains every element of S exaclty once; therefore, S is countable.
+#+end_quote
+
 * Problem 2
 ** Task
 ** Notes

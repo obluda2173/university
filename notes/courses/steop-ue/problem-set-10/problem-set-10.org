@@ -2,9 +2,10 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-04>
-#+lastmod: <2025-11-06 20:43>
+#+lastmod: <2025-11-06 23:50>
 #+options: num:t
 #+startup: overview
+
 * NB?
 Below, asnwering "finite" or "infinite" to "How many?" is not enough. We care whether it is ℵ0 or c, or somethinsg else.
 
@@ -103,14 +104,70 @@ Now:
 Because each Sn is finite, concatenating these lists produces a single sequence that contains every element of S exaclty once; therefore, S is countable.
 #+end_quote
 
-* Problem 2
+* Problem 2 [MAYBE SKIP]
 ** Task
+Prove that the set of infinite bit strings has the same cardinality as ℝ.
+
 ** Notes
+From what I can notice from the start is that in each level of the S, Sn repeats the binary numbers of the predecessor except of S0.
+
+        S0 = {""}
+        S1 = {"0", "1"}
+        S2 = {"00", "01", "10", "11"}
+        S3 = {...}
+
+So in here we can see that S2's "00" equal to S1's "0" as a binary number (and "01" = "1" as well).
+
+So we kind of repeat the previous numbers in each level.
+
+
+
 ** Solution
-* Problem 3
+* Problem 3 [DONE]
 ** Task
+How many disjoints intervals (a,b) are in ℝ?
+
 ** Notes
+- The rational numbers ℚ are countable and dense in ℝ.
+
 ** Solution
+#+begin_quote
+*Lemma.* ∃ x ∈ ℚ : a < x < b; a,b ∈ ℝ.
+
+Let x = m/n : m ∈ ℤ, n ∈ ℕ. Hence, a < m/n < b; a,b ∈ ℝ.
+
+Thus, an < m < bn (an, bn ∈ ℝ).
+
+By Archimedean property, we pick n ∈ ℕ, where 1/n < b - a (or a < b - 1/n).
+- This simply means to find n that would make the distance between a and b being greater than 1.
+
+Next, take the smallest
+
+m ∈ ℤ :   m - 1 <= na < m
+                    a < m/n
+
+        m - 1 <= na (substitute (b - 1/n) )
+        m - 1 < n(b - 1/n)
+        m - 1 < nb - 1
+            m < nb
+          m/n < b
+
+
+Thus, a < m/n < b.
+
+*Statement.* Number of disjoint open intervals in ℝ is either finite, or countably infinite, but not uncountable.
+
+For each open interval of ℝ, there exists at least one x ∈ ℚ, such that x ∈ (a,b); a,b ∈ ℝ.
+
+Because intervals are disjoint, different intervals can not contain the same rational number. Hence, the map
+
+        F = {(a,b) : a,b ∈ ℝ; (a,b)∩Fn = ∅: n ∈ ℕ}
+
+        I |-> q1 is injective from F to ℚ
+
+An injective map into a countable set shows F is at most countable. Hence |F| <= ℵ0.
+#+end_quote
+
 * Problem 4
 ** Task
 ** Notes

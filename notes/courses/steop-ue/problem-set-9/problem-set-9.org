@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-07 00:41>
+#+lastmod: <2025-11-07 06:41>
 #+options: num:t
 #+startup: overview
 
@@ -552,7 +552,32 @@ Prove or disprove the following:
 4. There exists a countable subset of the set of irrational numbers.
 
 ** Notes
-No notes(
+2. Solutions
+   - Solution 1
+     *Definition.* A set is *countable* if it has the same cardinality as some subset of the natural numbers.
+
+     In other words, if there exists a bijective function between the set and a subset of the natural numbers.
+
+     Given: A ⊂ B ⊂ C are countable.
+
+     Since C is countable, there exists a bijective function f from C to a subset of natural numbers.
+
+     And since B is a subset of C, for every element b in B, there existgs a natural number n such that f(b) = n. This creates a function g from B to a subset of natural numbers.
+
+     Thus, B is countable.
+
+   - Solution 2
+     *Definition.* Set S is *countable* iff |S| = |ℕ|, i.e. f : S -> ℕ, f is bijection.
+
+     *Proposition.* A,B,C are sets. If A,C are countable and A ⊂ B ⊂ C; then B is countable.
+
+     *Proof.*
+
+     Since C is countable, ∃ bij. f : C -> ℕ.
+
+     And since B ⊆ C, ∀ b ∈ B : g(b) ∈ ℕ.
+
+     Thus B is countable.
 
 ** Solution
 1. There exists a bijective function f : ℚ -> ℝ.
@@ -602,17 +627,17 @@ No notes(
 
 2. If A,B,C are sets such that A ⊂ B ⊂ C and A and C are countable, then B is countable.
 
-   *Definition.* A set is *countable* if it has the same cardinality as some subset of the natural numbers.
+   *Proof.*
 
-   In other words, if there exists a bijective function between the set and a subset of the natural numbers.
+   1. Since C is countably infinite, ∃ bij. f : C -> ℕ.
 
-   Given: A ⊂ B ⊂ C are countable.
+   2. Let S := f(B). Then S ⊂ ℕ. Because A ⊂ B, and A is infinite, f(A) ⊂ S is infinite; hence S is an infinite subset of ℕ.
 
-   Since C is countable, there exists a bijective function f from C to a subset of natural numbers.
+   3. Any infinite subset S ⊂ ℕ can be listed in increasing order. Thus h : ℕ -> S is bij..
 
-   And since B is a subset of C, for every element b in B, there existgs a natural number n such that f(b) = n. This creates a function g from B to a subset of natural numbers.
+   4. Define g = f^-1 o h : ℕ -> B. Since both f^-1 and h are bij. g is also bij..
 
-   Thus, B is countable.
+   5. Therefore, B is countably infinite.
 
 3. The set S = {root(5)/2n : n ∈ ℕ} is countable.
 

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-04>
-#+lastmod: <2025-11-06 23:52>
+#+lastmod: <2025-11-07 13:30>
 #+options: num:t
 #+startup: overview
 
@@ -104,7 +104,7 @@ Now:
 Because each Sn is finite, concatenating these lists produces a single sequence that contains every element of S exaclty once; therefore, S is countable.
 #+end_quote
 
-* Problem 2 [MAYBE SKIP]
+* Problem 2 [SKIP]
 ** Task
 Prove that the set of infinite bit strings has the same cardinality as ℝ.
 
@@ -123,7 +123,7 @@ So we kind of repeat the previous numbers in each level.
 
 
 ** Solution
-* Problem 3 [DONE]
+* Problem 3 [DONE] [CHECKED]
 ** Task
 How many disjoints intervals (a,b) are in ℝ?
 
@@ -169,19 +169,27 @@ Because intervals are disjoint, different intervals can not contain the same rat
 An injective map into a countable set shows F is at most countable. Hence |F| <= ℵ0.
 #+end_quote
 
-* Problem 4
+* Problem 4 [NOT DONE] [CHECKED]
 ** Task
 ** Notes
 ** Solution
-* Problem 5
+* Problem 5 [NOT DONE] [CHECKED]
+** Task
+How many non-intersecting circles can be drawn on a plane (circles may have an arbitrary radius)?
+
+** Notes
+** Solution
+For two circles with the same center to intersect, its needed:
+
+(x - a)^2 + (y - b)^2 + r^2 = (x - )^2 + (y - d)^2 + r'^2
+
+* Problem 6 [NOT DONE] [CHECKED]
 ** Task
 ** Notes
 ** Solution
-* Problem 6
+* Problem 7 [NOT DONE]
 ** Task
-** Notes
-** Solution
-* Problem 7
-** Task
+Prove that the set of all functions f : ℕ -> {0,1} is uncountable.
+
 ** Notes
 ** Solution

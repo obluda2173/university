@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-01>
-#+lastmod: <2025-11-07 06:41>
+#+lastmod: <2025-11-07 08:18>
 #+options: num:t
 #+startup: overview
 
@@ -542,7 +542,7 @@ Let A and B be countable sets.
 5. Conclusion
    Since we can list all elements of AxB one by one without missing any, AxB is countable.
 
-* Problem 8 [DONE] [REDO]
+* Problem 8 [DONE] [CHECKED]
 ** Task
 Prove or disprove the following:
 
@@ -665,7 +665,7 @@ Prove or disprove the following:
 
       Thus f is surjective.
 
-   Hence, by definition, the set S is countable.
+   Hence, the set S is countable.
 
 4. There exists a countable subset of the set of irrational numbers.
 
@@ -673,4 +673,6 @@ Prove or disprove the following:
 
    S = {ne : n ∈ ℕ} = {1e,2e,3e,...}
 
-   S is countable, since it is basically set of natural numbers, with each element being multiplied by irrational number e, forming a subset of the set of irrational numbers. Since e * n : n ∈ ℕ (multiplying irrational number by rational) gives irrational number.
+   S is countable, since it is basically set of natural numbers, with each element being multiplied by irrational number e, forming a subset of the set of irrational numbers.
+
+   Since e * n : n ∈ ℕ (multiplying irrational number by rational) gives irrational number.

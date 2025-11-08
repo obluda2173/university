@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-08 08:30>
+#+lastmod: <2025-11-08 08:36>
 #+options: num:t
 #+startup: overview
 
@@ -30,11 +30,19 @@ x^2 + x(-3 - 7^1/2 - 3 + 7^1/2) + (3^2 - 7) = 0
 x^2 - 6x + 2 = 0
 
 ** Solution
-* Problem 2
+* Problem 2 [DONE]
 ** Task
 Find the remainder when P(x) = x^4 - 4x^3 + 6x^2 - 3x + 1 is divided by x^2 - x + 1.
 
 ** Notes
+ (x^4 - 4x^3 + 6x^2 - 3x + 1) | (x^2 - x + 1) | x^2 - 3x
+-(x^4 -  x^3 +  x^2)
+
+      (-3x^3 + 5x^2 - 3x + 1)
+     -(-3x^3 + 3x^2 - 3x)
+
+                          (1)
+
 ** Solution
 * Problem 3
 ** Task

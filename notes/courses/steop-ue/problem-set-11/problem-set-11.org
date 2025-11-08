@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-08 08:36>
+#+lastmod: <2025-11-08 09:05>
 #+options: num:t
 #+startup: overview
 
@@ -44,10 +44,14 @@ Find the remainder when P(x) = x^4 - 4x^3 + 6x^2 - 3x + 1 is divided by x^2 - x 
                           (1)
 
 ** Solution
-* Problem 3
+* Problem 3 [DONE]
 ** Task
+Find the remainder when P(x) = x^5 - 17x + 1 is divided by x + 2 (can you do all the calculation in your head?)
+
 ** Notes
 ** Solution
+Yes, I can. 3.
+
 * Problem 4
 ** Task
 ** Notes

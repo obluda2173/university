@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-10 14:50>
+#+lastmod: <2025-11-10 15:20>
 #+options: num:t
 #+startup: overview
 
@@ -273,10 +273,56 @@ Express the following numbers in a basic algebraic form (that is as a + bi):
 ** Solution
 Same as in notes.
 
-* Problem 7
+* Problem 7 [DONE]
 ** Task
+Solve the following quadratic equations:
+1. x^2 + 3x + 4 = 0
+2. z^2 + 5^1/2 * z + 3i = 0
+
 ** Notes
 ** Solution
+x = (-b ± (b^2 - 4ac)^1/2)/(2a)
+
+1. x^2 + 3x + 4 = 0
+
+   Thus,
+
+   x12 = (-3 ± (9 - 4 * 4)^1/2)/(2)
+       = (-3 ± (-7)^1/2)/(2)
+       = (-3 ± 7^1/2 * i)/(2)
+
+2. z^2 + 5^1/2 * z + 3i = 0
+
+   Thus,
+   z12 = (-(5^1/2) ± (5 - 12i)^1/2)/(2)
+
+   Lets simplify (5 - 12i)^1/2:
+   (5 - 12i)^1/2 = ((a + ib)^2)^1/2
+   5 - 12i = (a + ib)^2
+   5 - 12i = a^2 + 2abi - b^2
+
+   Thus,
+   5 = a^2 - b^2
+   -12 = 2ab
+   (a^2 + b^2)^2 = (a^2 - b^2)^2 + (2ab)^2 = 5^2 + 12^2 = 25 + 144 = 169
+
+   Hence,
+   a^2 + b^2 = 13
+
+   Thus,
+   a^2 = ((a^2 + b^2) + (a^2 - b^2))/(2) = (13 + 5)/2 = 9
+   b^2 = 4
+   a = ±3; b = ±2.
+
+   Since 2ab = -12, roots are 3 - 2i and -3 + 2i
+
+
+   Back to original equation:
+   z12 = (-(5^1/2) ± (5 - 12i)^1/2)/(2)
+
+   z1 = (-(5^1/2) + 3 - 2i)/(2)
+   z2 = (-(5^1/2) - 3 + 2i)/(2)
+
 * Problem 8
 ** Task
 ** Notes

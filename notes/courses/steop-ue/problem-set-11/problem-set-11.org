@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-10 11:12>
+#+lastmod: <2025-11-10 11:57>
 #+options: num:t
 #+startup: overview
 
@@ -52,14 +52,57 @@ Find the remainder when P(x) = x^5 - 17x + 1 is divided by x + 2 (can you do all
 ** Solution
 Yes, I can. 3.
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
 The cubic polynomial p(x) = x^3 - 2x^2 + x + 1 has roots x1,x2,x3. Find a cubic polynomial f(y) that has roots y1 = x2x3, y2 = x1x3, y3 = x1x2.
 
 ** Notes
+#+begin_quote
+P(t) = (t - x)(t - y)(t - z) = t^3 - s1*t^2 + s2*t - s3
 
+s1 = x + y + z          = 2
+s2 = xy + xz + yz       = 1
+s3 = xyz                = -1
+
+s4 = yz + xz + xy
+s5 = xyz^2 + xzy^2 + yzx^2
+s6 = (xyz)^2
+
+Since p(x) = x^3 - 2x^2 + x + 1, f(y)'s:
+s4 = s2
+s5 = s1*s2
+s6 = s3^2
+
+f(y) = y^3 - s4*y^2 + s5*y - s6
+f(y) = y^3 - s2*y^2 + s1*s2*y - s3^2
+f(y) = y^3 - y^2 + 2*y - 1
+#+end_quote
+
+Something here is not correct, so I will start from 0 in Solution
 
 ** Solution
+#+begin_quote
+p(x) = x^3 - 2x^2 + x + 1
+
+p(x)'s coefficients:
+c1 = x + y + z          = 2
+c2 = xy + xz + yz       = 1
+c3 = xyz                = -1
+
+Since f(y) has the following roots:
+y1 = x2x3
+y2 = x1x3
+y3 = x1x2
+
+f(y)'s coefficients woud be:
+c4 = x2x3 + x1x3 + x1x2                         = c2            = 1
+c5 = x2x3(x1)^2 + x1x3(x2)^2 + x1x2(x3)^2       = c1c3          = -2
+c6 = (xyz)^2                                    = c3^2          = 1
+
+Thus,
+f(y) = y^3 - y^2 - 2y - 1
+#+end_quote
+
 * Problem 5 [DONE]
 ** Task
 Numbers x,y,z ∈ ℝ satisfy two conditions

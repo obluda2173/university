@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-10 15:20>
+#+lastmod: <2025-11-10 16:15>
 #+options: num:t
 #+startup: overview
 
@@ -325,8 +325,20 @@ x = (-b ± (b^2 - 4ac)^1/2)/(2a)
 
 * Problem 8
 ** Task
+Solve the following equations:
+1. z^2 = -8i
+2. z^2 + 2z = -1
+3. z^4 + 3z^2 + 2 = 0
+
 ** Notes
 ** Solution
+1. z^2 = -8i
+
+
+
+2. z^2 + 2z = -1
+3. z^4 + 3z^2 + 2 = 0
+
 * Problem 9
 ** Task
 ** Notes

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-07>
-#+lastmod: <2025-11-08 09:05>
+#+lastmod: <2025-11-10 11:12>
 #+options: num:t
 #+startup: overview
 
@@ -54,12 +54,119 @@ Yes, I can. 3.
 
 * Problem 4
 ** Task
+The cubic polynomial p(x) = x^3 - 2x^2 + x + 1 has roots x1,x2,x3. Find a cubic polynomial f(y) that has roots y1 = x2x3, y2 = x1x3, y3 = x1x2.
+
 ** Notes
+
+
 ** Solution
-* Problem 5
+* Problem 5 [DONE]
 ** Task
+Numbers x,y,z ∈ ℝ satisfy two conditions
+
+        x + y + z = a
+        1/x + 1/y + 1/z = 1/a
+
+for some a ∈ ℝ. Prove that at leas one of the numbers x,y,z is equal to a.
+
 ** Notes
+a = x + y + z
+
+then,
+
+1/x + 1/y + 1/z = 1/(x + y + z)
+
+yz/xyz + xz/xyz + xy/xyz = 1/(x + y + z)
+
+(yz + xz + xy)/(xyz) = 1/(x + y + z)
+
+(yz + xz + xy)(x + y + z) = xyz
+
+(xyz + zy^2 + yz^2) + (zx^2 + xyz + xz^2) + (yx^2 + xy^2 + xyz) = xyz
+
+(zy^2 + yz^2) + (zx^2 + xz^2) + (yx^2 + xy^2)
+
+yz(y + z) + xz(x + z) + xy(x + y)
+
+x(xz + xy) + y(yx + yz) + z(zx + zy)
+
+x(xz + xy) + y(yx + yz) + z(zx + zy) = -2xyz
+
+
+#+begin_quote
+x^3 + ax^2 + bx + c = 0
+
+Since,
+r1 + r2 + r3 = -a
+r1r2 + r1r3 + r2r3 = b
+r1r2r3 = -c
+
+Thus,
+(r1r2 + r1r3 + r2r3)/(r1r2r3) = -b/c
+1/r1 + 1/r2 + 1/r3 = -b/c
+
+Back to problem. Thus,
+a = r1 + r2 + r3
+-b/c = (r1r2 + r1r3 + r2r3)/(r1r2r3)
+#+end_quote
+
+#+begin_quote
+Got:
+x + y + z = a
+1/x + 1/y + 1/z = 1/a
+
+
+P(t) = (t - x)(t - y)(t - z) = t^3 - s1*t^2 + s2*t - s3
+
+Thus,
+s1 = x + y + z = a
+s2 = xy + xz + yz
+s3 = xyz
+
+Hence,
+s2/s3 = (xy + xz + yz)/(xyz) = 1/x + 1/y + 1/z = 1/a
+s2/s3 = 1/a
+as2 = s3
+
+Therefore,
+P(a) = a^3 - s1*a^2 + s2*a + s3 = a^3 - s1*a^2 = a^3 - a^3 = 0
+P(a) = 0.
+
+Thus, one of the roots (e.g. x,y,z) must be equal to a.
+#+end_quote
+
 ** Solution
+#+begin_quote
+*Proposition.* If numbers x,y,z ∈ ℝ satisfy two conditions
+
+        x + y + z = a
+        1/x + 1/y + 1/z = 1/a
+
+And a ∈ ℝ. Than at least one of the numbers x,y,z is equal to a.
+
+*Proof.*
+P(t) = (t - x)(t - y)(t - z) = t^3 - s1*t^2 + s2*t - s3
+
+s1 = x + y + z
+s2 = xy + xz + yz
+s3 = xyz
+
+thus,
+s1 = a
+s2/s3 = (xy + xz + yz)/(xyz) = 1/x + 1/y + 1/z = 1/a
+
+hence,
+a*s2 = s3
+
+therefore,
+P(a) = a^3 - s1*a^2 + s2*a - s3         (s1 = a)
+     = a^3 - a^3 + s2*a - s3
+     = s2*a - s3                        (s2*a = s3)
+     = 0
+
+Since, P(a) = 0, that means a is one of the roots of P(t), and thus equals to at least one of the x,y,z.
+#+end_quote
+
 * Problem 6
 ** Task
 ** Notes

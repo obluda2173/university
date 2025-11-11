@@ -1,0 +1,79 @@
+#+title: Exam Prep
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-11-11>
+#+lastmod: <2025-11-11 20:49>
+#+options: num:t
+#+startup: overview
+
+* TODO
+- [ ] Write tasks in Problem Sets 1,2.
+- [ ] Assign topic to each Problem Set.
+- [ ]
+
+* General exam information
+- Problems from Problem Set 1-11.
+- Grading scheme:
+  90% -- 100%:  grade 1 (very good)
+  80% -- 89%:   grade 2 (good)
+  70% -- 79%:   grade 3 (satisfactory)
+  60% -- 69%:   grade 4 (sufficient)
+- Exam consists of 11 exercises from each Problem Set.
+- Exam lasts 75 minutes.
+- Exam start at 18:30 on 17/11/2025.
+- Only pen and water bottle allowed (bring earplugs).
+- Bring student ID.
+- Allowed to use Theorems from lectures with no proof.
+
+* General content information:
+- 6 minutes on each problem.
+-
+
+
+Oct 1. Lecture 0. Introduction to the course. Logistics. Julia.
+
+Oct 2. Lecture 1. Sets. Basic definitions and operations with sets.
+
+Oct 6. Lectures 2-3. Propositional logic. Quantifiers.
+
+Oct 7-8. Lecture 4-5. Induction.
+
+Oct 9. Lecture 6. Proofs.
+
+Oct 10. Lecture 7. Numbers: integer, rational, real. Decimal representation.
+
+Oct 13. Lectures 8-9. Numbers. Decimal representation. Integers.
+
+Oct 14. Lecture 10. Integers.
+
+Oct 15. Lecture 11. Integers. Congruences.
+
+Oct 16. Lecture 12. Julia tutorial.
+
+Oct 17. Lecture 13. Problem solving.
+
+Oct 20. Lectures 14-15. Counting. Binomial theorem. Inclusion-exclusion formula.
+
+Oct 21-22. Lectures 16-17. Relations.
+
+Oct 23. Lecture 18. Extremal elements in a poset.
+
+Oct 24. Lecture 19. Pigeonhole principle.
+
+Oct 27. Lecture 20. Functions. Lecture 21. Julia tutorial.
+
+Oct 28. Lecture 22. Functions (continuation).
+
+Oct 29-30. Lectures 23-24. Even more functions.
+
+Oct 31. Lecture 25. Infinite sets.
+
+Nov 3. Lectures 26-27. Infinite sets. Cantor-Schröder-Bernstein theorem.
+
+Nov 4. Lecture 28. Polynomials.
+
+Nov 5. Lecture 29. Polynomials-2.
+
+Nov 6. Lecture 30. Complex numbers.
+
+Nov 7. Lecture 31. Complex numbers-2.

@@ -2,41 +2,163 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-12>
-#+lastmod: <2025-11-12 13:43>
+#+lastmod: <2025-11-12 14:59>
 #+options: num:t
 #+startup: overview
 
-* Problem 1
+* Analysis
+|-----------+---------------------------+--------+------------+--------------|
+| *Problem* | *Generalised*             | *Time* | *Accuracy* | *Difficulty* |
+|-----------+---------------------------+--------+------------+--------------|
+|         1 | Set notation              | <5min  |       100% | 2/10         |
+|-----------+---------------------------+--------+------------+--------------|
+|         2 | Set notation              | 6min   |        75% | 3/10         |
+|-----------+---------------------------+--------+------------+--------------|
+|         3 | Cross product & Power set |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         4 | Power set                 |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         5 | Power set                 |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         6 | Set notation              |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         7 | Cartesian product         |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         8 | Cross product & Power set |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|         9 | Euler-Venn diagram        |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|        10 | Sketching sets            |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|        11 | Set notation              |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+|        12 | Power sets                |        |            |              |
+|-----------+---------------------------+--------+------------+--------------|
+* Problem 1 [DONE]
 ** Task
-1.
-** Exercise
-* Problem 2
+Write each of the following sets by listing their elements between braces
+1. {x ∈ ℤ : |2x| < 5}
+2. {x ∈ ℝ : x^3 + 5x^2 = -6x}
+3. {x ∈ ℝ : sin(Pi*x) = 0}
+4. {5x : x ∈ ℤ, |2x| <= 8}
+
+** Solution
+1. {x ∈ ℤ : |2x| < 5}
+
+   {x ∈ ℤ : |2x| < 5} = {-2,-1,0,1,2}
+
+2. {x ∈ ℝ : x^3 + 5x^2 = -6x}
+
+   {x ∈ ℝ : x^3 + 5x^2 = -6x} = {-3,-2,0}
+
+   ^3 + 5x^2 + 6x = 0
+   x(x^2 + 5x + 6) = 0  --> x1 = 0
+   x^2 + 5x + 6 = 0
+
+   Thus,
+   x = (-5 ± sqrt{25 - 4 * 6})/(2)
+   x = (-5 ± sqrt{1})/(2)
+   x = (-5 ± 1)/(2)
+
+   Hence,
+   x1 = 0
+   x2 = (-5 + 1)/(2) = -2
+   x3 = (-5 - 1)/(2) = -3
+
+3. {x ∈ ℝ : sin(Pi*x) = 0}
+
+   {x ∈ ℝ : sin(Pi*x) = 0} = ℤ
+
+4. {5x : x ∈ ℤ, |2x| <= 8}
+
+   {5x : x ∈ ℤ, |2x| <= 8} =
+
+   x = {-4, -3, -2, -1, 0, 1, 2, 3, 4}
+
+   Thus,
+   {-20, -15, -10, -5, 0, 5, 10, 15, 20}
+
+* Problem 2 [DONE]
 ** Task
-** Exercis
-* Problem 3
+Write each of the following sets in set-builder notation
+1. {2, 4, 8, 16, 32, 64, ...}
+2. {-5, -4, -3, -2, -1, , 0, 1}
+3. {..., 1/27, 1/9, 1/3, 1, 3, 9, 27}
+4. {3, 6, 11, 18, 27, 38, ...}
+
+** Solution
+1. {2, 4, 8, 16, 32, 64, ...}
+
+   {2^x : x ∈ ℕ, x >= 2} = {2, 4, 8, 16, 32, 64, ...}
+
+   Correct: {2^x : x ∈ ℕ, x >= 1}
+
+2. {-5, -4, -3, -2, -1, , 0, 1}
+
+   {x : x ∈ ℤ : -5 <= x <= 1} = {-5, -4, -3, -2, -1, , 0, 1}
+
+3. {..., 1/27, 1/9, 1/3, 1, 3, 9, 27}
+
+   {3^x : x ∈ ℤ, x <= 3} = {..., 1/27, 1/9, 1/3, 1, 3, 9, 27}
+
+1. {3, 6, 11, 18, 27, 38, ...}
+
+   {x^2 + 2 : x ∈ ℕ} = {3, 6, 11, 18, 27, 38, ...}
+
+** Mistakes
+- Problem 2: little attention mistake
+  Reason: time pressure
+
+* Problem 3 []
 ** Task
-** Exercis
-* Problem 4
+Write out the indicated sets by listing their elements between braces.
+1. {x ∈ R : x^2 = 2} * {a, b, c}
+2. {0, 1}^4
+3. {П, 1, 0} * {-П, -1, -0}
+4. {{R}}
+
+* Problem 5 []
 ** Task
-** Exercis
-* Problem 5
+Write the following sets by listing their elements between braces.
+1. P({{∅}, 4})
+2. P(P({3}))
+
+* Problem 6 []
 ** Task
-** Exercis
-* Problem 6
+Check in Julia whether the following is true. Afterwards, make sure you understand why
+the statements are true or false.
+1. {1} ∈ {1, {1}}
+2. {1} ⊂ {1, {1}}
+3. ∅ ∉ N
+4. ∅ ⊂ N
+
+* Problem 7 []
 ** Task
-** Exercis
-* Problem 7
+Write a function in Julia that takes two sets A and B and returns the Cartesian product A×B as a set of tuples
+
+* Problem 8 []
 ** Task
-** Exercis
-* Problem 8
+Let A = {b, c, d} and B = {a, b}. Find:
+1. P(A) ∩ P(B)
+2. (A × B) \ (B × B)
+
+* Problem 9 []
 ** Task
-** Exercis
-* Problem 9
+Draw an Euler-Venn diagram for
+a) (A \ B) ∩ C
+b) A \ (B ∩ C)
+
+* Problem 10 []
 ** Task
-** Exercis
-* Problem 10
+Sketch the set A = [1, 3] × [1, 2] on the plane R^2. On separate drawing, shade in the sets A∁ and A∁ ∩ ([0, 2] × [0, 3]). The set A∁ denotes the complement of A (in this context, the universal set is R^2).
+
+* Problem 11 []
 ** Task
-** Exercis
-* Problem 11
+Simplify:
+1. ∪(n∈ℕ)[i, i + 1]
+2. ∩(n∈ℕ)[i, i + 1]
+3. ∩(n∈ℕ)ℝ*[i, i + 1]
+
+* Problem 12 []
 ** Task
-** Exercise
+Write in Julia the function that outputs the power set of a given set (without using external libraries).

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-12>
-#+lastmod: <2025-11-12 17:27>
+#+lastmod: <2025-11-12 17:37>
 #+options: num:t
 #+startup: overview
 
@@ -34,6 +34,15 @@
 |-----------+---------------------------+--------+------------+--------------|
 |        12 | Power sets                | X      |          X | X            |
 |-----------+---------------------------+--------+------------+--------------|
+** Opinion on this approach:
+- Working on the laptop takes more time, and thus leads to a rush and mistakes.
+- Since I am solving them in a rush I do not analyse them well, so it is purely intuition on this level. While I would prefer to put more thought on it to get more confortable with them.
+
+** Resolution:
+- I will continue to woek from the laptop, but only for the revision. Meaning that no rush in problem solving. Just pure analisation and rememberisation with notes.
+- After this, I will do them again with a pen and paper, to simulate "real" exam condition.
+
+
 * Problem 1 [DONE]
 ** Task
 Write each of the following sets by listing their elements between braces

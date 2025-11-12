@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-03>
-#+lastmod: <2025-11-11 21:09>
+#+lastmod: <2025-11-12 15:15>
 #+options: num:t
 #+startup: overview
 
@@ -45,7 +45,7 @@ Write out the indicated sets by listing their elements between braces.
 ** Solution
 . {x ∈ R : x^2 = 2} * {a, b, c} = {-(2^(1/2)), 2^(1/2)} * {a, b, c}
   = {{-(2^(1/2), a}, {-(2^(1/2), b}, {-(2^(1/2), c},
-  {2^(1/2, a},    {2^(1/2), b},   {2^(1/2), c}}
+  {2^(1/2), a},    {2^(1/2), b},   {2^(1/2), c}}
 . {0, 1}^4 =
   {0, 1} * {0, 1} * {0, 1} * {0, 1}
   {{0, 0}, {0, 1}, {1, 0}, {1, 1}} * {{0, 0}, {0, 1}, {1, 0}, {1, 1}}

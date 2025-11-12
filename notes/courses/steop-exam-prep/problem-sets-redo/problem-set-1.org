@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-12>
-#+lastmod: <2025-11-12 14:59>
+#+lastmod: <2025-11-12 15:27>
 #+options: num:t
 #+startup: overview
 
@@ -14,7 +14,7 @@
 |-----------+---------------------------+--------+------------+--------------|
 |         2 | Set notation              | 6min   |        75% | 3/10         |
 |-----------+---------------------------+--------+------------+--------------|
-|         3 | Cross product & Power set |        |            |              |
+|         3 | Cross product & Power set | 8min   |       100% | 3/10         |
 |-----------+---------------------------+--------+------------+--------------|
 |         4 | Power set                 |        |            |              |
 |-----------+---------------------------+--------+------------+--------------|
@@ -109,7 +109,7 @@ Write each of the following sets in set-builder notation
 - Problem 2: little attention mistake
   Reason: time pressure
 
-* Problem 3 []
+* Problem 3 [DONE]
 ** Task
 Write out the indicated sets by listing their elements between braces.
 1. {x ∈ R : x^2 = 2} * {a, b, c}
@@ -117,9 +117,66 @@ Write out the indicated sets by listing their elements between braces.
 3. {П, 1, 0} * {-П, -1, -0}
 4. {{R}}
 
+** Solution
+1. {x ∈ R : x^2 = 2} * {a, b, c}
+
+   {-sqrt{2}, sqrt{2}} * {a,b,c} =
+
+   {(-sqrt{2}, a), (sqrt{2}, a),
+    (-sqrt{2}, b), (sqrt{2}, b),
+    (-sqrt{2}, c), (sqrt{2}, c),}
+
+2. {0, 1}^4 =
+
+   {0,1} * {0,1} * {0,1} * {0,1}
+   {{0,0},{0,1},{1,0},{1,1}} * {{0,0},{0,1},{1,0},{1,1}}
+   {{{0,0},{0,0}},
+    {{0,0},{0,1}},
+    {{0,0},{1,0}},
+    {{0,0},{1,1}},
+    {{0,1},{0,0}},
+    {{0,1},{0,1}},
+    {{0,1},{1,0}},
+    ...
+    {{1,1},{1,0}},
+    {{1,1},{1,1}},
+
+    total of 2^4
+
+3. {П, 1, 0} * {-П, -1, -0} =
+
+   {{П, -П}, {П, -1}, {П, -0},
+    {1, -П}, {1, -1}, {1, -0},
+    {0, -П}, {0, -1}, {0, -0}}
+
+    Maybe {0, -0} does not exist, since 0 = -0
+
+4. {{R}} = {{R}}
+
+* Problem 4 []
+** Task
+List all the subsets of the following sets.
+1. {1, 2, 3, 4}
+2. {R, Q, N}
+3. {{0, 1}, {0, 1, {2}}, {0}}
+
+** Solution
+1. {1, 2, 3, 4}
+
+
+
+2. {R, Q, N}
+
+3. {{0, 1}, {0, 1, {2}}, {0}}
+
+
 * Problem 5 []
 ** Task
 Write the following sets by listing their elements between braces.
+1. P({{∅}, 4})
+2. P(P({3}))
+
+** Solution
 1. P({{∅}, 4})
 2. P(P({3}))
 

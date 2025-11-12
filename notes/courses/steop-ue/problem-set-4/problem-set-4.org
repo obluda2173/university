@@ -2,11 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-14>
-#+lastmod: <2025-10-17 06:35>
+#+lastmod: <2025-11-12 13:10>
 #+options: num:t
 #+startup: overview
 
-* Problem 1
+* Problem 1 [DONE]
 ** Task
 Let x and y be nonnegative numbers. Prove that if x <= y, then x^(1/2) <= y^(1/2).
 
@@ -25,7 +25,7 @@ Because (a - b) > 0 and (a + b) > 0. That gives a^2 > b^2, i.e. x > y, contradic
 
 Therefore, x^(1/2) <= y^(1/2). Equality holds iff x = y.
 
-* Problem 2
+* Problem 2 [DONE]
 ** Task
 For n ∊ N prove that 4|(1 + (-1)^n * (2n - 1)).
 
@@ -67,7 +67,7 @@ Hence, for n ∊ N, 4|(1 + (-1)^n * (2n - 1)).
 
 Q.E.D.
 
-* Problem 3
+* Problem 3 [DONE]
 ** Task
 Prove that log2(3) is irrational.
 
@@ -84,7 +84,7 @@ But 2^p = 1 would force p = 0, which gives 3^q = 0, and then q = 0, which is imp
 
 Thus log2(3) is irrational.
 
-* Problem 4
+* Problem 4 [DONE]
 ** Task
 Five children found nine mushrooms. Prove that at least two of them found an equal number of mushrooms.
 
@@ -117,7 +117,7 @@ a1 >= 0, a2 >= 1, a3 >= 2, a4 >= 3, a5 >= 4.
 
 Hence the total amount of mushrooms is 10, which exceeds the number of found mushrooms (9). Therefore, my statement was false, meaning that at least 2 children had same number of found mushrooms.
 
-* Problem 5
+* Problem 5 [DONE]
 ** Task
 Calculate
 a. 0.1212.. + 0.122122..
@@ -138,7 +138,7 @@ Thus,
                 = 4/27
                 = 0.148...
 
-* Problem 6
+* Problem 6 [DONE]
 ** Task
 Find digits a and b such that (o.aa..)^(1/2) = 0.bb..
 
@@ -148,12 +148,12 @@ Find digits a and b such that (o.aa..)^(1/2) = 0.bb..
 3. a = 4, b = 6
 4. a = 9, b = 9
 
-* Problem 7
+* Problem 7 [DONE]
 ** Task
 
 ** Solution
 
-* Problem 8
+* Problem 8 [DONE]
 ** Task
 a. gcd(10223; 33341)
 b. gcd(2n + 1; 3n + 2)
@@ -172,7 +172,7 @@ a. 33341 = 10223 * 3 + 2672
    Thus, 1
 b. 1
 
-* Problem 9
+* Problem 9 [DONE]
 ** Task
 Convert (110 1001 0101 1011)2 to decimal representation. Without converting, can you know for sure whether this number is greater than 2^15?
 

@@ -1,0 +1,42 @@
+#+title: Problem Set 1
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-11-12>
+#+lastmod: <2025-11-12 13:43>
+#+options: num:t
+#+startup: overview
+
+* Problem 1
+** Task
+1.
+** Exercise
+* Problem 2
+** Task
+** Exercis
+* Problem 3
+** Task
+** Exercis
+* Problem 4
+** Task
+** Exercis
+* Problem 5
+** Task
+** Exercis
+* Problem 6
+** Task
+** Exercis
+* Problem 7
+** Task
+** Exercis
+* Problem 8
+** Task
+** Exercis
+* Problem 9
+** Task
+** Exercis
+* Problem 10
+** Task
+** Exercis
+* Problem 11
+** Task
+** Exercise

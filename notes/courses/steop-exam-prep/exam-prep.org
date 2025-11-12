@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-11>
-#+lastmod: <2025-11-12 13:09>
+#+lastmod: <2025-11-12 14:13>
 #+options: num:t
 #+startup: overview
 
@@ -27,6 +27,140 @@
 - Only pen and water bottle allowed (bring earplugs).
 - Bring student ID.
 - Allowed to use Theorems from lectures with no proof.
+
+
+* Problem Sets Topics
+** Problem Set 1
+*** Generalization and statistics
+|---------+----------------------------------+---------------------------|
+| Problem | Specific                         | Generalised               |
+|---------+----------------------------------+---------------------------|
+|       1 | Listing elements of set          | Set notation              |
+|---------+----------------------------------+---------------------------|
+|       2 | Set building notation            | Set notation              |
+|---------+----------------------------------+---------------------------|
+|       3 | Cross product & Power sets       | Cross product & Power set |
+|---------+----------------------------------+---------------------------|
+|       4 | Subsets                          | Power set                 |
+|---------+----------------------------------+---------------------------|
+|       5 | Power set                        | Power set                 |
+|---------+----------------------------------+---------------------------|
+|       6 | Set operations (Julia)           | Set notation              |
+|---------+----------------------------------+---------------------------|
+|       7 | Software (Julia)                 | Cartesian product         |
+|---------+----------------------------------+---------------------------|
+|       8 | Power set and Set cross products | Cross product & Power set |
+|---------+----------------------------------+---------------------------|
+|       9 | Euler-Venn diagram               | Euler-Venn diagram        |
+|---------+----------------------------------+---------------------------|
+|      10 | Sketching sets                   | Sketching sets            |
+|---------+----------------------------------+---------------------------|
+|      11 | Simplifying set exressions       | Set notation              |
+|---------+----------------------------------+---------------------------|
+|      12 | Power sets (Julia)               | Power sets                |
+|---------+----------------------------------+---------------------------|
+
+|---+--------------------+-------|
+|   | Subtopic           | Count |
+|---+--------------------+-------|
+| 1 | Power set          |     5 |
+|---+--------------------+-------|
+| 2 | Set notation       |     4 |
+|---+--------------------+-------|
+| 3 | Cross product      |     2 |
+|---+--------------------+-------|
+| 4 | Cartesian product  |     1 |
+|---+--------------------+-------|
+| 5 | Euler-Venn diagram |     1 |
+|---+--------------------+-------|
+| 6 | Sketching sets     |     1 |
+|---+--------------------+-------|
+|   | *Total*            |    14 |
+|---+--------------------+-------|
+*** Topics
+- Problem 1
+
+  Topic: Set Theory
+
+  Technique: Listing Elements of a Set
+
+- Problem 2
+
+  Topic: Set Theory
+
+  Technique: Set-Builder Notation
+
+- Problem 3
+
+  Topic: Set Theory
+
+  Technique: Creating Sets Through Cross Products and Power Sets
+
+- Problem 4
+
+  Topic: Set Theory
+
+  Technique: Determining Subsets of a Given Set
+
+- Problem 5
+
+  Topic: Set Theory
+
+  Technique: Listing Elements of Power Sets
+
+- Problem 6
+
+  Topic: Set Theory, Software (Julia)
+
+  Technique: Implementing Set Operations in Julia
+
+- Problem 7
+
+  Topic: Software (Julia)
+
+  Technique: Writing a Julia Function to obtain Cartesian Product of Two Sets
+
+- Problem 8
+
+  Topic: Set Theory
+
+  Technique: Determining Power Sets and Set Cross Products
+
+- Problem 9
+
+  Topic: Set Theory
+
+  Technique: Drawing Euler-Venn Diagrams for Set Operations
+
+- Problem 10
+
+  Topic: Set Theory
+
+  Technique: Sketching Sets on a Plane
+
+- Problem 11
+
+  Topic: Set Theory
+
+  Technique: Simplifying Set Expressions
+
+- Problem 12
+
+  Topic: Set Theory, Software (Julia)
+
+  Technique: Writing a Function in Julia to Output Power Sets
+
+** Problem Set 2
+** Problem Set 3
+** Problem Set 4
+** Problem Set 5
+** Problem Set 6
+** Problem Set 7
+** Problem Set 8
+** Problem Set 9
+** Problem Set 10
+** Problem Set 11
+** Problem Set 12
 
 * General content information:
 - 6 minutes on each problem.

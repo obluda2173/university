@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-11>
-#+lastmod: <2025-11-12 14:13>
+#+lastmod: <2025-11-13 09:36>
 #+options: num:t
 #+startup: overview
 
@@ -27,7 +27,6 @@
 - Only pen and water bottle allowed (bring earplugs).
 - Bring student ID.
 - Allowed to use Theorems from lectures with no proof.
-
 
 * Problem Sets Topics
 ** Problem Set 1
@@ -167,6 +166,47 @@
 -
 
 
+
+* Study plan
+- Wednesday - 12th
+  - Problem Sets: 1
+- Thursday- 13th
+  - Problem Sets: 2,3,4
+  - Timed revision: 1
+- Friday - 14th
+  - Problem Sets: 5,6,7
+  - Timed revision: 2,3,4
+- Saturday - 15th
+  - Problem Sets: 8,9
+  - Timed revision: 5,6,7
+- Sunday - 16th
+  - Problem Sets: 10,11
+  - Timed revision: 8,9
+- Monday - 17th
+  - Timed revision: 10,11
+  Revisit main problems of all problem sets.
+
+
+- [X] Problem Set 1
+  - Sets
+  - Cross Product
+  - Power Set
+  - Cartesian Product
+  - Sketching sets
+  - Euler-Venn diagrams
+
+- [ ] Problem Set 2
+  - Sets
+  - Logic operators
+
+- [ ] Problem Set 3
+  - Modulo
+  - Weak Induction
+  - Strong Induction
+
+- [ ] Problem Set 4
+
+* Lecture topics
 Oct 1. Lecture 0. Introduction to the course. Logistics. Julia.
 
 Oct 2. Lecture 1. Sets. Basic definitions and operations with sets.

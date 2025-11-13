@@ -2,12 +2,11 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-06>
-#+lastmod: <2025-11-12 13:09>
+#+lastmod: <2025-11-13 09:41>
 #+options: num:t
 #+startup: overview
 
-* Answers
-** Problem 1 [DONE]
+* Problem 1 [DONE]
 *** Task
 Prove
 1. (A \ B) \ C = (A \ C) \ (B \ C)
@@ -47,7 +46,7 @@ Prove
 
   ∀ x ∈ R, y ∈ [3 - x^2, 5 + x^2],
 
-** Problem 2 [DONE]
+* Problem 2 [DONE]
 *** Task
 Construct the truth table for:
 1. (P ∨ ¬Q) => (P ∧ Q)
@@ -73,7 +72,7 @@ Construct the truth table for:
 | F   | F   | T          | T          | T                      |
 |-----+-----+------------+------------+------------------------|
 
-** Problem 3 [DONE]
+* Problem 3 [DONE]
 *** Task
 For each of these sentences, determine whether an inclusive “or”, or an exclusive “or”, is
 intended.
@@ -88,7 +87,7 @@ intended.
 3. *Exclusive*, since perish is not prefered after publishing and publishing is impossible after perishing.
 4. *Inclusive*, since its just logical.
 
-** Problem 4 [DONE]
+* Problem 4 [DONE]
 *** Task
 Let P,Q, and R be the propositions
 • P: You have the flu.
@@ -109,7 +108,7 @@ Express each of these propositions as an English sentence.
 3. "If =you miss the final examination=, then =you not pass the course=."
 4. "If =you have a flu= or =you miss the final examination=, then =you not pass the course=."
 
-** Problem 5 [DONE]
+* Problem 5 [DONE]
 *** Task
 Five friends have access to a chat room. Is it possible to determine who is chatting if the following information is known?
 
@@ -174,7 +173,7 @@ get_chats()
 #+RESULTS:
 : Bool[1, 0, 0, 1, 0]
 
-** Problem 6 [DONE]
+* Problem 6 [DONE]
 *** Task
 A proposition that is always true is called a tautology. Prove (without using a truth table) that (P ∧ Q) => (P ∨ Q) is a tautology.
 
@@ -187,7 +186,7 @@ A proposition that is always true is called a tautology. Prove (without using a 
 = T v T
 = T
 
-** Problem 7 [DONE]
+* Problem 7 [DONE]
 *** Task
 Express each of these statements using quantifiers. Then form the negation of the statement
 and simplify it. Next, express the negation in simple English.
@@ -235,7 +234,7 @@ and simplify it. Next, express the negation in simple English.
   <=> ∀x(Pig(x) => (¬Swim(x) v ¬CatchFish(x)))
 - English: No Pig both swims and catches fish.
 
-** Problem 8 [DONE]
+* Problem 8 [DONE]
 *** Task
 1. Show that ∀x P(x) ∨ ∀x Q(x) and ∀x (P(x) ∨ Q(x)) are not logically equivalent.
 2. Show that ∃x P(x) ∨ ∃x Q(x) and ∃x (P(x) ∨ Q(x)) are logically equivalent.
@@ -274,7 +273,7 @@ Hence, ∀x P(x) ∨ ∀x Q(x) is false.
                 = ¬∀x¬P(x) v ¬∀x¬Q(x)
                 = ∃xP(x) ∨ ∃xQ(x)
 
-** Problem 9 [DONE]
+* Problem 9 [DONE]
 *** Task
 Construct a truth table for the proposition P ∨ Q ∧ (P => R) => (P => ((Q ∧ P) ∨ R)). You don’t need to do it manually and can use Julia library TruthTables1.
 

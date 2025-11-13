@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-12>
-#+lastmod: <2025-11-12 19:41>
+#+lastmod: <2025-11-13 14:20>
 #+options: num:t
 #+startup: overview
 
@@ -41,7 +41,6 @@
 ** Resolution:
 - I will continue to woek from the laptop, but only for the revision. Meaning that no rush in problem solving. Just pure analisation and rememberisation with notes.
 - After this, I will do them again with a pen and paper, to simulate "real" exam condition.
-
 
 * Problem 1 [DONE]
 ** Task

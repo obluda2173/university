@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-06>
-#+lastmod: <2025-11-13 09:41>
+#+lastmod: <2025-11-13 14:00>
 #+options: num:t
 #+startup: overview
 
@@ -27,7 +27,7 @@ Prove
     since x ∉ C, x ∉ B
 
   therefore
-  x ∈ (A \ B) \ (       B \ C)  <=>  (x ∈ A) ∧ (x ∉ B) ∧ (x ∉ C)
+  x ∈ (A \ B) \ (B \ C)  <=>  (x ∈ A) ∧ (x ∉ B) ∧ (x ∉ C)
 
 **** ∩(x ∈ R)[3 - x^2, 5 + x^2] = [3, 5]
 - ∩(x ∈ R)[3 - x^2, 5 + x^2] = [3, 5]

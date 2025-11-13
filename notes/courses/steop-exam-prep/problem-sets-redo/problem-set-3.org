@@ -1,0 +1,151 @@
+#+title: Problem Set 3
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-11-13>
+#+lastmod: <2025-11-13 20:44>
+#+options: num:t
+#+startup: overview
+
+* Analysis
+
+- I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
+* Weak Induction Structure
+#+begin_quote
+*Proposition.* S1, S2, S3 .., are all true.
+
+*Base case.* Demonstrate that S1 is true.
+
+*Inductive hypothesis.* Assume that Sk is true.
+
+*Inductive step.* Prove that Sk implies Sk+1.
+
+*Conclusion.* Therefore, by induction, all the Sn are true.
+#+end_quote
+
+#+begin_quote
+*Proposition.*
+
+*Base case.*
+
+*Inductive hypothesis.*
+
+*Inductive step.*
+
+*Conclusion.*
+#+end_quote
+
+* Problem 1 [DONE]
+** Task
+Prove that 3|(n^3 - n) for all n ∈ ℕ
+
+** Solution
+#+begin_quote proof by induction
+*Proposition.* 3|(n^3 - n) for all n ∈ ℕ.
+
+*Base case.* Let n = 1. 1^3 - 1 = 0, hence 3|0. Base holds.
+
+*Inductive hypothesis.* Assume 3|(a^3 - a) <--> (a^3 - a) ≡ 0 (mod 3) is true for some a ∈ ℕ.
+
+*Induction step.* Let a ∈ ℕ.
+
+(a^3 - a) ≡ 0 (mod 3)   (add 3(a^2 + a) to the left side, since multiple of 3)
+ a^3 - a + 3(a^2 + a) ≡ 0 (mod 3)
+ a^3 - a + (3a^2 + 3a) ≡ 0 (mod 3)
+ a^3 + 3a^2 + 3a + 1 - a - 1 ≡ 0 (mod 3)
+(a+1)^3 - (a+1) ≡ 0 (mod 3)
+
+Therefore, 3|(a^3 - a) implies 3|((a+1)^3 - (a+1)) for some a ∈ ℕ.
+
+*Conclusion.* Therefore, by induction, 3|(n^3 - n) for all n ∈ ℕ.
+#+end_quote
+
+* Problem 2 [DONE]
+** Task
+Prove that 2^n < n! for all n >= 4.
+
+** Solution
+#+begin_quote
+*Proposition.* 2^n < n! for all n >= 4.
+
+*Base case.* Let n = 4. 2^4 = 16, 4! = 24; 16 < 24. Base holds.
+
+*Inductive hypothesis.* Assume 2^k < k! for all k >= 4.
+
+*Inductive step.* Let k >= 4.
+
+2^k < k!                (multiply both sides by 2)
+2^(k+1) < 2 * k!
+
+Since k >= 4 --> (k + 1) >= 5 > 2. Hence, replace 2 on RHS with (k+1).
+2^(k+1) < (k+1) * k!
+2^(k+1) < (k+1)!
+
+Hence, 2^n < k! implies 2^(k+1) < (k+1)! for k >= 4.
+
+*Conclusion.* Therefore, 2^n < n! for all n >= 4.
+#+end_quote
+
+* Problem 3 [DONE]
+** Task
+Prove that sin(nx) <= n * sin(x) for all x ∈ [0, Pi/2] and n ∈ ℕ.
+
+** Solution
+#+begin_quote
+*Proposition.* sin(nx) <= n * sin(x) for all for all x ∈ [0, Pi/2]  and k ∈ ℕ.
+
+*Base case.* Let n = 1. sin(1*x) <= 1 * sin(x) <--> sin(x) <= sin(x). Base holds.
+
+*Inductive hypothesis.* Assume sin(kx) <= k * sin(x) for all x ∈ ℝ and k ∈ ℕ.
+
+*Inductive step.* Let k ∈ ℕ.
+
+- Trigonometric identities: sin(2x) = 2sin(x)cos(x)
+                            sin(A+B) = sin(A)cos(B) + cos(A)sin(B)
+
+sin((k+1)x) <= (k+1) * sin(x)
+sin(kx + x) <= (k+1) * sin(x)
+sin(kx)cos(x) + cos(kx)sin(x) <= (k+1) * sin(x)
+
+Since x ∈ [0, Pi/2]; cos(x) ∈ [0,1], sin(x) >= 0, cos(kx) <= 1:
+
+sin(kx)cos(x) <= ksin(x)cos(x) <= ksin(x)
+
+and since cos(x) <= 1,
+
+cos(kx)sin(x) <= 1 * sin(x) = sin(x)
+
+Thus,
+sin(kx)cos(x) + cos(kx)sin(x) <= sin(x) + ksin(x)
+sin(kx)cos(x) + cos(kx)sin(x) <= (k+1) * sin(x)
+
+*Conclusion.* Therefore, sin(nx) <= n * sin(x) for all for all x ∈ [0, Pi/2]  and k ∈ ℕ.
+#+end_quote
+
+* Problem 4 []
+** Task
+(Bernoulli inequality.) Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
+
+** Solution
+* Problem 5 []
+** Solution
+
+* Problem 6 []
+** Task
+Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
+
+** Solution
+* Problem 7 []
+** Task
+The bank has an unlimited supply of 3 and 5 euros bills. Prove that it can dispense any number of euros greater than 8 (without change).
+
+** Solution
+* Problem 8 []
+** Task
+There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them). We have already proved it in class, and now your goal is to express the proof in words.
+
+** Solution
+* Problem 9 []
+** Task
+Prove that there exists an n ∈ N for which 11|(2^n − 1).
+
+** Solution

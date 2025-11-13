@@ -2,13 +2,14 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-13 20:44>
+#+lastmod: <2025-11-13 20:56>
 #+options: num:t
 #+startup: overview
 
 * Analysis
 
 - I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
+- The weak induction is done very very smoothly.
 * Weak Induction Structure
 #+begin_quote
 *Proposition.* S1, S2, S3 .., are all true.
@@ -121,11 +122,31 @@ sin(kx)cos(x) + cos(kx)sin(x) <= (k+1) * sin(x)
 *Conclusion.* Therefore, sin(nx) <= n * sin(x) for all for all x ∈ [0, Pi/2]  and k ∈ ℕ.
 #+end_quote
 
-* Problem 4 []
+* Problem 4 [DONE]
 ** Task
-(Bernoulli inequality.) Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ N.
+(Bernoulli inequality.) Prove that (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ ℕ.
 
 ** Solution
+#+begin_quote
+*Proposition.* (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ ℕ.
+
+*Base case.* Let n = 1. (1 + x) >= 1 + x. Base holds.
+
+*Inductive hypothesis.* Assume (1 + x)^k >= 1 + kx for all real x >= -1 and all k ∈ ℕ.
+
+*Inductive step.*
+
+(1 + x)^k >= 1 + kx                     (multiply both sides by (1+x))
+(1 + x)^(k+1) >= (1 + kx)(1 + x)
+(1 + x)^(k+1) >= 1 + x + kx + kx^2
+(1 + x)^(k+1) >= 1 + (k+1)x + kx^2      (since k >= 1 and x^2 >= 0, remove kx^2 from RHS)
+(1 + x)^(k+1) >= 1 + (k+1)x
+
+Hence, (1 + x)^k >= 1 + kx implies (1 + x)^(k+1) >= 1 + (k+1)x.
+
+*Conclusion.* Therefore, (1 + x)^n >= 1 + nx for all real x >= -1 and all n ∈ ℕ.
+#+end_quote
+
 * Problem 5 []
 ** Solution
 

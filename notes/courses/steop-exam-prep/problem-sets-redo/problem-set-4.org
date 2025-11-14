@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-14>
-#+lastmod: <2025-11-14 14:45>
+#+lastmod: <2025-11-14 14:53>
 #+options: num:t
 #+startup: overview
 
@@ -88,11 +88,29 @@ By the Fundamental Theorem of Arithmetics (unique prime factorisation), the two 
 But 2^p = 1 would force a = 0, which gives 3^b = 1, and then b = 0, which is impossible because of b being natural.
 #+end_quote
 
-* Problem 4 []
+* Problem 4 [DONE]
 ** Task
 Five children found nine mushrooms. Prove that at least two of them found an equal number of mushrooms.
 
 ** Solution
+#+begin_quote
+*Proposition.* 9 items can not be splitted into 5 groups of different count number.
+
+Let 1st brat have 0 mushrooms, this would force 2nd brat to have 0+1 mushrooms, so it would not be equal to the first brat's mushrooms. Same logic goes for the rest brats.
+
+        1st = 0 mushrooms
+        2nd = 1 mushrooms
+        3rd = 2 mushrooms
+        4th = 3 mushrooms
+        5th = 4 mushrooms
+
+Thus, the total amount of mushrooms in this case would be:
+
+        0 + 1 + 2 + 3 + 4 = 10
+
+Thus, it would force us to decrement on of the brat's mushrooms by 1. Which would lead to 2 brats with the same amount of mushrooms.
+#+end_quote
+
 * Problem 5 []
 ** Task
 Calculate

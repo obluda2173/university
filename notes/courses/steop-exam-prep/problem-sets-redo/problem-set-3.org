@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-14 12:52>
+#+lastmod: <2025-11-14 13:08>
 #+options: num:t
 #+startup: overview
 
@@ -330,8 +330,37 @@ By the inductive hypothesis, each 2^k x 2^k quadrants, with exaclty one missing 
 *Conclusion.* By induction, any 2^n x 2^n board with one square removed can be tiled with L-trominoes.
 #+end_quote
 
-* Problem 9 []
+* Problem 9 [DONE]
 ** Task
-Prove that there exists an n ∈ N for which 11|(2^n − 1).
+Prove that there exists an n ∈ ℕ for which 11|(2^n − 1).
 
 ** Solution
+#+begin_quote
+*Proposition.* There exists an n ∈ ℕ for which 11|(2^n − 1).
+               Or equivalently, 2^n - 1 ≡ 0 (mod 11)
+
+*Proof.* Since 11 is prime, and gcd(2, 11) = 1, the sequence:
+
+        2^1, 2^2, 2^3, ... (mod 11)
+
+must eventually repeat. Because, there are only 10 nonzero remainders modulo 11, the numbers 2^1, 2^2, 2^3, ... must contain a repetition.
+
+        2^1 ≡ 1 (mod 11)
+        2^2 ≡ 4 (mod 11)
+        2^3 ≡ 8 (mod 11)
+        2^4 ≡ 5 (mod 11)
+        2^5 ≡ 10 (mod 11)
+        2^6 ≡ 9 (mod 11)
+        2^7 ≡ 7 (mod 11)
+        2^8 ≡ 3 (mod 11)
+        2^9 ≡ 6 (mod 11)
+        2^10 ≡ 1 (mod 11)
+
+We have found:
+
+        2^10 ≡ 1 (mod 11)
+
+Thus, 2^10 - 1 ≡ 0 (mod 11)
+
+*Conclusion.* For n = 10, 11|(2^n − 1).
+#+end_quote

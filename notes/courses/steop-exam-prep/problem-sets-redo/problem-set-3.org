@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-14 12:11>
+#+lastmod: <2025-11-14 12:52>
 #+options: num:t
 #+startup: overview
 
@@ -10,8 +10,8 @@
 
 - I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
 - The weak induction is done very very smoothly.
-- Revisit Problem 6
-- Revisit Problem 7
+- Revisit Problem 6,7,8
+
 * Weak Induction Structure
 #+begin_quote
 *Proposition.* S1, S2, S3 .., are all true.
@@ -287,11 +287,49 @@ Thus,
 *Conclusion.* Therefore, for any x ∈ ℕ : x >= 8, x = 3n + 5m, for n,m ∈ ℕ0.
 #+end_quote
 
-* Problem 8 []
+* Problem 8 [DONE]
 ** Task
 There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them). We have already proved it in class, and now your goal is to express the proof in words.
 
 ** Solution
+*** Solution 1 [mine and right]
+#+begin_quote
+*Proposition.* There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them).
+
+*Base case.* Consider 2x2 chess board. Choose any of the four squares, the left 3 would perfectly fit a triminos.
+
+*Inductive hypothesis.* Assume any of the chess boards of size 2^n x 2^n, with n ∈ ℕ, can be filled with triminoes, leaving one square unoccupied.
+
+*Inductive step.*
+
+Consider 2^(n+1) x 2^(n+1) chessboard with one square removed at its center (center is 2x2 squares). Now, by splitting this chessboard into 5 parts, vertically and horizontally making 4 parts, and 5th being the center's triminos. This would result in 4 2^n chessboards, with 1 empty square in each, and 1 triminoes.
+
+Each of these 4 parts could be perfectly covered with triminoes by the inductive hypothesis, and hence 2^(n+1) x 2^(n+1) chessboard can be perfeclty covered.
+
+*Conclusion.* By induction, for every n ∈ ℕ, if one square is removed from a 2^n x 2^n chessboard, the result can be perfectly covered with triminoes.
+#+end_quote
+
+*** Solution 2 [revised]
+#+begin_quote
+*Proposition.* There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them).
+
+Chessboard follows a resolution of 2^n x 2^n, n ∈ ℕ.
+
+*Base case.* When n = 1, the board is 2 x 2. Removing any square leaves an L-shape, which can be covered by a single L-tromino. Base holds.
+
+*Inductive hypothesis.* Assume that for some k >= 1, any table 2^k x 2^k with one square removed can be covered by L-trominoes.
+
+*Inductive step.* Consider 2^(k+1) x 2^(k+1) board with one square removed.
+
+Cut it vertically and horizontally through the center, forming 2^k x 2^k quadrants. Exactly one quadrant contains the removed square, and by the inductive hypothesis can be filled with L-trominoes.
+
+Now place one L-tromino at the center, so that is covers one central square of other 3 quadrants. This creates exactly one missing square in each quadrant.
+
+By the inductive hypothesis, each 2^k x 2^k quadrants, with exaclty one missing square can be tiled. Togethere with the center tromino, this tiles the whole 2^(k+1) x 2^(k+1) board.
+
+*Conclusion.* By induction, any 2^n x 2^n board with one square removed can be tiled with L-trominoes.
+#+end_quote
+
 * Problem 9 []
 ** Task
 Prove that there exists an n ∈ N for which 11|(2^n − 1).

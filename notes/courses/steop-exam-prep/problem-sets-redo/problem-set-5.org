@@ -6,7 +6,7 @@
 #+options: num:t
 #+startup: overview
 
-* Problem 1 []
+* Problem 1 [SKIP]
 ** Task
 Find gcd(11...1, 11...1)
             n       m

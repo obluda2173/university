@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-11>
-#+lastmod: <2025-11-13 09:36>
+#+lastmod: <2025-11-14 10:53>
 #+options: num:t
 #+startup: overview
 
@@ -169,21 +169,33 @@
 
 * Study plan
 - Wednesday - 12th
-  - Problem Sets: 1
+  - [X] Problem Set 1
 - Thursday- 13th
-  - Problem Sets: 2,3,4
-  - Timed revision: 1
+  - [X] Problem Set 2
+  - [X] Problem Set 3
+  - [ ] Problem Set 4
+  - [ ] Timed revision PS1
 - Friday - 14th
-  - Problem Sets: 5,6,7
-  - Timed revision: 2,3,4
+  - [ ] Problem Set 5
+  - [ ] Problem Set 6
+  - [ ] Problem Set 7
+  - [ ] Timed revision PS2
+  - [ ] Timed revision PS3
+  - [ ] Timed revision PS4
 - Saturday - 15th
-  - Problem Sets: 8,9
-  - Timed revision: 5,6,7
+  - [ ] Problem Set 8
+  - [ ] Problem Set 9
+  - [ ] Timed revision PS5
+  - [ ] Timed revision PS6
+  - [ ] Timed revision PS7
 - Sunday - 16th
-  - Problem Sets: 10,11
-  - Timed revision: 8,9
+  - [ ] Problem Set 10
+  - [ ] Problem Set 11
+  - [ ] Timed revision PS8
+  - [ ] Timed revision PS9
 - Monday - 17th
-  - Timed revision: 10,11
+  - [ ] Timed revision PS10
+  - [ ] Timed revision PS11
   Revisit main problems of all problem sets.
 
 

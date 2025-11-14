@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-13 21:16>
+#+lastmod: <2025-11-14 11:28>
 #+options: num:t
 #+startup: overview
 
@@ -10,6 +10,7 @@
 
 - I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
 - The weak induction is done very very smoothly.
+- Revisit Problem 6
 * Weak Induction Structure
 #+begin_quote
 *Proposition.* S1, S2, S3 .., are all true.
@@ -19,6 +20,31 @@
 *Inductive hypothesis.* Assume that Sk is true.
 
 *Inductive step.* Prove that Sk implies Sk+1.
+
+*Conclusion.* Therefore, by induction, all the Sn are true.
+#+end_quote
+
+#+begin_quote
+*Proposition.*
+
+*Base case.*
+
+*Inductive hypothesis.*
+
+*Inductive step.*
+
+*Conclusion.*
+#+end_quote
+
+* Strong Induction Structure
+#+begin_quote
+*Proposition.* S1, S2, S3 .., are all true.
+
+*Base case.* Demonstrate that S1 (or more S) is true.
+
+*Inductive hypothesis.* Assume that S1, S2, S3, ..., Sk are true.
+
+*Inductive step.* Prove that (S1, S2, S3, ..., Sk) implies Sk+1.
 
 *Conclusion.* Therefore, by induction, all the Sn are true.
 #+end_quote
@@ -165,16 +191,39 @@ Thus,
 Hence,
 equation = 1 - 1/k+1
 
-* Problem 6 []
+* Problem 6 [DONE]
 ** Task
 Let S be a set containing n elements. Use induction to prove that |P(S)| = 2^n.
 
 ** Solution
+#+begin_quote
+*Proposition.* If S is set, and |S| = n. Then |P(S)| = 2^n.
+
+*Base case.* Let |S| = 0. |P(S)| = 1. Base holds.
+
+*Inductive hypothesis.* Assume If |S| = k, then |P(S)| = 2^k.
+
+*Inductive step.* Let S be the set of k+1 elements. Let a ∈ S. Define T := S \ {a}. Thus |T| = k. Now define:
+
+A = {X ⊆ S : a ∉ X}
+B = {X ⊆ S : a ∈ X}
+
+f : P(T) --> B  f(X) = X ∪ {a}.
+
+Since f is a bijective function, with assumption, |A| = 2^k, |B| = 2^k.
+
+And since P(S) = A ∪ B --> |P(S)| = |A| + |B|, |P(S)| = 2^k + 2^k = 2^(k+1)
+
+*Conclusion.* Therefore, if |S| = n. Then |P(S)| = 2^n.
+#+end_quote
+
 * Problem 7 []
 ** Task
 The bank has an unlimited supply of 3 and 5 euros bills. Prove that it can dispense any number of euros greater than 8 (without change).
 
 ** Solution
+
+
 * Problem 8 []
 ** Task
 There is a 16 × 16 chess board with one square removed. Prove that it can be tiled using triminoes (you can rotate them). We have already proved it in class, and now your goal is to express the proof in words.

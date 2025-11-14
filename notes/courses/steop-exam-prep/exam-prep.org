@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-11>
-#+lastmod: <2025-11-14 13:10>
+#+lastmod: <2025-11-14 19:33>
 #+options: num:t
 #+startup: overview
 
@@ -173,7 +173,7 @@
 - Thursday- 13th
   - [X] Problem Set 2
   - [X] Problem Set 3
-  - [ ] Problem Set 4
+  - [X] Problem Set 4
   - [ ] Timed revision PS1
 - Friday - 14th
   - [ ] Problem Set 5

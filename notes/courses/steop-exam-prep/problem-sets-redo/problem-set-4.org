@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-14>
-#+lastmod: <2025-11-14 14:33>
+#+lastmod: <2025-11-14 14:45>
 #+options: num:t
 #+startup: overview
 
@@ -63,11 +63,31 @@ Let n = 2k + 1 for k ∈ ℕ.
 *Conclusion.* In both cases, expression is a multiple of 4 for every n ∈ ℕ.
 #+end_quote
 
-* Problem 3 []
+* Problem 3 [DONE]
 ** Task
 Prove that log2(3) is irrational.
 
 ** Solution
+#+begin_quote
+*Proposition.* log2(3) != a/b, a ∈ ℤ, b ∈ ℕ. log2(3) is irrational.
+
+*Proof.*
+Assume log2(3) is rational.
+
+log2(3) = a/b, a ∈ ℤ, b ∈ ℕ.
+
+Thus,
+2^(a/b) = 3
+2^a = 3^b
+
+LHS has only one prime number factor 2
+RHS has only one prime number factor 3
+
+By the Fundamental Theorem of Arithmetics (unique prime factorisation), the two sides can not be equal unless both are 1.
+
+But 2^p = 1 would force a = 0, which gives 3^b = 1, and then b = 0, which is impossible because of b being natural.
+#+end_quote
+
 * Problem 4 []
 ** Task
 Five children found nine mushrooms. Prove that at least two of them found an equal number of mushrooms.

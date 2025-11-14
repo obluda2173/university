@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-14 13:08>
+#+lastmod: <2025-11-14 13:09>
 #+options: num:t
 #+startup: overview
 
@@ -11,6 +11,7 @@
 - I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
 - The weak induction is done very very smoothly.
 - Revisit Problem 6,7,8
+- I think the Problem 9 can come up in exam
 
 * Weak Induction Structure
 #+begin_quote

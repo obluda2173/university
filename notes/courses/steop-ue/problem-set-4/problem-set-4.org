@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-14>
-#+lastmod: <2025-11-14 15:12>
+#+lastmod: <2025-11-14 19:32>
 #+options: num:t
 #+startup: overview
 
@@ -140,7 +140,7 @@ Thus,
 
 * Problem 6 [DONE]
 ** Task
-Find digits a and b such that (o.aa..)^(1/2) = 0.bb..
+Find digits a and b such that (0.aa..)^(1/2) = 0.bb..
 
 ** Solution
 1. a = 0, b = 0
@@ -165,12 +165,31 @@ a. 33341 = 10223 * 3 + 2672
    2207 = 465 * 4 + 347
    465 = 347 * 1 + 118
    347 = 118 * 2 + 111
-   116 = 111 * 1 + 5
-   111 = 5 * 22 + 1
-   5 = 1 * 5 + 0
+   118 = 111 * 1 + 7
+   111 = 7 * 15 + 6
+   7 = 6 * 1 + 1
+   5 = 1 * 5
 
-   Thus, 1
-b. 1
+   Thus, 1.
+
+b. gcd(2n + 1; 3n + 2)
+
+   3n + 2 - 2n - 1 = n + 1
+
+   Thus,
+   gcd(2n + 1; 3n + 2) = gcd(2n + 1, n + 1)
+
+   Now,
+   2n + 1 - 2(n + 1) = - 1
+
+   Hence,
+   gcd(2n + 1, n + 1) = gcd(n + 1, 1)
+
+   Finally,
+   gcd(n + 1, 1) = 1
+
+   Hence,
+   gcd(2n + 1; 3n + 2) = 1
 
 * Problem 9 [DONE]
 ** Task

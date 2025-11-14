@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-13>
-#+lastmod: <2025-11-14 11:28>
+#+lastmod: <2025-11-14 12:11>
 #+options: num:t
 #+startup: overview
 
@@ -11,6 +11,7 @@
 - I need revisit problem 3, feels a bit strange, specifically the part of "Sn implies Sn+1".
 - The weak induction is done very very smoothly.
 - Revisit Problem 6
+- Revisit Problem 7
 * Weak Induction Structure
 #+begin_quote
 *Proposition.* S1, S2, S3 .., are all true.
@@ -217,12 +218,74 @@ And since P(S) = A ∪ B --> |P(S)| = |A| + |B|, |P(S)| = 2^k + 2^k = 2^(k+1)
 *Conclusion.* Therefore, if |S| = n. Then |P(S)| = 2^n.
 #+end_quote
 
-* Problem 7 []
+* Problem 7 [DONE]
 ** Task
 The bank has an unlimited supply of 3 and 5 euros bills. Prove that it can dispense any number of euros greater than 8 (without change).
 
 ** Solution
+*** Solution 1 [mine and wrong]
+#+begin_quote
+*Proposition.* For any x ∈ ℕ : x > 8, x = 3n + 5m, for n,m ∈ ℕ0.
 
+*Base case.* Let x = 9. x = 3*3 + 5*0; n = 3, m = 0.
+             Let x = 10. x = 3*0 + 5*2; n = 3, m = 0.
+             Let x = 11. x = 3*2 + 5*1; n = 3, m = 0.
+             Bases hold.
+
+*Inductive hypothesis.* For any k ∈ ℕ : k > 8, k = 3n + 5m, for n,m ∈ ℕ0.
+
+*Inductive step.*
+
+Let k be arbitrary, k ∈ ℕ.
+
+Hence, k ≡ 0 (mod 3)
+       k ≡ 1 (mod 3)
+       k ≡ 2 (mod 3)
+
+- If k ≡ 0 (mod 3)
+  k = 3*a + 9, a ∈ ℕ0.
+  k = 3*a + 3*3 + 5*0,
+  k = 3*(a+3) + 5*0,
+  Since a ∈ ℕ0, (a+3) ∈ ℕ. Thus, k = 3n + 5m, for n,m ∈ ℕ0.
+
+- If k ≡ 1 (mod 3)
+  k = 3*a + 3*3 + 1, a ∈ ℕ0.
+  k = 3*a + 10,
+  k = 3*a + 3*0 + 5*2,
+  k = 3*(a) + 5*2,
+  Since a ∈ ℕ0. Thus, k = 3n + 5m, for n,m ∈ ℕ0.
+
+- If k ≡ 2 (mod 3)
+  k = 3*a + 3*3 + 2, a ∈ ℕ0.
+  k = 3*a + 11,
+  k = 3*a + 3*2 + 5*1,
+  k = 3*(a+2) + 5*1,
+  Since a ∈ ℕ0, (a+2) ∈ ℕ. Thus, k = 3n + 5m, for n,m ∈ ℕ0.
+
+*Conclusion.* For any x ∈ ℕ : x > 8, x = 3n + 5m, for n,m ∈ ℕ0.
+#+end_quote
+
+*** Solution 2
+#+begin_quote
+*Proposition.* For any x ∈ ℕ : x >= 8, x = 3n + 5m, for n,m ∈ ℕ0.
+
+*Base case.* Let x = 8. x = 3*1 + 5*1; n = 1, m = 1.
+             Let x = 9. x = 3*3 + 5*0; n = 3, m = 0.
+             Let x = 10. x = 3*0 + 5*2; n = 0, m = 2.
+             These represent all congruence classes of modulo 3.
+             Bases hold.
+
+*Inductive hypothesis.* Assume for any k ∈ ℕ : k >= 8, k = 3n + 5m, for n,m ∈ ℕ0.
+
+*Inductive step.* Then, k + 3 = 3(n+1) + 5m, which is also a valid representation.
+
+Thus,
+- Numbers congruent to 2 mod 3 are generated from 8.
+- Numbers congruent to 0 mod 3 are generated from 9.
+- Numbers congruent to 1 mod 3 are generated from 10.
+
+*Conclusion.* Therefore, for any x ∈ ℕ : x >= 8, x = 3n + 5m, for n,m ∈ ℕ0.
+#+end_quote
 
 * Problem 8 []
 ** Task

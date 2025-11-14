@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-14>
-#+lastmod: <2025-11-12 13:10>
+#+lastmod: <2025-11-14 15:12>
 #+options: num:t
 #+startup: overview
 
@@ -121,7 +121,7 @@ Hence the total amount of mushrooms is 10, which exceeds the number of found mus
 ** Task
 Calculate
 a. 0.1212.. + 0.122122..
-b. 0.33.. + 0.44..
+b. 0.33.. * 0.44..
 
 ** Solution
 *** a.

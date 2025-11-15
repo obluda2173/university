@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-17>
-#+lastmod: <2025-10-20 19:46>
+#+lastmod: <2025-11-15 12:07>
 #+options: num:t
 #+startup: overview
 
@@ -126,7 +126,7 @@ a ≡ b (mod n)
 *** Original
 2^2025 = (2^10)^202 * 2^5
 
-FML:
+FLT:
 Since 11 is prime, then,
 2^10 ≡ 1 (mod 11)
 
@@ -139,7 +139,7 @@ Since 11 is prime, then,
 
 * Problem 5 [DONE]
 ** Task
-Solve the equation x^2 - 16y = 3, where x, y ∈ Z.
+Solve the equation x^2 - 16y = 3, where x, y ∈ ℤ.
 
 ** Solution
 *** Original
@@ -166,7 +166,7 @@ But we are searching for the remainder 3.
 
 However 3 is not possible.
 
-Therefore, there are no solutions for x^2 - 16y = 3, where x, y ∈ Z.
+Therefore, there are no solutions for x^2 - 16y = 3, where x, y ∈ ℤ.
 
 *** Polished
 Rearranging:
@@ -348,7 +348,7 @@ Conclusion: In both cases, N can not be a perfect square.
 
 * Problem 7 [DONE]
 ** Task
-Find all p ∈ N such that p, p + 10, and p + 14 are prime numbers.
+Find all p ∈ ℕ such that p, p + 10, and p + 14 are prime numbers.
 
 ** Solution
 *** Original

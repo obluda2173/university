@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-14>
-#+lastmod: <2025-11-15 12:20>
+#+lastmod: <2025-11-15 12:22>
 #+options: num:t
 #+startup: overview
 
@@ -136,11 +136,13 @@ Hence, p + 10 = 13, and p + 14 = 17, which are both prime.
 
 And due to the fact that p, p + 10, and p + 14 have different remainders, and none of them should be divisible by 3 (since they would not be primes), unless one of them equal to 3, there are no other solutions other than 3, 13, 17.
 
-* Problem 8 []
+* Problem 8 [DONE]
 ** Task
 It is October today. What are the chances that, in 250 months’ time, people will be swimming in the Danube?
 
 ** Solution
+(250 + 10) % 12 = 8 which is August.
+
 * Problem 9 [SKIP]
 ** Task
 Prove that there exists an n ∈ N for which 11 | (2^n − 1).

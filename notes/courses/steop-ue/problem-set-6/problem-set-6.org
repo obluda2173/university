@@ -2,13 +2,13 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-10-24 09:23>
+#+lastmod: <2025-11-15 15:55>
 #+options: num:t
 #+startup: overview
 
 * Counting notes
 ** What are permutations?
-- Permutation :: is the number of arrangements from a set of n items taken k at a time, where the order of arrengement matters. It's represented as P(n, k) or nPk.
+- Permutation :: is the number of arrangements from a set of n items taken k at a time, where the order of arrangement matters. It's represented as P(n, k) or nPk.
 
 The formula of permutation is: P(n, k) = n! / (n - k)!
 
@@ -16,7 +16,7 @@ So, when we start to select the objects starting from n, we go like this:
 
 n, n-1, n-2, ..., 1   (each number relate to the number of possible object choice at that moment)
 
-When we have to find the all lists with the lenght of the choice list, with no repetition in values we basically go from n * n-1 * n02 * ... * 1.
+When we have to find the all lists with the lenght of the choice list, with no repetition in values we basically go from n * n-1 * n-2 * ... * 1.
 
 However, when we need to find lists with certain length we won't need to multiply any further n - k, where k is the length of the wanted list.
 
@@ -48,7 +48,7 @@ C(n, k) = n! / (n - k)! * k!
 
 * Problem 1 [DONE] [CHECKED]
 ** Task
-In a school, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
+In a s  chool, every boy knows 32 girls, and every girl knows 29 boys. Who are there more of in the school: boys or girls, and by how many times?
 
 ** Solution
 Let B be the number of boys, and G be the number of girls.
@@ -90,6 +90,7 @@ Thus, 9 * 10^9 - 9 * 9!
 How many permutations of the letters ABCDEFGH contain the string 'ABC'?
 
 ** Solution
+*** Solution 1
 Uhhh, so...
 
 Lets imagine the list of ((A, B, C), D, E, F, G, H).
@@ -120,6 +121,12 @@ This gives us a hint to see a shuffle in letters part as a separate permitation 
 List (E, D, F, G, H) has a total of 5 objects. No repetitions are allowed, so the total amount of lists is 5!.
 
 Therefore, combining two small steps into one we get 6 * 5! of total lists having (A, B, C) in order.
+*** Solution revised
+Consider 'ABC' being one element in the list of strings, like this:
+
+['ABC', 'D', 'E', 'F', 'G', 'H']
+
+Hence, there are a total of 6 elements in a list. Meaning that there are a total of 6! permutations.
 
 * Problem 4 [DONE] [CHECKED]
 ** Task

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-14>
-#+lastmod: <2025-11-15 12:28>
+#+lastmod: <2025-11-15 15:18>
 #+options: num:t
 #+startup: overview
 
@@ -130,11 +130,62 @@ Hence, all x^2 have remainders of {0, 1, 4, 9}.
 
 Therefore, there are no solutions for x^2 - 16y = 3 where x,y ∈ ℤ.
 
-* Problem 6 [MAYBE]
+* Problem 6 [DONE]
 ** Task
 Prove that a number whose decimal representation contains three 1 and several 0 can not be a perfect square.
 
 ** Solution
+*** Lemmas
+- Fundamental Theorem of Arithmetics
+  Each number can be exressed as the product of prime numbers.
+- Square <--> Even exponent
+  An integer is a perfect square iff in its prime factorisation every prime has an even exponent.
+- Congruence of powers of 10 mod 9
+  10 ≡ 1 (mod 9), thus, 10^k ≡ 1 (mod 9), k ∈ ℕ.
+- Quadratic remainders mod 9
+  The only possible remainder of perfect square are: {0, 1, 4, 7}.
+
+*** Proof
+Express such a number as:
+N = 10^a + 10^b + 10^c, such that,
+a > b > c; a,b,c ∈ ℕ.
+
+1. Factor out 10^c
+   N = 10^a + 10^b + 10^c
+   N = 10^c * (10^(a-c) + 10^(b-c) + 1)
+   Let M = 10^(a-c) + 10^(b-c) + 1
+   Thus,
+   N = 10^c * M
+
+2. Case 1: c is odd
+   Notice that 10^k ≡ 0 (mod 2) and 10^k ≡ 0 (mod 5). Hence,
+
+   M = 10^(a-c) + 10^(b-c) + 1 = 0 + 0 + 1 ≡ 1 (mod 2), and
+                               = 0 + 0 + 1 ≡ 1 (mod 5).
+
+   Hence, M does not contribute any of the 2's and 5's to the overall expression.
+   Meaning, that there should be even exponents of 2 and 5 in 10^c.
+
+   However, since c is odd, 10^c = 2^c * 5^c, prime factors 2 and 5 have an odd exponent.
+   Due to lemma of square having even exponents, N can not be a perfect square.
+
+3. Case 2: c is even
+   Let c = 2t, then, (10^t)^2, which is a perfect square.
+   Thus, M should also be a perfect square.
+   Since congruence of perfect squares by mod 9 are only {0, 1, 4, 7},
+
+   M ≡ x (mod 9), x ∈ {0, 1, 4, 7}.
+
+   Let r = a-c, q = b-c. Thus,
+
+   M = 10^r + 10^q + 1 ≡ 1 + 1 + 1 ≡ 3 (mod 9)
+
+   Hence,
+   3 ∉ {0, 1, 4, 7}, implies that M is not a perfect square.
+
+   Therefore, N is not a perfect square either.
+
+*Conlusion:* In both cases, N can not be a perfect square.
 
 * Problem 7 [DONE]
 ** Task

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-16>
-#+lastmod: <2025-11-16 12:30>
+#+lastmod: <2025-11-16 13:18>
 #+options: num:t
 #+startup: overview
 
@@ -100,12 +100,49 @@ Let R be a relation on the real numbers defined by xRy <--> x^2 = y^2. Is R an e
 *Conclusion.* Since xRy is reflexive, symmetric and transitive for all x,y ∈ ℝ, R is an equivalence relation.
 #+end_quote
 
-* Problem 3 []
+* Problem 3 [DONE]
 *Problem topic:* Relations - Equivalence.
 ** Task
-Define R on Z as xRy <--> 4|(x + 3y) for all x,y ∈ Z. Is R an equivalence relation?
+Define R on ℤ as xRy <--> 4|(x + 3y) for all x,y ∈ ℤ. Is R an equivalence relation?
 
 ** Solution
+#+begin_quote
+*Proposition.* If xRy <--> 4|(x + 3y) for all x,y ∈ ℤ, R an equivalence relation.
+- 4|(x + 3y) <--> x + 3y ≡ 0 (mod 4)
+
+*Proof.*
+- *Reflexive:* ∀a∈A; a~a.
+  Let a ∈ ℤ. Thus
+  a + 3a ≡ 0 (mod 4)
+  4a ≡ 0 (mod 4)
+  trivial
+  Hence, ∀a∈ℤ; a~a.
+
+- *Symmetric:* ∀a,b∈A; a~b --> b~a.
+  Let a,b ∈ ℤ.
+  Assume a~b, thus,
+  a + 3b ≡ 0 (mod 4) <--> 3b + a ≡ 0 (mod 4)
+  3b + a ≡ 0 (mod 4) (multiply both sides by 3)
+  9b + 3a ≡ 0 (mod 4)
+  (b + 3a) + 8b ≡ 0 (mod 4)
+  (b + 3a) + 4(2b) ≡ 0 (mod 4) (substract 4(2b), since 4|4(2b))
+  b + 3a ≡ 0 (mod 4)
+  Hence, ∀a,b∈ℤ; a~b --> b~a.
+
+- *Transitive:* ∀a,b,c∈A; (a~b ∧ b~c) --> a~c.
+  Let a,b,c ∈ ℤ.
+  Assume a~b and b~c, thus,
+  a + 3b ≡ 0 (mod 4)
+  b + 3c ≡ 0 (mod 4)
+  thus,
+  a + 3b + b + 3c ≡ 0 (mod 4)
+  a + 4b + 3c ≡ 0 (mod 4) (substract 4b, since 4|4b)
+  a + 3c ≡ 0 (mod 4)
+  Hence, ∀a,b,c∈ℤ; (a~b ∧ b~c) --> a~c.
+
+*Conclusion.* Since xRy is reflexive, symmetric and transitive, R is equivalence for all x,y ∈ ℤ.
+#+end_quote
+
 * Problem 4 []
 ** Task
 Prove or disprove: If R is an equivalence relation on an infinite set S, then R has infinitely many equivalence classes.

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-16>
-#+lastmod: <2025-11-16 13:18>
+#+lastmod: <2025-11-16 15:47>
 #+options: num:t
 #+startup: overview
 
@@ -143,11 +143,52 @@ Define R on ℤ as xRy <--> 4|(x + 3y) for all x,y ∈ ℤ. Is R an equivalence 
 *Conclusion.* Since xRy is reflexive, symmetric and transitive, R is equivalence for all x,y ∈ ℤ.
 #+end_quote
 
-* Problem 4 []
+* Problem 4 [DONE]
 ** Task
 Prove or disprove: If R is an equivalence relation on an infinite set S, then R has infinitely many equivalence classes.
 
 ** Solution
+- Equivalence class :: is a subset of a set where all elements are related to each other by an equivalence relation.
+
+#+begin_quote
+*Proposition.* If xRy <--> 2|(x+y), x,y ∈ ℤ, R is an equivalence relation.
+
+*Proof.*
+- *Reflexive:* ∀a∈A; a~a.
+  Let a ∈ ℤ. Thus,
+  a + a ≡ 0 (mod 2)
+  2(a) ≡ 0 (mod 2)
+  trivial.
+  Hence, ∀a∈ℤ; a~a.
+
+- *Symmetric:* ∀a,b∈A; a~b --> b~a.
+  Let a,b ∈ ℤ.
+  Assume a~b. Thus,
+  a + b ≡ 0 (mod 2) <--> b + a ≡ 0 (mod 2)
+  trivial.
+  Hence, ∀a,b∈ℤ; a~b --> b~a.
+
+- *Transitive:* ∀a,b,c∈A; (a~b ∧ b~c) --> a~c.
+  Let a,b,c ∈ ℤ.
+  Assume a~b and b~c. Thus,
+  a + b ≡ 0 (mod 2)
+  b + c ≡ 0 (mod 2)
+  Thus,
+  a + b + b + c ≡ 0 (mod 2)
+  a + 2b + c ≡ 0 (mod 2)        (substract 2b, since 2|2b)
+  a + c ≡ 0 (mod 2)
+  Hence, ∀a,b,c∈ℤ; (a~b ∧ b~c) --> a~c.
+
+*Conclusion.* Since R is reflexive, symmetric and transitive, it is an equivalence relation for all x,y ∈ ℤ.
+#+end_quote
+
+Thus, since xRy <--> 2|(x+y), x,y ∈ ℤ, R is an equivalence relation, and has only 2 equivalence classes:
+
+{a ∈ ℤ : a ≡ 1 (mod 2)}
+{a ∈ ℤ : a ≡ 0 (mod 2)}
+
+This disproves initial statement.
+
 * Problem 5 []
 ** Task
 There are five different equivalence relations on the set A = {a,b,c}. Describe them all. (Here you can just draw a picture instead of text if you prefer.)

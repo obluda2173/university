@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-10-20>
-#+lastmod: <2025-11-15 16:03>
+#+lastmod: <2025-11-16 10:37>
 #+options: num:t
 #+startup: overview
 
@@ -402,10 +402,10 @@ Therefore, we can do a combination calculation:
 
 * Problem 11 [DONE] [CHECKED]
 ** Task
-Let m, n ∈ N. How many solutions does the equation
+Let m, n ∈ ℕ. How many solutions does the equation
         x1 + x2 + ... xm = n
 have if
-1. all xi are nonegative integer numbers.
+1. all xi are nonnegative integer numbers.
 2. all xi are natural numbers?
 
 /Hint. If you are not confident in your solution, try verifying particular cases for small values of m and n./
@@ -413,7 +413,7 @@ have if
 ** Solution
 *** Original
 **** 1.
-Let x1, x2, ..., xm be sme boxes, and we have n number of abstract 1's.
+Let x1, x2, ..., xm be some boxes, and we have n number of abstract 1's.
 
 Therefore, we can regard this problem as /stars and bars/ type of problem.
 
@@ -438,9 +438,9 @@ Therefore, the answer is (n-1)C(m-1).
 
 *** Polished
 **** 1. Nonnegative Integer Solutions
-I use the start and bars method. Consider n indistinguishable objects (stars) to be among m distinguishable boxes (variables x1, x2, ..., xm).
+I use the stars and bars method. Consider n indistinguishable objects (stars) to be among m distinguishable boxes (variables x1, x2, ..., xm).
 
-To represent distribution, I arrente n stars and m-1 separators in a sequence. Each arrengemenr corresponds to a unique solution.
+To represent distribution, I arrange n stars and m-1 separators in a sequence. Each arrangement corresponds to a unique solution.
 
 - The stars before first bar represent x1.
 - The stars between first and last bars represent x2, x3, ..., x(m-1).
@@ -452,7 +452,7 @@ I choose m-1 positions in this arrangement n+m-1 positions for the bars.
 
 Answer: (n+m-1)C(m-1).
 
-**** Positive Integer Solutions
+**** 2. Positive Integer Solutions
 Since each of xi must be at least 1, I allocate one unit to each of the m variables. This accounts for m unite of the total n.
 
 The remaining n-m units can be distributed freely among the m variables as nonnegative integers.

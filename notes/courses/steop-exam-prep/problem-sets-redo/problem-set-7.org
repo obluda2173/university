@@ -2,15 +2,69 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-16>
-#+lastmod: <2025-11-16 10:47>
+#+lastmod: <2025-11-16 12:08>
 #+options: num:t
 #+startup: overview
 
-* Problem 1 []
+* How to prove equivalence relations?
+1. *Reflexive*
+   Let a ∈ A. Show a~a. (one sentence: reason why the relaton includes (a,a) or why the property holds)
+
+   Therefore, ∀a ∈ A, a~a.
+
+2. *Symmetric*
+   Let a,b ∈ A, and assume a~b. Show b~a. (one sentence: use definition of algebraic symmetry)
+
+   Therefore, ∀a,b ∈ A, a~b --> b~a.
+
+3. *Transitive*
+   LEt a,b,c ∈ A, and assume a~b and b~c. Show a~c. (one sentence: combine assumptions via definition/transitivity property)
+
+   Therefore, ∀a,b,c ∈ A, (a~b ∧ b~a) --> a~c.
+
+4. *Conclude*
+   Since three properties hold, ~ is an equivalence relation.
+
+* Problem 1 [DONE]
 ** Task
-Define R on Z a mRn <--> 2|(m^2 + n^2) for all m,n ∈ Z. Is R an equivalence relation?
+Define R on ℤ a mRn <--> 2|(m^2 + n^2) for all m,n ∈ ℤ. Is R an equivalence relation?
 
 ** Solution
+#+begin_quote
+*Proposition.* mRn <--> 2|(m^2 + n^2) for all m,n ∈ ℤ. Prove R an equivalence relation.
+        2|(m^2 + n^2) <--> m^2 + n^2 ≡ 0 (mod 2)
+
+*Proof.*
+- *Reflexive* ∀a ∈ A; a~a.
+  Let a ∈ ℤ.
+  a^2 + a^2 ≡ 0 (mod 2)
+  2(a^2) ≡ 0 (mod 2)
+  which is obviously true.
+  Hence, ∀a ∈ ℤ; a~a.
+
+- *Symmetric* ∀a,b ∈ A; a~b --> a~b.
+  Let a,b ∈ ℤ.
+  Assume aRb, thus,
+  a^2 + b^2 ≡ 0 (mod 2) <--> b^2 + a^2 ≡ 0 (mod 2)
+  Thus, a~b --> b~a.
+  Hence, ∀a,b ∈ ℤ; a~b --> b~a.
+
+- *Transitive* ∀a,b,c ∈ A; (a~b ∧ b~c) --> a~c.
+  Let a,b,c ∈ ℤ.
+  Assume aRb and bRc, thus,
+  a^2 + b^2 ≡ 0 (mod 2)
+  b^2 + c^2 ≡ 0 (mod 2)
+
+  Thus,
+  a^2 + b^2 + b^2 + c^2 ≡ 0 (mod 2)
+  a^2 + 2(b^2) + c^2 ≡ 0 (mod 2)        (since 2|2(b^2), substract 2(b^2) from LHS)
+  a^2 + c^2 ≡ 0 (mod 2)
+
+  Hence, ∀a,b ∈ ℤ; (a~b ∧ b~c) --> a~c.
+
+*Conclusion.* Since mRn is reflexive, symmetric and transitive for all m,n ∈ ℤ, R is an equivalence relation.
+#+end_quote
+
 * Problem 2 []
 *Problem topic:* Relations - Equivalence.
 

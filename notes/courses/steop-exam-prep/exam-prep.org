@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-11>
-#+lastmod: <2025-11-15 21:30>
+#+lastmod: <2025-11-16 16:32>
 #+options: num:t
 #+startup: overview
 
@@ -178,7 +178,7 @@
 - Friday - 14th
   - [X] Problem Set 5
   - [X] Problem Set 6
-  - [ ] Problem Set 7
+  - [X] Problem Set 7
   - [ ] Timed revision PS2
   - [ ] Timed revision PS3
   - [ ] Timed revision PS4

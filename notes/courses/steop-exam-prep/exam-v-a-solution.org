@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-17>
-#+lastmod: <2025-11-17 14:42>
+#+lastmod: <2025-11-17 15:56>
 #+options: num:t
 #+startup: overview
 
@@ -238,7 +238,7 @@ Hence, f is not injective.
 
 #+end_quote
 
-* 7. Problem 7
+* 7. Problem 7 [DONE]
 ** Task
 Countability
 
@@ -247,8 +247,40 @@ Countability
 - Decide whether the given set(s) are countable or uncountable.
 
 ** Solution
+- A = {Pi * g : g ∈ ℚ}
+  #+begin_quote
+  A is countable, since:
 
-* 8. Problem 8
+  f(x) = Pi * x; x ∈ ℚ is bijective.
+
+
+
+  *Proposition.* f(x) = Pi * x; x ∈ ℚ is bijective.
+  - *Surjective.* ∀b∈B, ∀a∈A : f(a) = b.
+    f : ℚ --> A  f(q) = Pi * q.
+    Let a ∈ A.
+    Thus, by definition of A, ∃q∈ℚ : a = Pi * q.
+    Hence, f is into A. f is surjective
+
+  - *Injective.* ∀b∈B, ∀a1,a2 ∈ A : (f(a1) = b ∧ f(a2) = b) --> a1 = a2.
+    Let q1,q2 ∈ ℚ.
+    Assume f(q1) = f(q2). Hence,
+    Pi * q1 = Pi * q2   (divide both sides by Pi)
+         q1 = q2
+
+    Hence, f is injective.
+
+  Since f is bijective, and ℚ is countable (diagonal proof)
+  Set A is countable.
+  #+end_quote
+
+- ∪(∞, n = 1)[0, 1/n]
+
+  ∪(∞, n = 1)[0, 1/n] = [0,1]
+
+  [0,1] is uncountable, Cantor's diagonal argument.
+
+* 8. Problem 8 [DONE]
 ** Task
 Set S = {I, J, K, L, M, N, O, P}
 
@@ -258,8 +290,11 @@ b) Letters may be reused as many times as desired
 c) M must appear before N in the word
 
 ** Solution
+ a) 8!, trivial
+ b) 8^8
+ c) 8! / 2
 
-* 9. Problem 9
+* 9. Problem 9 [DONE]
 ** Task
 Modular
 
@@ -267,19 +302,43 @@ Modular
 - 21321 ≡ ? (mod 21)
 
 ** Solution
+- 421 ≡ ? (mod 21)
 
-* 10. Problem 10
+  421 8
+  40  52
+   21
+   16
+    5
+
+  Hence, 421 ≡ 5 (mod 21)
+
+- 21321 ≡ ? (mod 21)
+
+  21321 21
+  21    15
+    32
+    21
+    111
+    105
+      6
+
+  Hence, 21321 ≡ 6 (mod 21)
+
+* 10. Problem 10 [SKIP]
 ** Task
 Solve the equation (algebraic or trigonometric form)
 
 z^3 = -8i
 
 ** Solution
+z = (-8i)^(1/3)
+z = -2 * (i)^(1/3)
 
-* 11. Problem 11
+* 11. Problem 11 [DONE]
 ** Task
 Solve this
 
 (x^4 + x + 1) / (x - 1)
 
 ** Solution
+3, trivial

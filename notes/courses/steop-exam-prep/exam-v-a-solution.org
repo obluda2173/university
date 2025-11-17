@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-17>
-#+lastmod: <2025-11-17 15:56>
+#+lastmod: <2025-11-17 18:07>
 #+options: num:t
 #+startup: overview
 
@@ -252,8 +252,6 @@ Countability
   A is countable, since:
 
   f(x) = Pi * x; x ∈ ℚ is bijective.
-
-
 
   *Proposition.* f(x) = Pi * x; x ∈ ℚ is bijective.
   - *Surjective.* ∀b∈B, ∀a∈A : f(a) = b.

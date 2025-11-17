@@ -1,0 +1,199 @@
+#+title: Exam V A Solution
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-11-17>
+#+lastmod: <2025-11-17 12:56>
+#+options: num:t
+#+startup: overview
+
+* 1. Problem 1 [DONE]
+** Task
+Truth table: `P ∨ ¬Q -> P ∧ Q`
+
+Construct the full truth table.
+
+** Solution
+|---+---+----+--------+-------+-----------------|
+| P | Q | ¬Q | P ∨ ¬Q | P ∧ Q | P ∨ ¬Q -> P ∧ Q |
+|---+---+----+--------+-------+-----------------|
+| T | T | F  | T      | F     | F               |
+|---+---+----+--------+-------+-----------------|
+| T | F | T  | T      | T     | T               |
+|---+---+----+--------+-------+-----------------|
+| F | T | F  | F      | F     | F               |
+|---+---+----+--------+-------+-----------------|
+| F | F | T  | T      | F     | F               |
+|---+---+----+--------+-------+-----------------|
+
+* 2. Problem 2 [DONE]
+** Task
+Compute: gcd(225, 135)
+
+** Solution
+gcd(225, 135)
+
+225 = 135 * 1 + 90
+135 = 90 * 1 + 45
+90 = 45 * 2 + 0
+
+Hence,
+gcd(225, 135) = 45
+
+* 3. Problem 3 [DONE]
+** Task
+Induction
+
+∑(n, l = 1)(1/(l(l+1))) = n/(n+1)
+
+** Solution
+#+begin_quote
+*Proposition.* ∑(n, l = 1)(1/(l(l+1))) = n/(n+1)
+
+*Base case.* n = 1.
+
+∑(1, l = 1)(1/(l(l+1))) = 1/(1+1)
+1/(1(1+1)) = 1/(1+1)
+1/2 = 1/2
+
+*Inductive hypothesis.* Assume ∑(n, l = 1)(1/(l(l+1))) = n/(n+1).
+
+*Induction step.*
+
+∑(n, l = 1)(1/(l(l+1))) + 1/((n+1)((n+1)+1)) = n/(n+1) + 1/((n+1)((n+1)+1))
+
+∑(n+1, l = 1)(1/(l(l+1))) = n/(n+1) + 1/((n+1)(n+2))
+
+∑(n+1, l = 1)(1/(l(l+1))) = (n(n+2))/((n+1)(n+2)) + 1/((n+1)(n+2))
+
+∑(n+1, l = 1)(1/(l(l+1))) = (n(n+2) + 1)/((n+1)(n+2))
+
+∑(n+1, l = 1)(1/(l(l+1))) = (n^2 + 2n + 1)/((n+1)(n+2))
+
+∑(n+1, l = 1)(1/(l(l+1))) = ((n + 1)^2)/((n+1)(n+2))
+
+∑(n+1, l = 1)(1/(l(l+1))) = (n+1)/((n+1)+1)
+
+*Conclusion.* Hence,
+              ∑(n, l = 1)(1/(l(l+1))) = n/(n+1)
+
+              implies
+
+              ∑(n+1, l = 1)(1/(l(l+1))) = (n+1)/((n+1)+1)
+#+end_quote
+* 4. Problem 4 [DONE]
+** Task
+Divisibility exercise
+
+3 !| a
+3 !| b
+
+--> 3|(a^2 - b^2)
+
+** Solution
+- Case 1: a ≡ 1, b ≡ 1 (mod 3)
+
+  Hence,
+  a^2 ≡ 1^2 ≡ 1 (mod 3)
+  b^2 ≡ 1^2 ≡ 1 (mod 3)
+
+  Thus,
+  a^2 - b^2 ≡ 1 - 1 ≡ 0 (mod 3)
+
+- Case 2: a ≡ 1, b ≡ 2 (mod 3)
+
+  Hence,
+  a^2 ≡ 1^2 ≡ 1 (mod 3)
+  b^2 ≡ 2^2 ≡ 4 (mod 3)
+
+  Thus,
+  a^2 - b^2 ≡ 1 - 4 ≡ -3 ≡ 0 (mod 3)
+
+- Case 3: a ≡ 2, b ≡ 1 (mod 3)
+
+  Hence,
+  a^2 ≡ 2^2 ≡ 4 (mod 3)
+  b^2 ≡ 1^2 ≡ 1 (mod 3)
+
+  Thus,
+  a^2 - b^2 ≡ 4 - 1 ≡ 3 ≡ 0 (mod 3)
+
+- Case 4: a ≡ 2, b ≡ 2 (mod 3)
+
+  Hence,
+  a^2 ≡ 2^2 ≡ 4 (mod 3)
+  b^2 ≡ 2^2 ≡ 4 (mod 3)
+
+  Thus,
+  a^2 - b^2 ≡ 4 - 4 ≡ 0 (mod 3)
+
+Hence, 3|(a^2 - b^2).
+
+* 5. Problem 5
+** Task
+Relation on P(S) where S = {1,2,3,4}
+such that for x,y:
+
+xRy <--> a ⊆ b
+
+- Prove that it is a partial order.
+- Show whether it is a total order.
+
+** Solution
+
+
+* 6. Problem 6
+** Task
+Function properties
+
+- Let `f(x) = (x^2 / 2) - 1`
+  a) Prove it is surjective
+  b) Check whether it is injective
+  c) Determine whether it is bijective
+
+** Solution
+
+* 7. Problem 7
+** Task
+Countability
+
+- A = {Pi * g : g ∈ ℚ}
+- ∪(∞, n = 1)[0, 1/n]
+- Decide whether the given set(s) are countable or uncountable.
+
+** Solution
+
+* 8. Problem 8
+** Task
+Set S = {I, J, K, L, M, N, O, P}
+
+How many 8-letter words can be formed such that:
+a) Each letter is only used once
+b) Letters may be reused as many times as desired
+c) M must appear before N in the word
+
+** Solution
+
+* 9. Problem 9
+** Task
+Modular
+
+- 421 ≡ ? (mod 21)
+- 21321 ≡ ? (mod 21)
+
+** Solution
+
+* 10. Problem 10
+** Task
+Solve the equation (algebraic or trigonometric form)
+
+z^3 = -8i
+
+** Solution
+
+* 11. Problem 11
+** Task
+Solve this
+
+(x^4 + x + 1) / (x - 1)
+
+** Solution

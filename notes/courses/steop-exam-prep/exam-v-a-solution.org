@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-17>
-#+lastmod: <2025-11-17 13:42>
+#+lastmod: <2025-11-17 14:42>
 #+options: num:t
 #+startup: overview
 
@@ -195,7 +195,7 @@ Hence, {1} ⊄ {2} --> x ⊄ y and {2} ⊄ {1} --> y ⊄ x.
 Thus, ≼ is not a total order.
 #+end_quote
 
-* 6. Problem 6
+* 6. Problem 6 [DONE]
 ** Task
 Function properties
 
@@ -205,6 +205,38 @@ Function properties
   c) Determine whether it is bijective
 
 ** Solution
+#+begin_quote
+*Proposition.* f(x) = (x^2 / 2) - 1 is injective.
+- injective <--> ∀b∈B, ∀a1,a2 ∈ A : (f(a1) = b ∧ f(a2) = b) --> a1 = a2.
+
+*Proof.*
+Assume f(a1) = f(a2). Hence,
+
+((a1)^2 / 2) - 1 = ((a2)^2 / 2) - 1     (add 1 to both sides)
+      (a1)^2 / 2 = (a2)^2 / 2           (multiply both sides)
+          (a1)^2 = (a2)^2               (take root of both sides)
+             ±a1 = ±a2
+
+Let a1 = 2, a2 = -2.
+((2)^2 / 2) - 1 = ((-2)^2 / 2) - 1
+    (4 / 2) - 1 = (4 / 2) - 1
+          2 - 1 = 2 - 1
+              1 = 1
+
+while 2 != -2.
+
+Hence, f is not injective.
+#+end_quote
+
+#+begin_quote
+*Proposition.* f(x) = (x^2 / 2) - 1 is surjective.
+- injective <--> ∀b∈B, ∀a∈A : f(a) = b.
+
+*Proof.*
+- If codomain is ℝ, then not surjective, since range is [-1, ∞)
+- If codomain is [-1, ∞), then surjective.
+
+#+end_quote
 
 * 7. Problem 7
 ** Task

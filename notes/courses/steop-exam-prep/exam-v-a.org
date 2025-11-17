@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2025-11-17>
-#+lastmod: <2025-11-17 12:13>
+#+lastmod: <2025-11-17 13:14>
 #+options: num:t
 #+startup: overview
 
@@ -28,7 +28,7 @@
    Relation on P(S) where S = {1,2,3,4}
    such that for x,y:
 
-   xRy <--> a ⊆ b
+   x≼y <--> x ⊆ y
 
    - Prove that it is a partial order.
    - Show whether it is a total order.

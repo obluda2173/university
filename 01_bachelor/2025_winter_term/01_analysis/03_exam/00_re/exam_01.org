@@ -1,0 +1,169 @@
+#+title: Exam 01
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-08>
+#+lastmod: <2026-02-08 19:40>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+* Student Information & Instructions
+Student ID number:
+Family Name:
+Prename:
+
+EXAM: Introduction to Analysis
+February 2nd, 2026
+
+- The use of electronic devices or documents is not permitted.
+- Put your answers onto these sheets.
+- Keep these sheets stapled together.
+- Any additional sheets will not be graded.
+- Multiple-Choice-Part:
+Each multiple-choice question has exactly one correct answer.
+Points are awarded only if the correct answer is marked; no points are given for incorrect or missing answers.
+No points are deducted for wrong answers.
+
+* Problem 1
+(3 points) Define
+$d(x,y):=|\frac{x}{1+|x|}-\frac{y}{1+|y|}|$
+
+(a) Prove that d is a metric on $\mathbb{R}$.
+$d_{0}(x,y)=\begin{cases}1,&x\ne y,\\ 0,&x=y,\end{cases}$ $x,y\in\mathbb{R}$
+
+(b) Provide an explicit sequence $(x_{n})_{n\in\mathbb{N}}\subseteq\mathbb{R}$ that converges with respect to d but does not converge in the metric do.
+
+(a) Let x, y, $z\in\mathbb{R}$ be arbitrary. Then, $d(x,y)\ge0$ and symmetry holds by
+$d(x,y)=|\frac{x}{1+|x|}-\frac{y}{1+|y|}|=|(-1)(\frac{x}{1+|x|}+\frac{y}{1+|y|})|=|-\frac{x}{1+|x|}+\frac{y}{1+|y|}|=d(y,x)$
+
+Triangle inequality:
+$d(x,y)=|\frac{x}{1+|x|}-\frac{z}{1+|z|}+\frac{z}{1+|z|}-\frac{y}{1+|y|}|$
+$\le|\frac{x}{1+|x|}-\frac{z}{1+|z|}|+|\frac{z}{1+|z|}-\frac{y}{1+|y|}|$
+$=d(x,z)+d(z,y)$.
+
+If $x=y$, then $d(x,y)=d(x,x)=0$.
+Definite: If $d(x,y)=0$, then $\frac{x}{1+|x|}=\frac{y}{1+|y|}$ This implies
+$x(1+|y|)=y(1+|x|).$
+
+Case x, $y\ge0$: Then $x+xy=y+yx$ and hence $x=y.$
+Case x, $y\le0$: Then $x-xy=y-yx$ and hence $x=y$
+Case $x>0$, $y<0$ Then $x-xy=y+yx$ and hence $0<x=y+2xy<0$ contradiction.
+Case $x<0$, $y>0:$ leads also to a contradiction by symmetry.
+
+(b) Define
+$x_{n}=\frac{1}{n}$
+$n\in\mathbb{N}\backslash\{0\}$. Then
+$d(x_{n},0)=\frac{1/n}{1+1/n}=\frac{1}{n+1}\rightarrow0$,
+which implies convergence towards 0 with respect to the metric d.
+We also observe $d_{0}(x_{n},0)=1$ and there cannot exist any $x\in\mathbb{R}$ such that $d_{0}(x_{n},x)\rightarrow0.$
+
+* Problem 2
+(3 points) Consider the function $f:(0,\infty)\rightarrow\mathbb{R}$ given by $f(x)=\log x-x^{2}$.
+
+(a) Compute all local extrema.
+(b) Decide and reason whether f has a global maximum on (0,0).
+
+(a) $f^{\prime}(x)=\frac{1}{x}-2x=0$ implies $\frac{1}{x}=2x$ and hence $1=2x^{2}$. We have $x_{0}=1/\sqrt{2}$ and the other solution is not in (0, ).
+$f^{\prime\prime}(x_{0})=-\frac{1}{x_{0}^{2}}-2=-2-2=-4<0$ implies that $x_{0}$ is a local maximum.
+
+(b) $f^{\prime}$ is positive in (0,20) and negativ in ( , ).
+Thus, f is increasing in (0,20) and decreasing in ( , ). Therefore, the local maximum is a global one.
+
+* Problem 3
+(3 points) Consider the functions $f(x)=x^{x}$ for $x>0$ Determine the Taylor polynomial of f of degree 1 centered at $x_{0}=1.$
+
+$f(x)=x^{x}=\exp(x\log x)$ so that
+$f^{\prime}(x)=\exp(x\log x)(1\log x+x\frac{1}{x})=x^{x}(\log x+1).$
+Hence, $f(1)=1=f^{\prime}(1)$ and the Taylor polynomial of degree 1 in $x_{0}=1$ is
+$T_{f,1,1}(x)=f(x_{0})+f^{\prime}(x_{0})(x-x_{0})=1+(x-1)=x$.
+
+* Problem 4
+(3 points) Let $f:[0,1]\rightarrow\mathbb{R}$ be given by $f(x)=84x.$
+
+(a) Compute the lower Darboux-sum with respect to the equidistant partition $\mathcal{P}_{n}$ for $n=$ 1,2,....
+(b) Compute the upper Darboux-sum with respect to the equidistant partition $\mathcal{P}_{n}$ for $n=$ 1,2,....
+(c) Determine the integral value by taking limits of the Darboux sums.
+
+The equidistant partition is $\mathcal{P}_{n}=\{\frac{k}{n}:k=0,1,...,n\}$. The function f is increasing.
+
+(a) The lower Darboux sum is
+$L(f,\mathcal{P}_{n})=\frac{1}{n}\sum_{k=1}^{n}f(\frac{k-1}{n})=\frac{84}{n}\sum_{k=1}^{n}\frac{k-1}{n}=\frac{84}{n^{2}}\sum_{k=1}^{n}(k-1)=\frac{84}{n^{2}}\frac{(n-1)n}{2}=42\frac{n-1}{n}$
+
+(b) The upper Darboux sum is
+$U(f,\mathcal{P}_{n})=\frac{1}{n}\sum_{k=1}^{n}f(\frac{k}{n})=\frac{84}{n}\sum_{k=1}^{n}\frac{k}{n}=\frac{84}{n^{2}}\sum_{k=1}^{n}k=\frac{84}{n^{2}}\frac{n(n+1)}{2}=42\frac{n+1}{n}.$
+
+(c) Since
+$L(f,\mathcal{P}_{n})=42\frac{n-1}{n}\rightarrow42$ and $U(f,\mathcal{P}_{n})=42\frac{n+1}{n}\rightarrow42$, we have
+$\int_{0}^{1}f(x)dx=42.$
+
+* Problem 5
+(3 points) Compute the following integrals:
+(a) $\int_{0}^{1}x~e^{(x^{2})}dx$
+(b) $\int_{0}^{1}x~e^{-x}dx$
+
+(a) The substitution $u=x^{2}$ yields $\frac{du}{dx}=2x$ According to $dx=\frac{du}{2x}$ we obtain
+$\int_{0}^{1}x~e^{(x^{2})}dx=\frac{1}{2}\int_{0}^{1}e^{u}du=\frac{1}{2}[e^{u}]_{0}^{1}=\frac{1}{2}(e^{1}-e^{0})=\frac{1}{2}(e-1)$.
+
+(b) Partial integration leads to
+$\int_{0}^{1}x~e^{-x}dx=[-xe^{-x}]_{0}^{1}-\int_{0}^{1}-e^{-x}dx$
+$=-e^{-1}+0e^{0}+[-e^{-x}]_{0}^{1}$
+$=-1/e-e^{-1}+e^{0}$
+$=1-2/e$
+
+* Problem 6
+(3 points) Let $g:\mathbb{R}\rightarrow\mathbb{R}$ be functions that are continuous at a point $x_{0}\in\mathbb{R}$ Assume that f is differentiable at $x_{0}$ and that
+$f(x_{0})=0.$
+Prove that the product $f\cdot g$ is differentiable in 20.
+
+Since g is continuous in $x_{0}$ and f is differentiable in $x_{0}$, we observe
+$\lim_{x\rightarrow x_{0}}\frac{f(x)g(x)-f(x_{0})g(x_{0})}{x-x_{0}}=\lim_{x\rightarrow x_{0}}\frac{f(x)g(x)}{x-x_{0}}$
+$=g(x_{0})f^{\prime}(x_{0})$.
+Hence, the product $f\cdot g$ is differentiable in $x_{0}$.
+$=lim_{x\rightarrow x_{0}}g(x)\frac{\hat{f}(x)-\hat{f}(x_{0})}}{x-x_{0}}$
+$=lim_{x\rightarrow x_{0}}g(x)lim_{x\rightarrow x_{0}}\frac{f(x)-\hat{f(x_{0})}}{x-x_{0}}$
+
+* Problem 7
+Multiple-Choice-Reminder: There is only one correct answer per question.
+
+(1 point) The series $\sum_{n=1}^{\infty}\frac{(-1)^{n}}{n}$ is
+- [ ] divergent,
+- [ ] absolutely convergent,
+- [X] convergent,
+- [ ] convergent towards 0.
+
+* Problem 8
+(1 point) Which of the following functions is convex on R?
+- [ ] $f(x)=\sin x,$
+- [ ] $f(x)=x^{3}$
+- [X] $f(x)=x^{4}+x^{2}$,
+- [ ] $f(x)=\cos x$
+
+* Problem 9
+(1 point) Given a sequence of differentiable functions $f_{n}:[a,b]\rightarrow\mathbb{R}$ If $(f_{n})_{n\in\mathbb{N}}$ converges towards $f:[a,b]\rightarrow\mathbb{R}$ in the sup sup-norm $d_{\infty}(f_{n},f)=\sup_{x\in[a,b]}|f_{n}(x)-f(x)|\rightarrow0$ what is necessarily true:
+- [ ] f is constant,
+- [X] f is continuous,
+- [ ] f is differentiable,
+- [ ] f has at least one local extrema.
+
+* Problem 10
+(1 point) Which rule does this Julia code implement in order to approximate the integral?
+
+#+begin_src julia
+function myJuliaFunction(f,a,b; n=100)
+x= range (a,b,n+1)
+h=(b-a)/n
+y=x.+h/2
+return sum(f(y[k]) for k=1:n)*h
+end
+#+end_src
+
+- [ ] trapezoidal rule,
+- [X] mid-point rule,
+- [ ] lower Darboux sum,
+- [ ] upper Darboux sum.

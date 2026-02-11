@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-11>
-#+lastmod: <2026-02-11 18:05>
+#+lastmod: <2026-02-11 21:41>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -15,10 +15,10 @@
 
 * Exam Metadata
 :PROPERTIES:
-:COURSE:    25-0935, Introduction to Mathematics in Data Science, Exam 2
-:DATE:      15.01.2026
-:NAME:      Anonimus
-:TIME:      90 min
+:COURSE:   25-0935, Introduction to Mathematics in Data Science, Exam 2
+:DATE:     15.01.2026
+:NAME:     Anonimus
+:TIME:     90 min
 :TOTAL_SCORE: 0
 :END:
 

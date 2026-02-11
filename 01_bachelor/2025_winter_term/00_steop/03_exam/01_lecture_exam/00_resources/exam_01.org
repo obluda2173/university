@@ -1,0 +1,204 @@
+#+title: Exam 01
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-11>
+#+lastmod: <2026-02-11 18:05>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+* Exam Metadata
+:PROPERTIES:
+:COURSE:    25-0935, Introduction to Mathematics in Data Science, Exam 2
+:DATE:      15.01.2026
+:NAME:      Anonimus
+:TIME:      90 min
+:TOTAL_SCORE: 0
+:END:
+
+* Part A: MULTIPLE CHOICE QUESTIONS
+- *Instructions*: There is only one correct option for each question. Each problem is worth 1 point for a completely correct answer. No partial credit is given.
+
+** Problem A1
+The equation $z^2 + iz - 1 = 0$ has two roots $z_1$ and $z_2$. Find $z_1^2 + z_2^2$.
+- [ ] (a) $-1$
+- [ ] (b) $0$
+- [ ] (c) $1$
+- [ ] (d) $4$
+- [ ] (e) $12$
+
+** Problem A2
+What will the following code output? The command ~a % b~ denotes the remainder from dividing ~a~ by ~b~.
+
+#+begin_src julia
+s = 0
+for i in 1:11
+    if i % 3 == 0
+       s += i
+    elseif i % 5 == 0
+       s -= i
+    end
+end
+println(s)
+#+end_src
+
+- [ ] (a) $-2$
+- [ ] (b) $3$
+- [ ] (c) $4$
+- [ ] (d) $13$
+
+** Problem A3
+Let $A = \{k \in \mathbb{N} : k < 20\}$, $B = \{3k - 1 : k \in \mathbb{N}\}$, and $C = \{2k + 1 : k \in \mathbb{N}\}$. Determine the cardinality of the set $(A \cap B) \setminus C$.
+- [ ] (a) $2$
+- [ ] (b) $3$
+- [ ] (c) $4$
+- [ ] (d) $8$
+
+** Problem A4
+The set $A$ has 10 elements, the set $B$ has 14 elements. Choose the correct statement.
+- [ ] (a) The number of injective functions from $A$ to $B$ is greater (strictly) than the number of surjective functions from $A$ to $B$.
+- [ ] (b) The number of surjective functions from $A$ to $B$ is greater (strictly) than the number of bijective functions from $A$ to $B$.
+- [ ] (c) The number of injective functions from $A$ to $B$ is equal to the number of injective functions from $B$ to $A$.
+
+** Problem A5
+Given propositions $P$ and $Q$, when the proposition $((P \implies Q) \land Q) \implies P$ is false?
+- [ ] (a) When $P$ is false and $Q$ is true.
+- [ ] (b) When $P$ is false and $Q$ is false.
+- [ ] (c) When $P$ is true and $Q$ is false.
+- [ ] (d) When $P$ is true and $Q$ is true.
+
+** Problem A6
+Choose a pair of orthogonal planes in $\mathbb{R}^3$:
+- [ ] (a) $2x - y + 3z = 9$ and $\frac{1}{2}x + y - z = 0$.
+- [ ] (b) $4x - y + 3z = 9$ and $4x - y + 3z = 0$.
+- [ ] (c) $x + y - 10z = 1$ and $5x + 5y + z = 11$.
+- [ ] (d) $3x - 3y + 3z = 8$ and $x - y + z = 8$.
+
+** Problem A7
+Choose the correct statement:
+- [ ] (a) Every field is a ring.
+- [ ] (b) Cardinality of $\mathbb{Q}$ is greater than cardinality of $\mathbb{N}$.
+- [ ] (c) Cardinality of $\mathbb{Q}_+$ (nonnegative rationals) is smaller than cardinality of $\mathbb{Z}$.
+- [ ] (d) The inner product of two vectors in $\mathbb{R}^3$ cannot be greater than 1.
+
+** Problem A8
+Let $z = \frac{\sqrt{3}}{2} - \frac{1}{2}i$. Find $z^6$.
+- [ ] (a) $-1$
+- [ ] (b) $0$
+- [ ] (c) $1$
+- [ ] (d) $i$
+- [ ] (e) $-i$
+
+** Problem A9
+Consider the set $S = \{\frac{n+1}{n} : n \in \mathbb{N}\}$ in $\mathbb{R}$ (with the usual order). Find $\inf S + \sup S$.
+- [ ] (a) $0$
+- [ ] (b) $2$
+- [ ] (c) $3$
+- [ ] (d) $+\infty$
+
+** Problem A10
+The English alphabet contains 21 consonants and 5 vowels. How many strings of six lowercase letters of the English alphabet contain exactly one vowel?
+- [ ] (a) $5 \cdot (21C5)^5$
+- [ ] (b) $5 \cdot 21^5$
+- [ ] (c) $30 \cdot 21^5$
+- [ ] (d) $5 \cdot 21 \cdot 20 \cdot 19 \cdot 18 \cdot 17$
+
+* Part B: MULTIPLE CHOICE QUESTIONS
+- *Instructions*: Each question is worth 2 points. There may be multiple correct choices. To receive points, you must select every correct option and avoid selecting any incorrect ones. No partial credit is given.
+
+** Problem B1
+Which relations below are equivalence relations?
+- [ ] (a) $R$ is a relation on $\mathbb{Z}$ such that $xRy$ if and only if $x^2 \equiv y^2 \pmod 5$.
+- [ ] (b) $R$ is a relation on $\mathbb{Z}$ such that $xRy$ if and only if $2 \mid x^2 + 2y^2$.
+- [ ] (c) $R$ is the relation on the set of ordered pairs of positive integers such that $((a, b), (c, d)) \in R$ if and only if $ad = bc$.
+
+** Problem B2
+Let $f : \mathbb{R} \rightarrow \mathbb{R}$ be defined as $f(x) = 4 - x^2$. Find $f^{-1}(B)$ if $B = (2, 4)$.
+Answer:
+
+** Problem B3
+Choose all correct statements below (numbers $a, b, c, n$ are natural)
+- [ ] (a) If $3$ divides $n > 2026$, then $3^2 \mid n$.
+- [ ] (b) If $5^2 \mid ab$, then $5 \mid (a + b)$.
+- [ ] (c) If $a \mid b^2$ and $b \mid c^3$, then $a \mid c^6$.
+- [ ] (d) If $15 \mid n$ and $35 \mid n$, then $(15 \cdot 35) \mid n$.
+- [ ] (e) If $6 \mid n$ and $35 \mid n$, then $(6 \cdot 35) \mid n$.
+
+** Problem B4
+Choose which functions below are injective
+- [ ] (a) $f : \mathbb{R} \rightarrow \mathbb{R}, f(x) = x^2 - 2x + 4$.
+- [ ] (b) $f : [-1, 1] \rightarrow \mathbb{R}, f(x) = x^3$.
+- [ ] (c) $f : (0, 1) \rightarrow \mathbb{R}_+, f(x) = \frac{1}{x}$.
+- [ ] (d) $f : [2, +\infty] \rightarrow \mathbb{R}, f(x) = \sqrt{x^2 - 3x + 2}$.
+
+** Problem B5
+Real sequences $(a_n)$, $(b_n)$, and $(c_n)$ are such that $\lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} b_n$ and $\lim_{n \rightarrow \infty} c_n = 1$. What is $\lim_{n \rightarrow \infty} \frac{c_n^n}{a_n - b_n}$?
+- [ ] (a) $-\infty$.
+- [ ] (b) $+\infty$.
+- [ ] (c) Either $-\infty$ or $+\infty$, the sign is undetermined.
+- [ ] (d) The limit is undetermined.
+- [ ] (e) $0$
+
+** Problem B6
+Write $0.2\overline{1} + 0.\overline{9}$ as a fraction.
+Answer:
+
+** Problem B7
+Find the remainder from dividing $2026^{2026}$ by $7$.
+Answer:
+
+** Problem B8
+The following code aims to compute the Cartesian product $C$ of two lists $A$ and $B$. Fill in the missing bits.
+
+#+begin_src julia
+function productLists(A, B)
+    C = []
+    for a in A
+        for b in B
+            ?
+        end
+    end
+    ?
+end
+#+end_src
+
+** Problem B9
+What is $69$ in a positional system with base $7$?
+Answer:
+
+** Problem B10
+Given a list $a$, we want to make a list $b$ that is reversed to $a$. Complete the missing parts to achieve this.
+
+#+begin_src julia
+function makeReverse(a)
+    n = length(a)
+    b = zeros(n)
+    for
+
+    end
+    return b
+end
+#+end_src
+
+* Part C: OPEN QUESTIONS
+- *Instructions*: Each problem is worth 3 points. Partial credit may be given. Detailed solutions are required for all problems.
+
+** Problem C1
+A group of seven people has a combined age of 332 years. Prove that it is possible to select three people from this group whose combined age is at least 142 years.
+
+** Problem C2
+Let $P(x) = (x^2 - x + 1) \cdot (x^3 + 2x^2 - 1)^2 \cdot (x^4 + 3x^2 - 3)^3$. Find the sum of its coefficients.
+
+** Problem C3
+Prove that for all $n > 1$,
+$\frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} > \sqrt{n}$.
+
+** Problem C4
+Find the limit
+$\lim_{n \rightarrow \infty} \left( \frac{1}{\sqrt{n^2 + 1}} + \frac{1}{\sqrt{n^2 + 2}} + \dots + \frac{1}{\sqrt{n^2 + n}} \right)$.

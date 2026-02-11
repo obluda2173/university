@@ -1,8 +1,8 @@
 #+title: Exam 01
-#+author: Erik An
+du -sh .git#+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-08>
-#+lastmod: <2026-02-09 20:28>
+#+lastmod: <2026-02-11 10:09>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -29,6 +29,7 @@ February 2nd, 2026
 Each multiple-choice question has exactly one correct answer.
 Points are awarded only if the correct answer is marked; no points are given for incorrect or missing answers.
 No points are deducted for wrong answers.
+$\newpage$
 
 * Problem 1
 (3 points) Define
@@ -60,7 +61,9 @@ $x_{n}=\frac{1}{n}$
 $n\in\mathbb{N}\backslash\{0\}$. Then
 $d(x_{n},0)=\frac{1/n}{1+1/n}=\frac{1}{n+1}\rightarrow0$,
 which implies convergence towards 0 with respect to the metric d.
-We also observe $d_{0}(x_{n},0)=1$ and there cannot exist any $x\in\mathbb{R}$ such that $d_{0}(x_{n},x)\rightarrow0.$
+We also observe $d_{0}(x_{n},0)=1$ and there cannot exist any $x\in\mathbb{R}$ such that $d_{0}(x_{n},x)\rightarrow0$.
+
+$\newpage$
 
 * Problem 2
 (3 points) Consider the function $f:(0,\infty)\rightarrow\mathbb{R}$ given by $f(x)=\log x-x^{2}$.
@@ -73,6 +76,7 @@ $f^{\prime\prime}(x_{0})=-\frac{1}{x_{0}^{2}}-2=-2-2=-4<0$ implies that $x_{0}$ 
 
 (b) $f^{\prime}$ is positive in $(0, x_{0})$ and negativ in $(x_0 , \infty)$.
 Thus, f is increasing in $(0, x_0)$ and decreasing in $(x_{0}, \infty)$. Therefore, the local maximum is a global one.
+$\newpage$
 
 * Problem 3
 (3 points) Consider the functions $f(x)=x^{x}$ for $x>0$ Determine the Taylor polynomial of f of degree 1 centered at $x_{0}=1$.
@@ -84,6 +88,7 @@ $$f^{\prime}(x)=\exp(x\log x)(1\log x+x\frac{1}{x})=x^{x}(\log x+1)$$
 Hence, $f(1)=1=f^{\prime}(1)$ and the Taylor polynomial of degree 1 in $x_{0}=1$ is
 
 $$T_{f,1,1}(x)=f(x_{0})+f^{\prime}(x_{0})(x-x_{0})=1+(x-1)=x$$
+$\newpage$
 
 * Problem 4
 (3 points) Let $f:[0,1]\rightarrow\mathbb{R}$ be given by $f(x)=84x$.
@@ -106,6 +111,7 @@ $$U(f,\mathcal{P}_{n})=\frac{1}{n}\sum_{k=1}^{n}f(\frac{k}{n})=\frac{84}{n}\sum_
 $L(f,\mathcal{P}_{n})=42\frac{n-1}{n}\rightarrow42$ and $U(f,\mathcal{P}_{n})=42\frac{n+1}{n}\rightarrow42$, we have
 
 $$\int_{0}^{1}f(x)dx=42$$
+$\newpage$
 
 * Problem 5
 (3 points) Compute the following integrals:
@@ -124,6 +130,7 @@ $$\int_{0}^{1}x~e^{(x^{2})}dx=\frac{1}{2}\int_{0}^{1}e^{u}du=\frac{1}{2}[e^{u}]_
 &=-1/e-e^{-1}+e^{0} \\
 &=1-2/e \\
 \end{align*}
+$\newpage$
 
 * Problem 6
 (3 points) Let $g:\mathbb{R}\rightarrow\mathbb{R}$ be functions that are continuous at a point $x_{0}\in\mathbb{R}$ Assume that $f$ is differentiable at $x_{0}$ and that
@@ -141,6 +148,7 @@ Since $g$ is continuous in $x_{0}$ and f is differentiable in $x_{0}$, we observ
 \end{align*}
 
 Hence, the product $f\cdot g$ is differentiable in $x_{0}$.
+$\newpage$
 
 * Problem 7
 Multiple-Choice-Reminder: There is only one correct answer per question.

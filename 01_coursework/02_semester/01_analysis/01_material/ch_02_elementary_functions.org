@@ -1,8 +1,8 @@
-#+title: Log
+#+title: Ch 02 Elementary Functions
 #+author: Erik An
 #+email: obluda2173@gmail.com
-#+date: <2026-06-07>
-#+lastmod: <2026-06-07 17:15>
+#+date: <2026-03-20>
+#+lastmod: <2026-06-07 17:14>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -16,6 +16,3 @@
 #+startup: overview latexpreview inlineimages
 #+columns: %50ITEM(Item) %8LECTURE_REF(Lecture) %34CUSTOM_ID(ID)
 
-- [X] Renamed ch_01.
-- [X] Rewrote whole ch_01, source contains structure error after Theorem 1.4.17.
-- [X] Renamed ch_02, will will it out later (not priority content)

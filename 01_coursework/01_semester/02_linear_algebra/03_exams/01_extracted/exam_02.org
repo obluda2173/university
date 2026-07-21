@@ -1,0 +1,65 @@
+#+title: Exam 02
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-03-05>
+#+lastmod: <2026-04-13 17:28>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t tags:nil
+#+property: header-args :eval never-export
+#+startup: overview latexpreview inlineimages
+
+* Problem 1
+Provide the definition of a vector space. (4)
+
+* Problem 2
+Consider sets $X$ and $Y$ and a map $f: X\rightarrow Y$.
+a. Let $B\subseteq Y$ be a subset. Define $f^{-1}(B)$. (1)
+b. Define the term surjective for the map $f$. (1)
+c. Is the map $f: \mathbb{R}_{+} \rightarrow \mathbb{R}$ with $f(x):=x^{4}$ surjective? ($\mathbb{R}_{ +}$ is the set of all non-negative real numbers) (1)
+d. Define the identity map $x\mapsto x$. Also let us assume that there is a function $g: Y\rightarrow X$ such that $g\circ f = id_{X\rightarrow X}$ and $f\circ g = id_{Y\rightarrow Y}$. Prove that $g$ is unique. (2)
+
+* Problem 3
+Compute all solutions of the following linear system of equations using LU factorization (if needed with partial pivoting). Explicitly provide the factors $L, U$, and the solution.
+
+\begin{align*}
+3x+2y+z=1 \\
+6x+6y+z=3 \\
+3x+7z=3 \\
+\end{align*}
+(7)
+
+* Problem 4
+Compute the inverse matrix of $A$ using elementary row operations
+$A=\left(\begin{matrix}3&2&2\\ 3&3&4\\ 2&5&5\end{matrix}\right)$. (6)
+
+* Problem 5
+a. Let $V$ be an $\mathbb{F}$ -vector space. Define the terms subspace, the sum of two subspaces and the terms direct sum and complement (of subspaces). (2)
+b. Provide a proper formulation for the dimension theorem for subspaces (Hint: sum of subspaces, Proposition IV.1.4). (2)
+c. Give a proof of the dimension theorem for subspaces. (6)
+
+* Problem 6
+a. Let $V$ be an $\mathbb{F}$ -vector space, and $h: V\rightarrow V$ a linear map. Is the set $H$ of all fixed points of $h$, i.e.,
+
+   $H:=\{v\in V\mid h(v)=v\}$
+
+   a subspace of $V$? (3)
+
+b. Does the set $\mathbb{R}_{4}[X]$ of real polynomials of maximal degree four contain a spanning set of four elements? Provide an explanation for your answer. (1)
+c. Is the following map $\mathbb{R}^{3}\rightarrow\mathbb{R}^{2}$ linear?
+
+   $F(v_{1},v_{2},v_{3}):=\left\{\begin{array}{c}7v_{1}+3v_{2}-4v_{3}\\ v_{1}^{2}+2v_{2}-4v_{3}\end{array}\right$ ?
+
+   Provide an explanation for your answer. (1)
+
+d. Compute the kernel of the linear map $T: \mathbb{C}^{2}\rightarrow\mathbb{C}^{2}$
+
+   $T(z,w):=\left(\begin{array}{c}(2+4i)z+2w\\ (5+6i)z+(3-1i)w\end{array}\right)$.
+
+   Is the map injective? (3)

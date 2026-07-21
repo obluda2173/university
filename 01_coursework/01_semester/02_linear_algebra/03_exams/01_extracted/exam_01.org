@@ -1,0 +1,97 @@
+#+title: Exam 01
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-16>
+#+lastmod: <2026-04-13 17:28>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t tags:nil
+#+property: header-args :eval never-export
+#+startup: overview latexpreview inlineimages
+
+* Exam Metadata
+Family name:
+
+First name:
+
+Registration number:
+
+EXAM "INTRODUCTION TO LINEAR ALGEBRA FOR DATA SCIENCE" (2026 02 03)
+
+$\newpage$
+
+* Problem 1
+Provide the definition of a field. (4 Points)
+
+$\newpage$
+
+* Problem 2
+Consider sets $X$ and $Y$ and a map $f: X \rightarrow Y$.
+
+(a) Let $A \subseteq X$ be a subset. Define $f(A)$. (1 Point)
+
+(b) Define the term injective for the map $f$. (1 Point)
+
+(c) Is the map $f: \mathbb{R}_+ \rightarrow \mathbb{R}$ with $f(x) := x^4$ injective? ($\mathbb{R}_+$ is the set of all non-negative real numbers) (1 Point)
+
+(d) Let $Z$ be another set and $g: Y \rightarrow Z$ another map. Define the composition of $f$ and $g$. (1 Point)
+
+(e) Show that function composition is associative. (1 Point)
+
+$\newpage$
+
+* Problem 3
+Compute all solutions of the following linear system of equations using LU factorization (if needed with partial pivoting). Explicitly provide the factors $L, U$, and the solution.
+
+\begin{align*}
+6x + 6y + 5z &= 1 \\
+2x + 4y + 5z &= 2 \\
+4x + 3y + 4z &= 1.
+\end{align*}
+
+(7 Points)
+
+$\newpage$
+
+* Problem 4
+Compute the inverse matrix of $A$ using elementary row operations
+$$
+A = \begin{pmatrix} 3 & 2 & 3 \\ 3 & 1 & 3 \\ 2 & 3 & 1 \end{pmatrix}.
+$$
+(6 Points)
+
+$\newpage$
+
+* Problem 5
+(a) Define the terms kernel, image, and rank of a linear map. (2 Points)
+
+(b) Provide a proper formulation for the Steinitz exchange theorem (Theorem III.1.47). (2 Points)
+
+(c) Give a proof of the Steinitz exchange theorem. (6 Points)
+
+$\newpage$
+
+* Problem 6
+(a) Show that the set $\{p \in \mathbb{R}[X] \mid p(0) = p(1) = 0\}$ is a subspace of the space of polynomials. (3 Points)
+
+(b) Does the set $\mathbb{C}_5[X]$ of complex polynomials of maximal degree five contain a linearly independent set of seven elements? (Provide an explanation for your answer) (1 Point)
+
+(c) Is the following set a subspace of the vector space $\mathbb{R}^3$?
+$$
+W := \{x \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 0\}?
+$$
+Provide an explanation for your answer. (1 Point)
+
+(d) Compute the kernel of the linear map $T: \mathbb{C}^2 \rightarrow \mathbb{C}^2$
+$$
+T(z, w) := \begin{pmatrix} (1 + 5i)z + 2w \\ (8 + i)z + (1 - 3i)w \end{pmatrix}.
+$$
+Is the map injective? (3 Points)
+
+$\newpage$

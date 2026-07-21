@@ -1,0 +1,272 @@
+#+title: Past Paper 01 Test
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-16>
+#+lastmod: <2026-04-13 17:28>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t tags:nil
+#+property: header-args :eval never-export
+#+startup: overview latexpreview inlineimages
+
+* 1st Exam Date
+
+1. (7 points) Determine the set of all solutions of the following linear system over $\mathbb{Z}_{7}$ :
+
+   \begin{aligned}
+   & 6 x+6 y+5 z \equiv 1 \quad(\bmod 7), \\
+   & 2 x+4 y+5 z \equiv 2 \quad(\bmod 7), \\
+   & 4 x+3 y+4 z \equiv 1 \quad(\bmod 7) .
+   \end{aligned}
+
+
+2. (6 points) Using elementary row operations, compute the inverse matrix of
+   $$
+   A=\left(\begin{array}{lll}
+   3 & 2 & 0 \\
+   3 & 1 & 3 \\
+   2 & 3 & 1
+   \end{array}\right) \in M_{3}\left(\mathbb{Z}_{5}\right)
+   $$
+
+3.
+   a) (2 points) Define the notions kernel, image, and rank of a linear map.
+   b) (2 points) State the dimension theorem (tn. rank-nullity theorem) for linear maps.
+   c) (6 points) Prove the dimension theorem for linear maps. You do not have to prove additional theorems used in your proof, but you must clearly indicate (refer to) any theorems/propositions you use and state them precisely.
+
+4.
+   a) (2 points) Define the notions sum, direct sum, and complement for subspaces of a vector space.
+   b) (5 points) For which $c \in \mathbb{C}$ does the vector $(1, c, 4) \in \mathbb{C}^{3}$ lie in the image of the linear map
+      $$
+      f: \mathbb{C}^{2} \rightarrow \mathbb{C}^{3}, \quad f\binom{z_{1}}{z_{2}}=\left(\begin{array}{c}
+      3 i z_{1}+5 z_{2} \\
+      z_{1}-2 i z_{2} \\
+      -2 z_{1}+(2+i) z_{2}
+      \end{array}\right) ?
+      $$
+      Express $c$ in the form $a+i b$ (with $a, b \in \mathbb{R}$ ).
+
+5.
+   a) (2 points) Prove that the set
+      $$
+      E=\left\{p \in \mathbb{C}[X] \mid p^{\prime}(i)=0\right\}
+      $$
+      (where $p^{\prime}$ denotes the derivative of $p$ ) is a subspace of the vector space of all complex polynomials.
+   b) (3 points) Is the linear map
+      $$
+      f: \mathbb{Z}_{5}^{3} \rightarrow \mathbb{Z}_{5}^{2}, \quad f\left(x_{1}, x_{2}, x_{3}\right)=\left(x_{1}-x_{2}, x_{2}+x_{3}\right)
+      $$
+      injective and/or surjective?
+   c) (1 point) Does there exist a linearly independent set with 7 elements in $\mathbb{Q}_{5}[X]$ (the vector space of rational polynomials of degree at most 5 )?
+   d) (2 points) Let $V$ be a $K$ -vector space and let $f \in L(V, V)$ satisfy $f \circ f \circ f \circ f \circ f=f^{5}=f$. Show that
+      $$
+      V=\operatorname{Im}(f) \oplus \operatorname{Ker}(f)
+      $$
+   e) (2 points) Let $V$ and $W$ be finite-dimensional vector spaces and let $f: V \rightarrow W$ and $g: W \rightarrow V$ be linear maps satisfying
+      $$
+      f=f \circ g \circ f \quad \text { and } \quad g=g \circ f \circ g
+      $$
+      Show that
+      $$
+      \operatorname{rank}(f)=\operatorname{rank}(g)=\operatorname{rank}(f \circ g)=\operatorname{rank}(g \circ f)
+      $$
+
+* 2nd Exam Date
+
+1. (7 points) Determine, for the map
+   $$
+   f: \mathbb{Z}_{5}^{3} \rightarrow \mathbb{Z}_{5}^{3}, \quad x \mapsto\left(\begin{array}{c}
+   3 x_{1}+4 x_{2}+2 x_{3} \\
+   x_{1}+3 x_{2}+x_{3} \\
+   4 x_{1}+2 x_{2}+2 x_{3}
+   \end{array}\right)
+   $$
+   the set of all points $x \in \mathbb{Z}_{5}^{3}$ with
+   $$
+   f(x)=\left(\begin{array}{l}
+   1 \\
+   3 \\
+   1
+   \end{array}\right)
+   $$
+
+2. (7 points) Prove that the set
+   $$
+   B=\left\{\left(\begin{array}{l}
+   2 \\
+   1 \\
+   5
+   \end{array}\right),\left(\begin{array}{l}
+   3 \\
+   6 \\
+   4
+   \end{array}\right),\left(\begin{array}{l}
+   6 \\
+   6 \\
+   3
+   \end{array}\right)\right\}
+   $$
+   forms a basis of $\mathbb{Z}_{7}^{3}$, and determine the two change-of-basis maps $[i d]_{B}^{S}$ and $[i d]_{S}^{B}$, where $S$ denotes the standard basis of $\mathbb{Z}_{7}^{3}$.
+
+3.
+   a) (2 points) Define the notions sum, direct sum, and complement for subspaces of a vector space.
+   b) (2 points) State the dimension theorem for sums of subspaces of a $K$ -vector space.
+   c) (6 points) Prove the dimension theorem for sums of subspaces of a $K$ -vector space. You do not have to prove additional results used in your proof, but you must clearly indicate which theorems/propositions you use (by stating them precisely).
+
+4.
+   a) (3 points) Define the notions dual space, dual map, and rank of a linear map.
+   b) (5 points) For which $w \in \mathbb{C}$ does the vector $(w, 2 i, 6+i)^{T} \in \mathbb{C}^{3}$ lie in the image of the linear map
+      $$
+      g: \mathbb{C}^{2} \rightarrow \mathbb{C}^{3}, \quad g\binom{z_{1}}{z_{2}}=\left(\begin{array}{c}
+      (1+i) z_{1}+(2-i) z_{2} \\
+      3 z_{1}+4 i z_{2} \\
+      4 i z_{1}+5 z_{2}
+      \end{array}\right) ?
+      $$
+      Express $w$ in the form $a+i b$ (with $a, b \in \mathbb{R}$ ).
+
+5. Briefly justify your answers to questions (b) and (c) below.
+   a) (2 points) Let $h: V \rightarrow V \times V$ be linear. Prove that the set of points $v \in V$ such that $h(v)=\left(w_{v}, w_{v}\right)$ for some $w_{v} \in V$ is a subspace of $V$.
+   b) (2 points) Do there exist linear maps $f: \mathbb{Q}_{5}[X] \rightarrow M_{2}(\mathbb{Q})$ and $g: M_{2}(\mathbb{Q}) \rightarrow \mathbb{Q}_{5}[X]$ with $g \circ f=i d$ ? Here $\mathbb{Q}_{5}[X]$ denotes the vector space of polynomials of degree at most 5 with rational coefficients.
+   c) (2 points) Does there exist a basis of $\mathbb{Z}_{11}^{4}$ that contains the vectors $(1,1,5,10)^{T}$ and $(2,3,9,3)^{T} ?$
+   d) ($\mathbf{2}$ points) Let $X$ be a $K$ -vector space and let $U, V, W$ be subspaces of $X$ such that $U \subseteq V$ and $U$ is complementary to $W$ in $X$. Show that $U$ is complementary to $V \cap W$ in $V$.
+
+* 3rd Exam Date
+
+1. (7 points) Let the linear map
+   $$
+   f: \mathbb{Z}_{5}^{3} \rightarrow \mathbb{Z}_{5}^{3}, \quad\left(\begin{array}{c}
+   x \\
+   y \\
+   z
+   \end{array}\right) \mapsto\left(\begin{array}{c}
+   3 x+3 y+2 z \\
+   2 x+4 y+2 z \\
+   4 x+y
+   \end{array}\right)
+   $$
+   be given. Determine the set of all solutions $x \in \mathbb{Z}_{5}^{3}$ of
+   $$
+   f(x)=\left(\begin{array}{l}
+   1 \\
+   2 \\
+   1
+   \end{array}\right)
+   $$
+
+2. (6 points) Using elementary row operations, compute the inverse matrix of
+   $$
+   A=\left(\begin{array}{lll}
+   3 & 2 & 1 \\
+   3 & 1 & 3 \\
+   2 & 5 & 1
+   \end{array}\right) \in M_{3}\left(\mathbb{Z}_{7}\right)
+   $$
+
+3.
+   a) (2 points) Define the notions kernel, image, and rank of a linear map.
+   b) (2 points) State the dimension theorem (tn. rank-nullity theorem) for linear maps.
+   c) (6 points) Prove the dimension theorem for linear maps. You do not have to prove additional results used in your proof, but you must clearly indicate which theorems/propositions you use (by stating them precisely).
+
+4.
+   a) (3 points) Define the notions quotient space, dual space, and annihilator.
+   b) (5 points) For which $w \in \mathbb{C}$ does the vector $(3 i, w, 3) \in \mathbb{C}^{3}$ lie in the image of the linear map
+      $$
+      f: \mathbb{C}^{2} \rightarrow \mathbb{C}^{3}, \quad f\binom{z_{1}}{z_{2}}=\left(\begin{array}{c}
+      4 i z_{1}+12 z_{2} \\
+      7 z_{1}-5 i z_{2} \\
+      (2+i) z_{1}-(1-i) z_{2}
+      \end{array}\right) ?
+      $$
+      Express $w$ in the form $a+i b$ (with $a, b \in \mathbb{R}$ ).
+
+5. Briefly justify your answer to questions (b) and (c) below.
+   a) (2 points) Prove that the set $F$ of all real polynomials $p \in \mathbb{R}[X]$ such that
+      $$
+      \int_{0}^{1} p(t) d t=0
+      $$
+      is a subspace of the vector space of real polynomials.
+   b) (3 points) Is the linear map
+      $$
+      f: \mathbb{Z}_{5}^{3} \rightarrow \mathbb{Z}_{5}^{2}, \quad f\left(x_{1}, x_{2}, x_{3}\right)=\left(x_{1}-x_{3}, x_{2}+x_{1}\right)
+      $$
+      injective and/or surjective?
+   c) (2 points) Does there exist a basis of $\mathbb{Z}_{11}^{4}$ that contains the vectors $(1,2,5,10)^{T}$ and $(4,8,9,7)^{T} ?$
+   d) (2 points) Let $V$ be a finite-dimensional vector space and let $f: V \rightarrow V$ be linear with $f \neq 0$ and $f \circ f=0$. Show that $\operatorname{rank}(f)=1$.
+
+* 4th Exam Date
+
+1. (7 points) For the linear map
+   $$
+   f: \mathbb{Z}_{5}^{3} \rightarrow \mathbb{Z}_{5}^{3}, \quad x \mapsto\left(\begin{array}{c}
+   2 x_{1}+2 x_{2}+3 x_{3} \\
+   3 x_{1}+4 x_{2}+x_{3} \\
+   3 x_{1}+x_{2}+4 x_{3}
+   \end{array}\right)
+   $$
+   determine the set of all points $x \in \mathbb{Z}_{5}^{3}$ such that
+   $$
+   f(x)=\left(\begin{array}{l}
+   2 \\
+   2 \\
+   0
+   \end{array}\right)
+   $$
+
+2. (7 points) Prove that the set
+   $$
+   B=\left\{\left(\begin{array}{l}
+   5 \\
+   6 \\
+   2
+   \end{array}\right),\left(\begin{array}{l}
+   4 \\
+   1 \\
+   3
+   \end{array}\right),\left(\begin{array}{l}
+   1 \\
+   1 \\
+   4
+   \end{array}\right)\right\}
+   $$
+   forms a basis of $\mathbb{Z}_{7}^{3}$, and determine the two change-of-basis maps $[i d]_{B}^{S}$ and $[i d]_{S}^{B}$, where $S$ denotes the standard basis of $\mathbb{Z}_{7}^{3}$.
+
+3.
+   a) (2 points) Define the notions sum, direct sum, and complement for subspaces of a vector space.
+   b) (2 points) State the dimension theorem for sums of subspaces of a $K$ -vector space.
+   c) (6 points) Prove the dimension theorem for sums of subspaces of a $K$ -vector space. You do not have to prove additional results used in your proof, but you must clearly indicate which theorems/propositions you use (by stating them precisely).
+
+4.
+   a) (3 points) Define the notions dual space, dual map, and rank of a linear map.
+   b) (5 points) For which $w \in \mathbb{C}$ does the vector $(w, 4 i, 6+i)^{T} \in \mathbb{C}^{3}$ lie in the image of the linear map
+      $$
+      g: \mathbb{C}^{2} \rightarrow \mathbb{C}^{3}, \quad g\binom{z_{1}}{z_{2}}=\left(\begin{array}{c}
+      (1+i) z_{1}+(2-i) z_{2} \\
+      6 z_{1}+8 i z_{2} \\
+      4 i z_{1}+5 z_{2}
+      \end{array}\right) ?
+      $$
+      Express $w$ in the form $a+i b$ (with $a, b \in \mathbb{R}$ ).
+
+5.
+   a) (2 points) Let $h: V \rightarrow V$ be linear. Prove that the set of fixed points of $h$, i.e.
+      $$
+      \{v \in V \mid h(v)=v\}
+      $$
+      is a subspace of $V$.
+   b) (2 points) Do there exist linear maps
+      $$
+      f: C_{3}[X] \rightarrow M_{2}(\mathbb{C}) \quad \text { and } \quad g: M_{2}(\mathbb{C}) \rightarrow C_{3}[X]
+      $$
+      such that $g \circ f=i d$ ? Here $C_{3}[X]$ denotes the vector space of complex polynomials of degree at most 3 , and $M_{2}(\mathbb{C})$ denotes the set of all $2 \times 2$ matrices with complex entries.
+   c) (2 points) Does there exist a basis of $\mathbb{Z}_{11}^{4}$ that contains the vectors $(1,4,1,5)^{T}$ and $(3,3,5,4)^{T}$ ?
+   d) (2 points) Let $V$ be a $K$ -vector space and let $f \in L(V, V)$ satisfy $f \circ f \circ f \circ f \circ f=f^{5}=f$. Show that
+      $$
+      V=\operatorname{Im}(f) \oplus \operatorname{Ker}(f)
+      $$
